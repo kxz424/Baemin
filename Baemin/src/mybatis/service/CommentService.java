@@ -14,7 +14,7 @@ public class CommentService {
 	public static CommentService getInstance() {
 		if(service == null) service = new CommentService();
 		return service;
-	}
+	} 
 	
 	public Integer insertComment(Member m) {
 		return repo.insertComment(m);
