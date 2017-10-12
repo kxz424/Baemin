@@ -5,27 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title> 우리반 연습 </title>
-<style type="text/css">
-	.c {
-		width : 100%;
-		background-color : black;
-		height: 100px;
-		overflow: hidden;
-	}
-	#menubar {
-		background-color : black;
-		width : 75%;
-		margin : auto;
-		
-	}
-	.c:hover {
-		overflow : visible;
-	}
-	.menubar {
-		width : 100px;		
-	}
-	
-</style>
+<link rel="stylesheet" type="text/css" href="MenuBar.css" />
 </head>
 <body>
 <div class='c'>

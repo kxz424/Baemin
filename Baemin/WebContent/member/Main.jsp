@@ -7,30 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title> 메인 </title>
-<style type="text/css">
-/* 	카테고리 */
-	.category {
-		width : 150px;	
-		margin : 10px 13px;	
-	}
-	#c {
-		margin : 60px 0;
-		width : 100%;
-		
-	}
-	.cate {
-		width : 70%;
-		margin : auto;
-	}
-/* 	퀵메뉴 제외 가운데 정렬 */
- 	.center{ 
-	 	width:100%; 
- 	} 
- 	.center h3{
- 		text-align:center;
- 	}
- 	
-</style>
+<link rel="stylesheet" type="text/css" href="Main.css" />
 </head>
 <body>
 	<jsp:include page="MainBar.jsp"></jsp:include>

@@ -6,43 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title> 우리반 연습 </title>
-<style type="text/css">
-	/* 	로그인 회원가입 사장님   */
-	#quickmenu {
-		text-align : right;
-		margin : 0 30px;
-		padding : 10px 0;
-		font-size : 13px;
-	}
-	a {
-		text-decoration: none;
-		color : SlateGray;
-	}
-	a:visited {
-    color: SlateGray;
-	}
-	/* 	퀵메뉴 제외 가운데 정렬 */
- 	.center{ 
-	 	width:100%; 
- 	} 
- 	.center h3{
- 		text-align:center;
- 	}
-/*  	검색창 */
- 	input {
- 		color : SlateGray;
- 		border: 1px solid lightGray;
-  		border-radius: 3px;
-  		text-indent: 10px;
-  		height : 25px;
- 	}
- 	#SelectLocation {
- 		width : 160px;
- 	}
- 	#SelectFoodHome {
- 		width : 300px;
- 	}
-</style>
+<link type="text/css" rel="stylesheet" href="MainBar.css" />
 </head>
 <body>
 	<p id="quickmenu"> 
