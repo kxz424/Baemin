@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> 회원가입 2 </title>
+<title> 추가 정보 입력 </title>
 </head>
 <body>
 
