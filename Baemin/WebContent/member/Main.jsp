@@ -37,11 +37,12 @@
  	.center h3{
  		text-align:center;
  	}
+/*  	검색창 */
  	input {
  		color : SlateGray;
  		border: 1px solid lightGray;
   		border-radius: 3px;
-  		padding-left: 10px;
+  		text-indent: 10px;
   		height : 25px;
  	}
  	#SelectLocation {
@@ -49,11 +50,6 @@
  	}
  	#SelectFoodHome {
  		width : 300px;
- 	}
- 	
- 	.img {
- 		height: 25px;
- 		margin:0;
  	}
  	
 </style>
