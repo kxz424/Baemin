@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+	#sort {
+		text-align: right;
+		margin : 2%;
+	}
+	#foodhome {
+		width : 100%;
+/*  		border : 3px solid black;  */
+	}
+	#foodhome-content {
+/*  		border : 3px solid red;  */
+		width : 70%;
+		margin: auto;
+	}
+	#test {
+		margin : 2% 4%;
+		width : 90%;
+/* 		border : 3px solid yellow; */
+	}
+	.test {
+		width : 30%;
+		height : 30%;
+/* 		border : 3px solid blue; */
+/*  		margin : auto;  */
+	}

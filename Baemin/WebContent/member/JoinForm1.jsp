@@ -5,12 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title> 일반 회원가입 </title>
-<link rel="stylesheet" type="text/css" href="JoinForm1.css" />
+<link rel="stylesheet" type="text/css" href="/Baemin/member/JoinForm1.css" />
 </head>
 <body>
 <div class="cen">
 	<div class="center">
-		<img id="step1" src="../배달의민족/가입1.png">
+		<img id="step1" src="배달의민족/가입1.png">
 		<ul>
 			<li> 배달의민족은 <b>배민ID</b>로 로그인하실 있습니다 </li>
 			<li> 배민ID는 이메일가입 또는 페이스북 가입이 가능합니다. </li>
