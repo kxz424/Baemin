@@ -15,8 +15,7 @@
 	
 	#login { width: 400px; height: 60px; 
 			 background-color: #2ac1bc; color: #FFFFFF; 
-			 font-size: 16px; border:0; outline:0; 
-			 cursor: pointer;}
+			 font-size: 16px; border:0; outline:0; cursor: pointer;}
 	.input { width: 400px; height: 60px; padding: 12px; }
 	
 	#input-padding { padding-top: 20px; }
