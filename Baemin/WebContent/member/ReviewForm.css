@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+span>input {
+	border-style: hidden;
+}
+
+a>span>img {
+	width: 65px;
+	height: 65px;
+}
+#review{
+/* 	width: 100%; */
+	margin: 0;
+}

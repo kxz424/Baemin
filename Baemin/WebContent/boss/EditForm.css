@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.text-center {
+	margin-bottom: 30px;
+}
+
+.select {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+.xsmall, .img-circle {
+	float: left;
+}
+
+.xsmall {
+	margin-top: 35px;
+	margin-bottom: 35px;
+	margin-left: 10px;
+}
+
+.panel-default {
+	float: left;
+}
+
+.info {
+	height: 150px;
+}
+
+#area {
+	width: 100%;
+}
