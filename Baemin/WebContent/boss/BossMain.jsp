@@ -67,15 +67,19 @@
  	#bottom {
  		width : 100%;
  	}
+ 	#bosslogin:hover {
+ 		cursor: pointer;
+ 	}
+ 	
 </style>
 </head>
 <body>
 	<div class="bosslogo"><h3><img id="bosslogo" src="<%= projectName %>/배달의민족/사장님사이트.jpg"></h3></div>
 	<div class="quickmenu">
-		<img id="addmenu" class="bossmenu" src="<%= projectName %>/배달의민족/메뉴등록.png">
-		<img id="soldout" class="bossmenu" src="<%= projectName %>/배달의민족/품절관리.png">
-		<img id="edit" class="bossmenu" src="<%= projectName %>/배달의민족/정보수정.png">
-		<img id="ing" class="bossmenu" src="<%= projectName %>/배달의민족/운영중지.png">
+		<a href="AddMenuForm.jsp"><img id="addmenu" class="bossmenu" src="<%= projectName %>/배달의민족/메뉴등록.png"></a>
+		<a href="SoldOutForm.jsp"><img id="soldout" class="bossmenu" src="<%= projectName %>/배달의민족/품절관리.png"></a>
+		<a href="EditForm.jsp"><img id="edit" class="bossmenu" src="<%= projectName %>/배달의민족/정보수정.png"></a>
+		<a href="IngForm.jsp"><img id="ing" class="bossmenu" src="<%= projectName %>/배달의민족/운영중지.png"></a>
 	</div>
 	
 	<table class="content" >
@@ -84,14 +88,14 @@
 			<div class="bosslogin">
 				<img src="<%= projectName %>/배달의민족/g.jpg"> <br/>
 				<a href="<%= projectName %>/boss/BossLoginForm.jsp" ><button id="bosslogin" >사장님사이트 로그인</button></a> <br/>
-				<p> 아이디/비밀번호 찾기 ㅣ 회원가입 </p>
+				<p> 아이디/비밀번호 찾기 ㅣ<a href="BossJoinForm1.jsp">회원가입</a> </p>
 			</div>
 		 </th>
 		 <th>
 			<div class="bamin">
 				<img id="first" src="/Baemin/배달의민족/처음.png">	 <br/>
-				<img class="z" src="<%= projectName %>/배달의민족/배민소개.png"> <br/>
-				<img class="z" src="<%= projectName %>/배달의민족/광고가이드.png">
+				<a href="https://ceo.baemin.com/#/about/baemin"><img class="z" src="<%= projectName %>/배달의민족/배민소개.png"></a> <br/>
+				<a href="https://ceo.baemin.com/#/ad/guide"><img class="z" src="<%= projectName %>/배달의민족/광고가이드.png"></a>
 			</div>
 		</th>
 	</tr>
