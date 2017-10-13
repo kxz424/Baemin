@@ -12,52 +12,18 @@
 <!-- 부가적인 테마 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<style type="text/css">
-#info{
-	position: absolute;
-  	top: 160px; 
-  	left: 70%; 
-	width: 260px;
-	margin: 0px;
-}
-.shop-basic-info{
-/*  	border: 1px solid black; */
-	height: 70px;
-	
-}
-#main{  
-	width: 70%;
-	margin-left: 15px;
-	margin-top: 20px;
-	margin-right: 0;
-	margin-bottom: 0;
-}
-dd{
-	margin-bottom: 5px;
-}
-#login{
-/* 	margin: -1px; */
-	display: table-cell
-}
-.shop-det-info{
-/* 	border: 1px solid black; */
-	margin-bottom: 20px;
-}
-.cart{
-/* 	border: 1px solid black; */
-}
-.cartMenu{
-	border-bottom: 1px dotted black;
-	padding: 2px;
-}
-.menuName{
-	width: 100px;
-}
-</style>
+<link rel="stylesheet" href="DetailFoodHome.css"/>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	
+});
+</script>
 
 
 </head>

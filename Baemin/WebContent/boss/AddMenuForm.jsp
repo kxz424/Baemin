@@ -13,39 +13,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<style type="text/css">
-.text-center {
-	margin-bottom: 50px;
-}
-
-.select {
-	float: left;
-	margin: 0px;
-	padding: 0px;
-}
-
-.xsmall, .img-circle {
-	float: left;
-}
-
-.xsmall {
-	margin-top: 35px;
-	margin-bottom: 35px;
-	margin-left: 10px;
-}
-
-.panel-default {
-	float: left;
-}
-
-.info {
-	height: 150px;
-}
-
-.form-control {
-	width: 150px;
-}
-</style>
+<link rel="stylesheet" href="AddMenuForm.css"/>
 
 
 <script

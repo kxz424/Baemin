@@ -13,23 +13,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<style type="text/css">
-.text-center {
-	margin-bottom: 30px;
-}
-
-.select {
-	float: left;
-	margin-right: 20px;
-}
-.panel-default{
-
-}
-
-.check{
-	float: left;
-}
-</style>
+<link rel="stylesheet" href="SoldOutForm.css"/>
 
 
 <script

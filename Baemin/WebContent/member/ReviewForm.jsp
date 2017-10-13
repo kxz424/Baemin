@@ -6,20 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>우리반 연습</title>
 
-<style type="text/css">
-span>input {
-	border-style: hidden;
-}
+<link rel="stylesheet" href="ReviewForm.css"/>
 
-a>span>img {
-	width: 65px;
-	height: 65px;
-}
-#review{
-/* 	width: 100%; */
-	margin: 0;
-}
-</style>
 
 <!-- <script -->
 <!-- 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
