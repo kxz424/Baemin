@@ -49,7 +49,7 @@
 	.label7 {font-size: 10px; padding:4px;}
 	.label8 {font-size: 20px; color: #FF6C00; padding:3px; }
 	
-	
+	 
 	
 </style>
 
