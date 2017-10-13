@@ -17,11 +17,11 @@
 	position: absolute;
   	top: 160px; 
   	left: 70%; 
-	width: 266px;
+	width: 260px;
 	margin: 0px;
 }
 .shop-basic-info{
- 	border: 1px solid black;
+/*  	border: 1px solid black; */
 	height: 70px;
 	
 }
@@ -40,11 +40,11 @@ dd{
 	display: table-cell
 }
 .shop-det-info{
-	border: 1px solid black;
+/* 	border: 1px solid black; */
 	margin-bottom: 20px;
 }
 .cart{
-	border: 1px solid black;
+/* 	border: 1px solid black; */
 }
 .cartMenu{
 	border-bottom: 1px dotted black;
@@ -86,6 +86,8 @@ dd{
 
 				</div>
 				
+				<div class="panel panel-default">
+				<div class="panel-body">
 				<div id="info" class="side-info" >
 
 					<section class="shop-det-info box">
@@ -106,27 +108,47 @@ dd{
 					<section class="cart box">
 						<h2 class="bold">장바구니</h2><hr/>
 						
-						<div class="login hidden-xs hidden-sm">
-<!-- 							<p class="notice small text-center">바로결제를 사용하시려면<br/>로그인을 해주세요.</p> -->
-								<div class="cartMenu">
-									<label class="menuName">양파뿌린닭</label>
-									<input type="text" value="1"/>
-									<label>19,900원</label>
-								</div>
-								<div class="cartMenu">
-									<label class="menuName">똥집세트</label>
-									<input type="text" value="1"/>
-									<label>19,900원</label>
-								</div>
-								<div>
-									<label><h4>주문합계금액</h4></label>
-								</div>
-								<button type="button" class="btn btn-primary btn-lg btn-block" id="login">
-								<span class="btn-cart-login">로그인</span>
-							</button>
-							
-						</div>
+						
+							<div class="login hidden-xs hidden-sm">
+	<!-- 							<p class="notice small text-center">바로결제를 사용하시려면<br/>로그인을 해주세요.</p> -->
+								
+								<form class="form-inline">
+								
+									<div class="form-group">
+										<div class="cartMenu">
+											<label class="menuName">양파뿌린닭</label>
+											<input type="text" value="1"/>
+											<label>19,900원</label>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<div class="cartMenu">
+											<label class="menuName">똥집세트</label>
+											<input type="text" value="1"/>
+											<label>19,900원</label>
+										</div>
+									</div>
+									
+									<div>
+										<div class="form-group">
+											<label><h4>주문합계금액</h4></label>
+											<label class="text-right">19,900원</label>
+										</div>
+									</div>
+								
+								</form>
+								
+								<button type="button" class="btn btn-warning btn-lg btn-block" id="login">
+									<span class="btn-cart-login">주문하기</span>
+								</button>
+							</div>
+						
+						
+						
 					</section>
+				</div>
+				</div>
 				</div>
 				
 				
