@@ -83,7 +83,7 @@
 		<th>
 			<div class="bosslogin">
 				<img src="<%= projectName %>/배달의민족/g.jpg"> <br/>
-				<button id="bosslogin" >사장님사이트 로그인</button> <br/>
+				<a href="<%= projectName %>/boss/BossLoginForm.jsp" ><button id="bosslogin" >사장님사이트 로그인</button></a> <br/>
 				<p> 아이디/비밀번호 찾기 ㅣ 회원가입 </p>
 			</div>
 		 </th>
