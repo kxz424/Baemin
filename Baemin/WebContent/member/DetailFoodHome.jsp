@@ -77,28 +77,28 @@
 							<div class="login hidden-xs hidden-sm">
 	<!-- 							<p class="notice small text-center">바로결제를 사용하시려면<br/>로그인을 해주세요.</p> -->
 								
-								<form id="cart" action="OrderForm.jsp" class="form-inline">
+								<form id="cart" action="/baemin?cmd=order-page" class="form-inline">
 								
-									<div class="form-group">
-										<div class="cartMenu">
-											<label class="menuName">양파뿌린닭</label>
-											<input type="text" value="1"/>
-											<label>19,900원</label>
-										</div>
-									</div>
+<!-- 									<div class="form-group"> -->
+<!-- 										<div class="cartMenu"> -->
+<!-- 											<label name="menuName">양파뿌린닭</label> -->
+<!-- 											<input type="text" name="menuCnt" value="1"/> -->
+<!-- 											<label name="menuPrice">19,900원</label> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
 									
-									<div class="form-group">
-										<div class="cartMenu">
-											<label class="menuName">똥집세트</label>
-											<input type="text" value="1"/>
-											<label>19,900원</label>
-										</div>
-									</div>
+<!-- 									<div class="form-group"> -->
+<!-- 										<div class="cartMenu"> -->
+<!-- 											<label class="menuName">똥집세트</label> -->
+<!-- 											<input type="text" name="menuCnt" value="1"/> -->
+<!-- 											<label name="menuPrice">19,900원</label> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
 									
 									<div>
 										<div class="form-group">
 											<label><h4>주문합계금액</h4></label>
-											<label class="text-right">19,900원</label>
+											<label name="oMoney" class="text-right">19,900원</label>
 										</div>
 									</div>
 								
