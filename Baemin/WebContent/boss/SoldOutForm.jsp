@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<% String projectName = "/Baemin"; %>	
+
 <!DOCTYPE>
 <html>
 <head>
@@ -13,7 +16,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<link rel="stylesheet" href="SoldOutForm.css" />
+<link rel="stylesheet" href="<%= projectName %>/boss/SoldOutForm.css" />
 
 
 <script
@@ -22,13 +25,13 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="SoldOutForm.js"></script>
+<script type="text/javascript" src="<%= projectName %>/boss/SoldOutForm.js"></script>
 
 </head>
 <body>
 	<div class="container">
 		<div class="text-center">
-			<img alt="메뉴품절관리" src="../배달의민족/품절관리.png" />
+			<img alt="메뉴품절관리" src="<%= projectName %>/배달의민족/품절관리.png" />
 		</div>
 
 

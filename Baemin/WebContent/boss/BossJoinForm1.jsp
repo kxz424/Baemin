@@ -27,7 +27,7 @@
 	</div>
 
 	<div class="terms-content">
-    	<form id="joinTerms" action="<%= projectName %>/baemin?cmd=boss-join1">
+    	<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=boss-join1">
       		<fieldset>
       			<div class="terms-all">
           		배달의민족 사장님사이트 이용약관,<br>

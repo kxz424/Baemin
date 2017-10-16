@@ -32,11 +32,17 @@ public class Control extends HttpServlet {
     	map.put("join-first", new CommandNull("JoinForm1.jsp"));
     	map.put("join-second", new CommandNull("JoinForm2.jsp")); 
     	map.put("cate-search", new CommandNull("FoodHomeForm.jsp") );
+    	map.put("order-page", new CommandNull("OrderForm.jsp"));
 
     	map.put("boss-main", new CommandNull("../boss/BossMain.jsp"));
     	map.put("boss-join1", new CommandNull("../boss/BossJoinForm2.jsp"));
     	map.put("boss-join2", new CommandNull("../boss/BossJoinForm3.jsp"));
     	map.put("boss-join3", new CommandNull("../boss/BossMain.jsp"));
+    	
+    	map.put("boss-add-menu", new CommandNull("../boss/AddMenuForm.jsp"));
+    	map.put("boss-edit", new CommandNull("../boss/EditForm.jsp"));
+    	map.put("boss-sold", new CommandNull("../boss/SoldOutForm.jsp"));
+    	map.put("boss-ing", new CommandNull("../boss/IngForm.jsp"));
     }
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

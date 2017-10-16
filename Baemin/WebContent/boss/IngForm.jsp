@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<% String projectName = "/Baemin"; %>	
+	
 <!DOCTYPE>
 <html>
 <head>
@@ -13,7 +16,6 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<link rel="stylesheet" href="SoldOutForm.css"/>
 <style type="text/css">
 	@charset "UTF-8";
 
@@ -45,7 +47,7 @@
 <body>
 	<div class="container">
 		<div class="text-center">
-			<img alt="메뉴등록관리" src="../배달의민족/운영중지.png" />
+			<img alt="메뉴등록관리" src="<%= projectName %>/배달의민족/운영중지.png" />
 		</div>
 
 
@@ -69,6 +71,7 @@
 		
 		<div class="col-sm-4"></div>
 		
+	</div>
 	</div>
 
 </body>

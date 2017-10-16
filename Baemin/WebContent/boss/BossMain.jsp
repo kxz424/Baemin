@@ -76,10 +76,10 @@
 <body>
 	<div class="bosslogo"><h3><img id="bosslogo" src="<%= projectName %>/배달의민족/사장님사이트.jpg"></h3></div>
 	<div class="quickmenu">
-		<a href="AddMenuForm.jsp"><img id="addmenu" class="bossmenu" src="<%= projectName %>/배달의민족/메뉴등록.png"></a>
-		<a href="SoldOutForm.jsp"><img id="soldout" class="bossmenu" src="<%= projectName %>/배달의민족/품절관리.png"></a>
-		<a href="EditForm.jsp"><img id="edit" class="bossmenu" src="<%= projectName %>/배달의민족/정보수정.png"></a>
-		<a href="IngForm.jsp"><img id="ing" class="bossmenu" src="<%= projectName %>/배달의민족/운영중지.png"></a>
+		<a href="<%=projectName%>/baemin?cmd=boss-add-menu"><img id="addmenu" class="bossmenu" src="<%= projectName %>/배달의민족/메뉴등록.png"></a>
+		<a href="<%=projectName%>/baemin?cmd=boss-sold"><img id="soldout" class="bossmenu" src="<%= projectName %>/배달의민족/품절관리.png"></a>
+		<a href="<%=projectName%>/baemin?cmd=boss-edit"><img id="edit" class="bossmenu" src="<%= projectName %>/배달의민족/정보수정.png"></a>
+		<a href="<%=projectName%>/baemin?cmd=boss-ing"><img id="ing" class="bossmenu" src="<%= projectName %>/배달의민족/운영중지.png"></a>
 	</div>
 	
 	<table class="content" >

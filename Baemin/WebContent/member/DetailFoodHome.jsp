@@ -77,7 +77,7 @@
 							<div class="login hidden-xs hidden-sm">
 	<!-- 							<p class="notice small text-center">바로결제를 사용하시려면<br/>로그인을 해주세요.</p> -->
 								
-								<form id="cart" action="/baemin?cmd=order-page" class="form-inline">
+								<form id="cart" method="post" action="/Baemin/baemin?cmd=order-page" class="form-inline">
 								
 <!-- 									<div class="form-group"> -->
 <!-- 										<div class="cartMenu"> -->

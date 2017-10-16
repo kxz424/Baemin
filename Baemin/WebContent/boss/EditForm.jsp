@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<% String projectName = "/Baemin"; %>	
+	
 <!DOCTYPE>
 <html>
 <head>
@@ -13,7 +16,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<link rel="stylesheet" href="EditForm.css"/>
+<link rel="stylesheet" href="<%= projectName %>/boss/EditForm.css"/>
 
 
 <script
@@ -22,13 +25,13 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="EditForm.js"></script>
+<script type="text/javascript" src="<%= projectName %>/boss/EditForm.js"></script>
 
 </head>
 <body>
 	<div class="container">
 		<div class="text-center">
-			<img alt="운영정보수정" src="../배달의민족/정보수정.png" />
+			<img alt="운영정보수정" src="<%= projectName %>/배달의민족/정보수정.png" />
 		</div>
 
 		<div class="select">
@@ -41,7 +44,7 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<div class="info">
-					<img src="../배달의민족/치킨1.png" alt="쌀통닭" class="img-circle">
+					<img src="<%= projectName %>/배달의민족/치킨1.png" alt="쌀통닭" class="img-circle">
 					<dl class="sinfo xsmall">
 						<dd>쌀통닭-신천점</dd>
 						<dd>서울특별시 송파구 석촌동</dd>
