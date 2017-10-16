@@ -1,62 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<% String projectName = "/Baemin"; %>
 <!DOCTYPE>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title> 회원가입(업주정보) </title>
-
-<style type="text/css">
-
-
-	.logo { text-align: center; 
-			margin-bottom: 20px; 
-			margin-top:30px;}
-	
-	.div1 {text-align: center;}
-	
-	.label1-color {color: #2ac1bc;}
-	
-	.terms-content {width: 400px; 
-					margin:0 auto; 
-					margin-top:20px;}
-	
-	ul {list-style:none; 
-		padding-left:0px;}
-	
-	input {width:100%; 
-		   border: none; 
-		   outline: none; 
-		   margin-top:8px;}
-	
-	.btn { width: 366px; 
-		   height:50px; 
-		   border:0; 
-		   outline:0; 
-		   cursor: pointer; 
-		   color: #ffffff; 
-		   font-size: 15px;}
-		   
-	.btn-color {background-color: #00c1bb; }
-	
-	.input-size {width: 100;}
-	
-	.li-margin {margin-top:30px;}
-
-	select {width: 100px;}
-	
-	#pass-info {font-size: 15px; 
-		        color: #a6a6a6;}
-
-	input[type="button"] {margin-top : 30px;}
-
-	::-webkit-input-placeholder {color: #9e9e9e;}
-	
-
-</style>
-
-
-
+<link rel="stylesheet" type="text/css" href="<%= projectName %>/css/boss/BossJoinForm2.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="<%= projectName %>/js/boss/BossJoinForm2.js"></script>
 </head>
 <body>
 
@@ -75,9 +27,7 @@
 		<label class= "label2">업소정보</label>
 	</div>
 	
-	
-	
-	
+
 <div class="terms-content">
 
     <form id="joinTerms" name="" action="">
@@ -110,11 +60,8 @@
           				<label>-</label>
           				<input type="text" class="input-size">
           				<label>-</label>
-          				<input type="text" class="input-size">
-          				</input><br/>
+          				<input type="text" class="input-size"><br/>
           				<hr/>
-          				
-           				
           				
           				<label>이메일</label><br/>
           				<input type="text" placeholder="이메일 주소 전체를 입력해 주세요."></input><br/>
