@@ -13,7 +13,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<link rel="stylesheet" href="SoldOutForm.css"/>
+<link rel="stylesheet" href="SoldOutForm.css" />
 
 
 <script
@@ -22,35 +22,40 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="SoldOutForm.js"></script>
 
 </head>
 <body>
 	<div class="container">
 		<div class="text-center">
-			<img alt="메뉴등록관리" src="../배달의민족/품절관리.png" />
+			<img alt="메뉴품절관리" src="../배달의민족/품절관리.png" />
 		</div>
 
 
 		<div class="row">
-		
-		<div class="col-sm-4"></div>
-		
-		<div class="panel panel-default col-sm-4">
-			<div class="panel-body">
-				<div class="select">
-					<select>
-						<option>쌀통닭-신천점</option>
-						<option>굽네치킨-가락점</option>
-					</select>
-				</div>
-				<div class="check">
-					<input type="checkbox" />품절유무
+
+			<div class="col-sm-4"></div>
+
+			<div class="panel panel-default col-sm-4">
+				<div class="panel-body">
+					<div class="select">
+						<select>
+							<option>쌀통닭-신천점</option>
+							<option>굽네치킨-가락점</option>
+						</select>
+					</div>
+					<div class="check">
+						<input type="checkbox" />품절유무
+					</div>
+					<div class="insertBtn">
+						<input type="button" value="적용">
+					</div>
 				</div>
 			</div>
+
+			<div class="col-sm-4"></div>
+
 		</div>
-		
-		<div class="col-sm-4"></div>
-		
 	</div>
 
 </body>

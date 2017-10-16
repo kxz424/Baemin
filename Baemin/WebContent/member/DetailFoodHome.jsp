@@ -12,17 +12,17 @@
 <!-- 부가적인 테마 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<link rel="stylesheet" href="DetailFoodHome.css"/>
+<link rel="stylesheet" href="../css/member/DetailFoodHome.css"/>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="DetailFoodHome.js"></script>
+
 <script type="text/javascript">
-$(function(){
-	
-});
+
 </script>
 
 
@@ -39,6 +39,7 @@ $(function(){
 					</strong>
 				</li>
 			</ol>
+
 			<div class="shop-basic-info box">
 				<div class="of-h">
 					<h1 class="pull-left">쌀통닭 신천점</h1>
@@ -52,8 +53,6 @@ $(function(){
 
 				</div>
 				
-				<div class="panel panel-default">
-				<div class="panel-body">
 				<div id="info" class="side-info" >
 
 					<section class="shop-det-info box">
@@ -78,7 +77,7 @@ $(function(){
 							<div class="login hidden-xs hidden-sm">
 	<!-- 							<p class="notice small text-center">바로결제를 사용하시려면<br/>로그인을 해주세요.</p> -->
 								
-								<form class="form-inline">
+								<form id="cart" action="OrderForm.jsp" class="form-inline">
 								
 									<div class="form-group">
 										<div class="cartMenu">
@@ -105,7 +104,7 @@ $(function(){
 								
 								</form>
 								
-								<button type="button" class="btn btn-warning btn-lg btn-block" id="login">
+								<button type="button" class="btn btn-warning btn-lg btn-block" id="order">
 									<span class="btn-cart-login">주문하기</span>
 								</button>
 							</div>
@@ -113,8 +112,6 @@ $(function(){
 						
 						
 					</section>
-				</div>
-				</div>
 				</div>
 				
 				

@@ -22,6 +22,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="AddMenuForm.js"></script>
 
 </head>
 <body>
@@ -55,14 +56,14 @@
 							<div class="col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
 									<label class="input-group-addon">메뉴명</label> <input type="text"
-										class="form-control" placeholder="메뉴명을 입력하세요." />
+										id="menuName" class="form-control" placeholder="메뉴명을 입력하세요." />
 								</div>
 							</div>
 
 							<div class="col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
 									<label class="input-group-addon">가격</label> <input type="text"
-										class="form-control" placeholder="가격을 입력하세요." />
+										id="menuPrice" class="form-control" placeholder="가격을 입력하세요." />
 								</div>
 							</div>
 						</div>
@@ -75,8 +76,8 @@
 					</div>
 
 					<div class="form-group">
-						<input type="button" class="btn btn-primary" value="수정"> <input
-							type="button" class="btn btn-success" value="등록">
+						<input type="button" id="modify" class="btn btn-primary" value="수정"> <input
+							type="button" id="insert" class="btn btn-success" value="등록">
 					</div>
 				</form>
 

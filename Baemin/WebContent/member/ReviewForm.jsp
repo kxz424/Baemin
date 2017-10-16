@@ -6,23 +6,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>우리반 연습</title>
 
-<link rel="stylesheet" href="ReviewForm.css"/>
+<link rel="stylesheet" href="../css/member/ReviewForm.css"/>
 
 
-<!-- <script -->
-<!-- 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<script type="text/javascript" src="ReviewForm.js"></script>
 
-<!-- </head> -->
-<!-- <body> -->
+</head>
+<body>
 
 	<!-- 메뉴 부분 -->
 	<div id="review">
 		<!-- 	<span class="caret"></span> -->
 		<ul class="nav nav-tabs nav-justified">
-			<li class="active lf-brd"><a href="#">메뉴</a></li>
-			<li><a href="#">리뷰</a></li>
+			<li><a href="#">메뉴</a></li>
+			<li class="active lf-brd"><a href="#review">리뷰</a></li>
 		</ul>
+		
 		<div class="box no-tp-brd">
 			<section class="review-sect">
 				<section class="view-review">
@@ -50,6 +51,19 @@
 							<p id="Review_Cont2">그냥 그래요... 그래도 배달은 빠르네요</p>
 						</div>
 					</div>
+					
+					<form id="frm" class="form-horizontal">
+						<label class="control-label">리뷰작성</label>
+						<input type="hidden" name="id" value="kxz424"/>
+						<div class="form-group">
+							<div class="col-sm-10">
+								<textarea name="review" class="form-control" rows="3"></textarea>
+							</div>
+							<div class="col-sm-2 bb">
+								<input id="revBtn" type="button" class="btn btn-info btn-lg bb" value="등록"/>
+							</div>
+						</div>
+					</form>
 				</section>
 			</section>
 		</div>
@@ -58,5 +72,5 @@
 
 
 
-<!-- </body> -->
-<!-- </html> -->
+</body>
+</html>

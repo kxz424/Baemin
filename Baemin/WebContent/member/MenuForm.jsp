@@ -14,6 +14,9 @@
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	
+<script type="text/javascript" src="MenuForm.js"></script>
 
 
 </head>
@@ -24,7 +27,7 @@
 		<!-- 	<span class="caret"></span> -->
 		<ul class="nav nav-tabs nav-justified">
 			<li class="active lf-brd"><a href="#">메뉴</a></li>
-			<li><a href="#">리뷰</a></li>
+			<li><a href="#review">리뷰</a></li>
 		</ul>
 		<div class="box no-tp-brd">
 			<section class="menu-sect panel-group" id="accordion">

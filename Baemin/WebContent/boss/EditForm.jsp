@@ -22,12 +22,13 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="EditForm.js"></script>
 
 </head>
 <body>
 	<div class="container">
 		<div class="text-center">
-			<img alt="메뉴등록관리" src="../배달의민족/정보수정.png" />
+			<img alt="운영정보수정" src="../배달의민족/정보수정.png" />
 		</div>
 
 		<div class="select">
@@ -55,14 +56,14 @@
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
 									<label class="input-group-addon">오픈시간</label> <input
-										type="text" class="form-control" placeholder="예) 09" />
+										id="openTime" type="text" class="form-control" placeholder="예) 09" />
 								</div>
 							</div>
 
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
 									<label class="input-group-addon">마감시간</label> <input
-										type="text" class="form-control" placeholder="예) 23" />
+										id="closeTime" type="text" class="form-control" placeholder="예) 23" />
 								</div>
 							</div>
 						</div>
@@ -71,19 +72,19 @@
 					<div class="form-group">
 						<div class="input-group">
 							<label class="input-group-addon">전화번호</label> <input type="text"
-								class="form-control" placeholder="예) 010-1234-5678" />
+								id="tel" class="form-control" placeholder="예) 010-1234-5678" />
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div id="area" class="input-group">
 							<label>업소소개</label>
-							<textarea class="form-control" rows="3"></textarea>
+							<textarea id="content" class="form-control" rows="3"></textarea>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<input type="button" class="btn btn-primary" value="수정">
+						<input id="modifyBtn" type="button" class="btn btn-primary" value="수정">
 					</div>
 				</form>
 
