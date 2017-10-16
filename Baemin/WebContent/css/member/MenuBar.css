@@ -4,7 +4,6 @@
 		width : 100%;
 		background-color : black;
 		height: 100px;
-		overflow: hidden;
 	}
 	#menubar {
 		background-color : black;
@@ -12,10 +11,15 @@
 		margin : auto;
 		
 	}
-/* 	.c:hover { */
-/* 		overflow : visible; */
-/* 	} */
 
 	.menubar {
 		width : 100px;		
+	}
+	
+	.hidden{
+		overflow: hidden;
+	}
+	
+	.visible{
+		overflow: visible;
 	}
