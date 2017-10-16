@@ -31,12 +31,12 @@ public class Control extends HttpServlet {
     	map.put("login-page", new CommandNull("LoginForm.jsp"));
     	map.put("join-first", new CommandNull("JoinForm1.jsp"));
     	map.put("join-second", new CommandNull("JoinForm2.jsp")); 
-    	map.put("boss-main", new CommandNull("../boss/BossMain.jsp"));
     	map.put("cate-search", new CommandNull("FoodHomeForm.jsp") );
 
+    	map.put("boss-main", new CommandNull("../boss/BossMain.jsp"));
     	map.put("boss-join1", new CommandNull("../boss/BossJoinForm2.jsp"));
-    	
-    	
+    	map.put("boss-join2", new CommandNull("../boss/BossJoinForm3.jsp"));
+    	map.put("boss-join3", new CommandNull("../boss/BossMain.jsp"));
     }
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
