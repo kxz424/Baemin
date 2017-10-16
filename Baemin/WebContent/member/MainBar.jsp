@@ -10,7 +10,7 @@
 <title>우리반 연습</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link type="text/css" rel="stylesheet" href="/Baemin/member/MainBar.css" />
+<link type="text/css" rel="stylesheet" href="<%= projectName %>/css/member/MainBar.css" />
 <style type="text/css">
 * {
 	box-sizing: border-box;

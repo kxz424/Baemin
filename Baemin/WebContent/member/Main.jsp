@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title> 메인 </title>
-<link rel="stylesheet" type="text/css" href="<%= projectName %>/member/Main.css" />
+<link rel="stylesheet" type="text/css" href="<%= projectName %>/css/member/Main.css" />
 </head>
 <body>
 	<jsp:include page="MainBar.jsp"></jsp:include>
