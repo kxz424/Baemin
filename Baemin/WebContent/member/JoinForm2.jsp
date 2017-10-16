@@ -10,11 +10,13 @@
 <link rel="stylesheet" type="text/css" href="<%= projectName %>/css/member/JoinForm2.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="<%= projectName %>/js/member/JoinForm2.js"></script>
+
 </head>
 <body>
 
 <div class="cen">
 	<div class="center">
+		<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=main-page">
 		<img id="step1" src="../배달의민족/가입2.png">
 
 		<p>아래 정보를 추가 입력해야 회원가입이 완료됩니다.</p>
@@ -72,15 +74,20 @@
 		
 		
 		<div>
-			<input type="button" class="btn btn-cancel" value=취소>
-			<input type="button" class="btn btn-finish" value=완료>
+			<a href="<%= projectName %>/baemin?cmd=main-page"><input type="submit" class="btn btn-cancel" value=취소></a>
+			<a href="#open"><input type="button" class="btn btn-finish" value=완료></a>
 		</div>
-		
-		
-		
-
+		</form>
 	</div>
 </div>
+
+
+	<div class="white_content" id="open">
+		<div>
+			<p>가입이 완료되었습니다.</p>
+			<a href="#close"><input type="button" class="close" value="닫기" /></a>
+		</div>
+	</div>
 
 </body>
 </html>

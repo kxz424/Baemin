@@ -87,6 +87,7 @@
 }
 
 .white_content p {
+	color: #999999;
 	font-size: 20px;
 	text-align: center;
 }
@@ -98,6 +99,7 @@
 	border: none; 
 	outline: none; 
 	cursor: pointer;
+	font-weight: bolder;
 }
 
 .white_content:target {

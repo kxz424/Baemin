@@ -19,23 +19,27 @@
 		<img alt="" src="/Baemin/배달의민족/로고2.jpg" id="logo" />
 	</div>
 
-	<form>
+	<form id="joinTerms" action="<%= projectName %>/baemin?cmd=main">
+	
 		<div id="input-padding">
-		<input type="text" placeholder="배민ID(이메일 또는 아이디)" class="input"/><br/> 
-		<input type="text" placeholder="비밀번호 (4~20자)" class="input" /><br/> 
+			<input type="text" placeholder="배민ID(이메일 또는 아이디)" class="input"/><br/> 
+			<input type="text" placeholder="비밀번호 (4~20자)" class="input" /><br/> 
 		</div>
+		
 		<div id="login-padding">
-		<input type="button" value="로그인" id="login"/><br/>
+			<input type="button" value="로그인" id="login"/><br/>
 		</div>
+		
 	</form>
 
 	<div id="size">
-		<a href="" class="id-create">배민ID 만들기</a>
 	
-	<span> 
-		<a href="" class="find">아이디 찾기</a> 
-		<a href="" class="find">비밀번호 찾기</a>
-	</span>
+		<a href="<%= projectName %>/baemin?cmd=join-first" class="id-create">배민ID 만들기</a>
+	
+		<span> 
+			<a href="" class="find">아이디 찾기</a> 
+			<a href="" class="find">비밀번호 찾기</a>
+		</span>
 	</div>
 	
 	
