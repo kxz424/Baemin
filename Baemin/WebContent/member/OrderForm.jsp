@@ -50,7 +50,7 @@
    .label8 {font-size: 20px; color: #FF6C00; padding:3px; }
    
     
-
+   
 </style>
 
 
@@ -120,12 +120,11 @@
          <label class="label8">39,800원</label>
 
       </div>
-       
- 
+      
+
       <center><input type="button" value="결제하기"/></center><br/>
    </div>
    
-
 </div>
 
 </div>

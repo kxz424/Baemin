@@ -14,7 +14,25 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
 <link rel="stylesheet" href="SoldOutForm.css"/>
+<style type="text/css">
+	@charset "UTF-8";
 
+.text-center {
+	margin-bottom: 30px;
+}
+
+.select {
+	float: left;
+	margin-right: 20px;
+}
+.panel-default{
+
+}
+
+.check{
+	float: left;
+}
+</style>
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -27,7 +45,7 @@
 <body>
 	<div class="container">
 		<div class="text-center">
-			<img alt="메뉴등록관리" src="../배달의민족/품절관리.png" />
+			<img alt="메뉴등록관리" src="../배달의민족/운영중지.png" />
 		</div>
 
 
@@ -44,7 +62,7 @@
 					</select>
 				</div>
 				<div class="check">
-					<input type="checkbox" />품절유무
+					<input type="radio" /> 운영중지
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+	.c {
+		width : 100%;
+		background-color : black;
+		height: 100px;
+		overflow: hidden;
+	}
+	#menubar {
+		background-color : black;
+		width : 75%;
+		margin : auto;
+		
+	}
+/* 	.c:hover { */
+/* 		overflow : visible; */
+/* 	} */
+
+	.menubar {
+		width : 100px;		
+	}

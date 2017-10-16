@@ -13,7 +13,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<link rel="stylesheet" href="AddMenuForm.css"/>
+<link rel="stylesheet" href="EditForm.css"/>
 
 
 <script
@@ -27,7 +27,7 @@
 <body>
 	<div class="container">
 		<div class="text-center">
-			<img alt="메뉴등록관리" src="../배달의민족/메뉴등록.png" />
+			<img alt="메뉴등록관리" src="../배달의민족/정보수정.png" />
 		</div>
 
 		<div class="select">
@@ -52,53 +52,40 @@
 				<form>
 					<div class="form-group">
 						<div class="row">
-							<div class="col-sm-6 col-md-6 col-lg-6">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
-									<label class="input-group-addon">메뉴명</label> <input type="text"
-										class="form-control" placeholder="메뉴명을 입력하세요." />
+									<label class="input-group-addon">오픈시간</label> <input
+										type="text" class="form-control" placeholder="예) 09" />
 								</div>
 							</div>
 
-							<div class="col-sm-6 col-md-6 col-lg-6">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
-									<label class="input-group-addon">가격</label> <input type="text"
-										class="form-control" placeholder="가격을 입력하세요." />
+									<label class="input-group-addon">마감시간</label> <input
+										type="text" class="form-control" placeholder="예) 23" />
 								</div>
 							</div>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label for="exampleInputFile">파일 업로드</label> <input type="file"
-							id="exampleInputFile">
-						<p class="help-block">여기에 블록레벨 도움말 예제</p>
+						<div class="input-group">
+							<label class="input-group-addon">전화번호</label> <input type="text"
+								class="form-control" placeholder="예) 010-1234-5678" />
+						</div>
 					</div>
 
 					<div class="form-group">
-						<input type="button" class="btn btn-primary" value="수정"> <input
-							type="button" class="btn btn-success" value="등록">
+						<div id="area" class="input-group">
+							<label>업소소개</label>
+							<textarea class="form-control" rows="3"></textarea>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<input type="button" class="btn btn-primary" value="수정">
 					</div>
 				</form>
-
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>메뉴명</th>
-							<th>가격</th>
-							<th>품절유무</th>
-						</tr>
-					</thead>
-					<tr>
-						<td>쌀통닭</td>
-						<td>16,900원</td>
-						<td>N</td>
-					</tr>
-					<tr>
-						<td>양파올린닭</td>
-						<td>19,900원</td>
-						<td>N</td>
-					</tr>
-				</table>
 
 			</div>
 		</div>

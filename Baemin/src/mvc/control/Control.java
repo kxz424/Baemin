@@ -27,10 +27,11 @@ public class Control extends HttpServlet {
     private void initCommand() {
     	map = new HashMap();
     	
-    	map.put("main", new CommandNull("main.jsp"));
+    	map.put("main-page", new CommandNull("Main.jsp"));
     	map.put("login-page", new CommandNull("LoginForm.jsp"));
     	map.put("join-page", new CommandNull("JoinForm1.jsp"));
     	map.put("boss-main", new CommandNull("../boss/BossMain.jsp"));
+    	map.put("cate-search", new CommandNull("FoodHomeForm.jsp") );
     	
     }
     
@@ -48,7 +49,7 @@ public class Control extends HttpServlet {
     	String nextPage = "";
     	String cmdKey = request.getParameter("cmd");
     	if( cmdKey == null ) {
-    		cmdKey = "main";
+    		cmdKey = "main-page";
     	}
     	
     	Command cmd = null;
