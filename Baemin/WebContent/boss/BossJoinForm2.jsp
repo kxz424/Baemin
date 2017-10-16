@@ -28,12 +28,11 @@
 	</div>
 	
 
-<div class="terms-content">
+	<div class="terms-content">
 
-    <form id="joinTerms" name="" action="">
-      <fieldset>
-      
-      		<div class="">
+    <form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=boss-join2">
+		<fieldset>
+			<div class="">
       			<ul>
       				<li class="li-margin">
           				<h3>사장님 정보</h3>
@@ -67,10 +66,7 @@
           				<input type="text" placeholder="이메일 주소 전체를 입력해 주세요."></input><br/>
           				<hr/>
           			</li>
-          			
-          			
-          			
-          			
+
           			<li class="li-margin">
           				<h3>사업자등록 정보</h3>
           				<label>사업자등록번호</label><br/>
@@ -78,9 +74,6 @@
           				<hr/>
           				
           			</li>
-          			
-          			
-          			
           			
           			<li  class="li-margin">
           				<h3>계정 정보</h3>
@@ -99,21 +92,14 @@
           			</li>
           			
           			
-          			   <div class="">
+          			<div class="btn-select">
           	 			<input type="button" class="btn btn-color" value="다음" />
-        				</div>
+        			</div>
           		</ul>
-
- 
-        </div>
-      </fieldset>
-    
-      
-      
-      
-      
-    </form>
-  </div>
+			</div>
+		</fieldset>
+	</form>
+	</div>
 	
 	
 	

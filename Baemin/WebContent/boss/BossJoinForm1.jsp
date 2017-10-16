@@ -27,7 +27,7 @@
 	</div>
 
 	<div class="terms-content">
-    	<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=boss-join1">
+    	<form id="joinTerms" method="post" action="">
       		<fieldset>
       			<div class="terms-all">
           		배달의민족 사장님사이트 이용약관,<br>
@@ -47,7 +47,7 @@
             			</div>
             
            				<div class="terms-box">
-             				<div class="terms_content __viewer__" style="opacity: 1;">
+             				<div class="terms_content" style="opacity: 1;">
          	 					<div class="terms terms_1-1" >
    									<strong>제 1 조 (목적)</strong><br>
     								이 약관은 ㈜우아한형제들(이하 “회사”라고 함)이 제공하는 배달의민족 사장님사이트 (http://ceo.baemin.com)의 이용과 관련하여 회사와 회원과의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.<br><br>
@@ -66,7 +66,7 @@
              			</div>
 						
 						<div class="terms-box">
-            				<div class="terms_content __viewer__" style="opacity: 1;">
+            				<div class="terms_content" style="opacity: 1;">
  			 					<div class="terms terms_2-1">
 		    					<b>제1장 총칙</b><br>
 		    					<strong>제1조 (약관의 적용목적)</strong><br>
@@ -88,7 +88,7 @@
             			</div>
             			
            		 		<div class="terms-box">
-              				<div class="terms_content __viewer__" style="opacity: 1;">
+              				<div class="terms_content" style="opacity: 1;">
   								<div class="terms terms_4-1">
 								(주)우아한형제들(이하 ‘회사’라 한다)은 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 개인정보보호법 등 관련 법령에 따라 이용자의 개인정보를 보호하고, 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보처리방침을 수립합니다.<br>
 								개인정보처리방침은 이용자가 언제나 쉽게 열람할 수 있도록 서비스 초기화면을 통해 공개하고 있으며, 개인정보 관련법령, 지침, 고시 또는 배달의민족 사장님사이트 정책의 변경에 따라 달라질 수 있습니다.<br><br>
@@ -118,7 +118,7 @@
             			</div>
             			
             			<div class="terms-box">
-              				<div class="terms terms_3-1 __viewer__" >
+              				<div class="terms terms_3-1" >
 							    <strong>■ 광고주 가입 및 정보변경</strong><br>
 							    1. 광고주 가입<br>
 							    ① 배달의민족 광고서비스를 이용하고자 하는 업주님은 배달의민족 광고 및 바로결제 서비스 신청서 작성 및 약관 동의 절차 등에 따라 신규가입 후 자유롭게 광고 서비스를 이용하실 수 있습니다. 광고주는 1) 신규가입을 완료한 ‘일반업주’와 2) 광고신청 후 회사의 승인을 거쳐 광고소재가 게재 된 상태의 ‘광고업주’로 구분합니다.<br>
