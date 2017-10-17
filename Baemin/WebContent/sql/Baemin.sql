@@ -1,4 +1,4 @@
---È¸¿ø
+--íšŒì›
 create table member(
     m_id varchar2(50) primary key,
     m_password varchar2(20) not null,
@@ -7,8 +7,8 @@ create table member(
     m_gender varchar2(4)
 );
 drop table member;
-
---»çÀå´Ô
+  
+--ì‚¬ì¥ë‹˜
 create table boss(
     b_num varchar2(10) primary key,
     b_id varchar2(20) UNIQUE,
@@ -20,7 +20,7 @@ create table boss(
 );
 drop table boss;
 
---¾÷¼Ò
+--ì—…ì†Œ
 create table food_home(
     f_boss varchar2(10) primary key,
     f_name varchar2(20) not null,
@@ -34,11 +34,11 @@ create table food_home(
 );
 drop table food_home;
 ALTER TABLE food_home DROP CONSTRAINT FK_food_home;
---¾÷¼Ò ¿Ü·¡Å° ÁöÁ¤
+--ì—…ì†Œ ì™¸ë˜í‚¤ ì§€ì •
 ALTER TABLE food_home
 ADD CONSTRAINT FK_food_home FOREIGN KEY(f_boss) 
 references boss(b_num);
---¸Ş´º
+--ë©”ë‰´
 create table menu(
     menu_num varchar2(5) primary key,
     menu_name varchar2(20) not null,
@@ -49,11 +49,11 @@ create table menu(
 );
 drop table menu;
 ALTER TABLE menu DROP CONSTRAINT FK_menu;
---¸Ş´º ¿Ü·¡Å° ÁöÁ¤
+--ë©”ë‰´ ì™¸ë˜í‚¤ ì§€ì •
 ALTER TABLE menu
 ADD CONSTRAINT FK_menu FOREIGN KEY(menu_boss) 
 references food_home(f_boss);
---¸®ºä
+--ë¦¬ë·°
 create table review(
     r_num varchar2(5) primary key,
     r_content varchar2(500),
@@ -64,14 +64,14 @@ create table review(
 drop table review;
 ALTER TABLE review DROP CONSTRAINT fk_review_member;
 ALTER TABLE review DROP CONSTRAINT fk_review_boss;
---¸®ºä ¿Ü·¡Å° ÁöÁ¤
+--ë¦¬ë·° ì™¸ë˜í‚¤ ì§€ì •
 alter table review
 add constraint fk_review_member foreign key(r_member)
 references member(m_id);
 alter table review
 add constraint fk_review_boss foreign key(r_boss)
 references food_home(f_boss);
---ÁÖ¹®
+--ì£¼ë¬¸
 create table order_list(
     o_num varchar2(5) primary key,
     o_tel varchar2(13) not null,
@@ -85,7 +85,7 @@ create table order_list(
 drop table order_list;
 ALTER TABLE order_list DROP CONSTRAINT fk_order_member;
 ALTER TABLE order_list DROP CONSTRAINT fk_order_boss;
---ÁÖ¹® ¿Ü·¡Å° ÁöÁ¤
+--ì£¼ë¬¸ ì™¸ë˜í‚¤ ì§€ì •
 alter table order_list
 add constraint fk_order_member foreign key(o_member)
 references member(m_id);
