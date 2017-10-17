@@ -19,4 +19,7 @@ public class CommentService {
 	public Integer insertComment(Member m) {
 		return repo.insertComment(m);
 	}
+	
+	
+	
 }
