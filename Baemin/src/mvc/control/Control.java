@@ -32,7 +32,7 @@ public class Control extends HttpServlet {
     	map.put("login-page", new CommandNull("LoginForm.jsp"));
     	map.put("join-first", new CommandNull("JoinForm1.jsp"));
     	map.put("join-second", new CommandNull("JoinForm2.jsp")); 
-    	map.put("cate-search", new CommandNull("FoodHomeForm.jsp") );
+    	map.put("cate-search", new CommandNull("FoodHomeForm.jsp"));
     	map.put("order-page", new CommandNull("OrderForm.jsp"));
 
     	map.put("boss-main", new CommandNull("../boss/BossMain.jsp"));
