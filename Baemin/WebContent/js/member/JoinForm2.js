@@ -1,7 +1,5 @@
 
 $(function(){
-	
-
 	$(".btn-caution").click(function(){
 
 		 if($(".cau").css("display") == "none"){   

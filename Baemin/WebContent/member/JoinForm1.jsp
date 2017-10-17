@@ -1,3 +1,4 @@
+<%@page import="org.omg.PortableServer.POA"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <% String projectName = "/Baemin"; %>
@@ -8,42 +9,7 @@
 <title> 일반 회원가입 </title>
 <link rel="stylesheet" type="text/css" href="<%= projectName %>/css/member/JoinForm1.css" />
 <script type="text/javascript" src="<%= projectName %>/lib/jquery-3.1.1.min.js"></script>
-<script type="text/javascript">
-	$(function() {		
-		$("#btn").click(function () {
-			var id = $("#userid").val(); 
-			var pass = $("#userpassword").val();
-			var word = $("#userconfirm").val();
-			var lo = id.indexOf("@");
-			var cation = id.indexOf(".");
-			
-			if( id == "") {
-				alert("이메일을 입력하세요");
-				return;
-			} else if( lo < 1 || cation == -1 || cation-lo < 2 ) {
-				alert("id " + id.length);
-				alert("cation " + cation);
-				alert(id.length-cation);
-// 				alert("이메일 형식을 확인해주세요. 이메일은 영문, 숫자, @만 입력 가능합니다.");
-				return;
-			}else if(pass == "") {
-				alert("비밀번호를 입력하세요");
-				return;
-			} else if(word == "") {
-				alert("비밀번호 확인을 입력하세요.");
-				return;
-			}
-			
-			
-			if(pass == word)
-				$("form").submit();
-			else 
-				alert("다르다");
-		});
-	
-		
-	});
-</script>
+<script src="<%= projectName %>/js/member/JoinForm1.js"></script>
 </head>
 <body>
 <div class="cen">
@@ -56,13 +22,15 @@
 			<li> 사용하고 있는 이메일을 입력해야 <br/> 아이디/비밀번호 분실 시 찾을 수 있습니다. </li>
 		</ul>
 		
-		<p id="title"> 배달의민족 가입하기</p><p id="question"> 이미 배민 ID가 있으세요? </p> <br/>
-		<form >
-			<input class="in" id="userid" type="email" placeholder="배민ID(이메일)" /> <br/>
-			<input class="in" id="userpassword" type="password" placeholder="비밀번호 (8~20자)" /> <br/>
-			<input class="in" id="userconfirm"type="password" placeholder="비밀번호 재입력 (8~20지)" /> <br/>
-		
-			<input id="btn" type="button" value="다음" />
+		<p id="title"> 배달의민족 가입하기</p><p id="question"> <a href="<%= projectName %>/baemin?cmd=login-page" >이미 배민 ID가 있으세요?</a> </p> <br/>
+		<form method="post" action="<%= projectName %>/baemin?cmd=join-second">
+			<input class="in" name="mId" id="userid" type="text" placeholder="배민ID(이메일)" /> 
+			<p id="pid" class="p"></p><br/>
+			<input class="in" name="mPassword" id="userpassword" type="password" placeholder="비밀번호 (8~20자)" /> <br/>
+			<input class="in" id="userconfirm"type="password" placeholder="비밀번호 재입력 (8~20지)" />
+			<p id="ppassword" class="p"></p><br/>
+
+			<button id="btn" class="disabled">다음</button>
 		</form> 
 	</div>
 </div>
