@@ -85,7 +85,7 @@ create table order_list(
 drop table order_list;
 ALTER TABLE order_list DROP CONSTRAINT fk_order_member;
 ALTER TABLE order_list DROP CONSTRAINT fk_order_boss;
---주문 외래키 지정
+--주문 외래키 지정  
 alter table order_list
 add constraint fk_order_member foreign key(o_member)
 references member(m_id);
