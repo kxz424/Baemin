@@ -10,13 +10,13 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import model.Member;
 
 public class CommentRepository {
-	private String namespace = "mapper.CommentMapper";
+	private String namespace = "mapper.BaeminMapper";
 	
 	SqlSessionFactory getSqlSessionFactory() {
 		InputStream in = null;
 		
 		try {
-			in = Resources.getResourceAsStream("mybatis.xml");
+			in = Resources.getResourceAsStream("mybatis-config.xml");
 		} catch(IOException e) {
 			System.out.println("mybatis 설정 실패 : " + e.getMessage());
 		}
