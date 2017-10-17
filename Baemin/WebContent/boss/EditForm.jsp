@@ -16,7 +16,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<link rel="stylesheet" href="<%= projectName %>/boss/EditForm.css"/>
+<link rel="stylesheet" href="<%= projectName %>/css/boss/EditForm.css"/>
 
 
 <script
@@ -25,7 +25,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="<%= projectName %>/boss/EditForm.js"></script>
+<script type="text/javascript" src="<%= projectName %>/js/boss/EditForm.js"></script>
 
 </head>
 <body>

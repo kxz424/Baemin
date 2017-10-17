@@ -6,72 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title> 사장님사이트 </title>
-<style type="text/css">
-	.bosslogo{ 
-	 	width:100%; 
- 	} 
- 	.bosslogo h3{
- 		text-align:center;
- 	}
-	.quickmenu {
-		background-color : #E0E0E0;
-		height : 150px;
- 		padding : 35px 0 0 150px; 
-	}
-	.quickmenu div {
-		width : 1180px;
-		padding : 4px 0 0 13px;
-	}
-	.bossmenu {
-		width : 250px;
-		margin : 5px 18px;
-	}
-	.bosslogin {
-		width : 380px;
-		display: inline-block;
-	}
-	.bosslogin img {
-		width : 210px;
-	}
-	button {
-		background-color : #20B2AA;
-		width : 380px;
-		height : 70px;
-		font-size : 18px;
-		text-align: center;
-		color : white;
-		border : 0px;
-	}
-	p {
-		color : gray;
-		text-align : right;
-		font-size : 14px;
-	}
-	.bamin {
-		width : 300px;
-	}
-	.bamin .z {
-		width : 300px;
-		border : 1px solid lightgray;
-	}
-	#first {
-		width : 180px;
-	}
-	
- 	.content { 
- 		width : 100%; 
- 	} 
- 	table {
- 		margin : 50px 0 40px 0;
- 	}
- 	#bottom {
- 		width : 100%;
- 	}
- 	#bosslogin:hover {
- 		cursor: pointer;
- 	}
- 	
-</style>
+<link type="text/css" rel="stylesheet" href="<%= projectName %>/css/boss/BossMain.css" />
 </head>
 <body>
 	<div class="bosslogo"><h3><img id="bosslogo" src="<%= projectName %>/배달의민족/사장님사이트.jpg"></h3></div>

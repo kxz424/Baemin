@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body { 
+ 		background-color: #f4f4f4; 
+ 	} 
+	#location { position: static; left: 50%; margin-top: 100px; }
+	#logo { width: 220px; height: auto; }
+	div { text-align: center; }
+	form { text-align: center; }
+	
+	#login { width: 400px; height: 60px; 
+			 background-color: #2ac1bc; color: #FFFFFF; 
+			 font-size: 16px; border:0; outline:0; 
+			 cursor: pointer;}
+	.input { width: 400px; height: 60px; padding: 12px; }
+	
+	#input-padding { padding-top: 20px; }
+	#login-padding { padding-top: 10px; }
+	
+	.id-create { margin-right: 150px; }
+	#size { font-size: 13px; }
+	
+	a:link { color: grey; }
+	a:visited { color: grey; }
+	a:active { color: grey; }
+	a:hover { color: grey; }
+	
+	#logo {
+		width : 300px;
+	}
