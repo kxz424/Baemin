@@ -16,25 +16,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<style type="text/css">
-	@charset "UTF-8";
-
-.text-center {
-	margin-bottom: 30px;
-}
-
-.select {
-	float: left;
-	margin-right: 20px;
-}
-.panel-default{
-
-}
-
-.check{
-	float: left;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="<%= projectName %>/css/boss/IngForm.css" />
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.text-center {
+	margin-bottom: 30px;
+}
+
+.select {
+	float: left;
+	margin-right: 20px;
+}
+.panel-default{
+
+}
+
+.check{
+	float: left;
+}
