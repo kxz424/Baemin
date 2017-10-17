@@ -27,14 +27,14 @@
 		font-weight: bold;
 		font-size : 17px;
 	}
-	#question {
+	#question, a:link, a:visited  {
 		float : right;
 		font-size : 13px;
 		text-decoration: underline;
 		color : DarkGray;
 		line-height: 3.0;
 	}
-	input {
+	input, #btn {
 		width : 440px;
 		height : 50px;
 		margin : 8px 0;
@@ -46,15 +46,29 @@
   		border-radius: 3px;
 	}
 	#btn {
-		background-color : #20B2AA;
 		font-size : 20px;
 		text-align: center;
 		color : white;
 		border : 0px;
-		cursor: pointer;
+		
 		
 	}
 	.cen {
 		width: 30em;
  		margin : auto; 
+	}
+	
+	.disabled {
+		background-color: #e0e0e0;
+		
+	}
+	
+	.normal {
+		background-color : #20B2AA;
+		cursor: pointer;
+	}
+	.p {
+		color : Coral;
+		font-size: 13px;
+		font-weight: bold;
 	}
