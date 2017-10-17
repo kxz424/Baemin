@@ -10,7 +10,7 @@ drop table member;
   
 --사장님
 create table boss(
-    b_num varchar2(10) primary key,
+    b_num varchar2(12) primary key,
     b_id varchar2(20) UNIQUE,
     b_password varchar2(20) not null,
     b_name varchar2(20) not null,
@@ -22,7 +22,7 @@ drop table boss;
 
 --업소
 create table food_home(
-    f_boss varchar2(10) primary key,
+    f_boss varchar2(12) primary key,
     f_name varchar2(20) not null,
     f_location varchar2(100) not null,
     f_open varchar2(5),
@@ -44,7 +44,7 @@ create table menu(
     menu_name varchar2(20) not null,
     menu_soldout char default 'N',
     menu_price number not null,
-    menu_boss varchar2(10) not null,
+    menu_boss varchar2(12) not null,
     menu_img varchar2(100)
 );
 drop table menu;
@@ -59,7 +59,7 @@ create table review(
     r_content varchar2(500),
     r_date date,
     r_member varchar2(50) not null,
-    r_boss varchar2(10) not null
+    r_boss varchar2(12) not null
 );
 drop table review;
 ALTER TABLE review DROP CONSTRAINT fk_review_member;
@@ -80,7 +80,7 @@ create table order_list(
     o_request varchar2(500),
     o_money number not null,
     o_member varchar2(50) not null,
-    o_boss varchar2(10) not null
+    o_boss varchar2(12) not null
 );
 drop table order_list;
 ALTER TABLE order_list DROP CONSTRAINT fk_order_member;
@@ -99,3 +99,15 @@ create SEQUENCE seq_review;
 create SEQUENCE seq_order;
 --메뉴 시퀀스
 create SEQUENCE seq_menu;
+
+insert into member values ('kxz424@naver.com', '1234', '010-4781-0364', '910424', '남');
+insert into boss values ('123-45-67890', 'kxz424', '1234', '김종상', 'kxz424@naver.com', '910424', '010-4781-0364');
+insert into food_home values('123-45-67890', '쌀통닭', '서울특별시 송파구 석촌동 120-9', '09', '23', '010-4781-0364', 'Y', '석촌동', '메뉴_쌀통닭.png');
+insert into menu values (seq_menu.nextval, '쌀통닭', 'N', 16900, '123-45-67890', '메뉴_쌀통닭.png'
+
+
+
+
+
+
+
