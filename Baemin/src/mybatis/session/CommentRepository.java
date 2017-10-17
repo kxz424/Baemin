@@ -4,9 +4,12 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import model.Boss;
+import model.FoodHome;
 import model.Member;
 
 public class CommentRepository {
@@ -32,12 +35,19 @@ public class CommentRepository {
 
 	
 	
-	public Integer insertBossJoin(Member m) {
+	public void insertBossJoin(Boss b) {
 		
+		SqlSession sess = getSqlSessionFactory().openSession();
+		sess.insert(namespace + ".insertBossJoin", b);
 		
-		
-		return null;
 	}
+
+//	public void insertFoodHome(FoodHome h) {
+//		
+//		SqlSession sess = getSqlSessionFactory().openSession();
+//		sess.insert(namespace + ".insertFoodHome", h);
+//		
+//	}
 	
 	
 	

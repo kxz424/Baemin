@@ -1,6 +1,7 @@
 package mybatis.service;
 
-import model.Member;
+import model.Boss;
+import model.FoodHome;
 import mybatis.session.CommentRepository;
 
 public class ServiceBossJoin {
@@ -15,8 +16,11 @@ public class ServiceBossJoin {
 		return service;
 	} 
 	
-	public Integer insertBossJoin(Member m) {
-		return repo.insertBossJoin(m);
+	public void insertBossJoin(Boss b) {
+		
+		repo.insertBossJoin(b); 
+//		repo.insertFoodHome(h);
+
 	}
 	
 
