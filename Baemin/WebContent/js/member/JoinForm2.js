@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-=======
 $(function(){
-	
-
 	$(".btn-caution").click(function(){
 
 		 if($(".cau").css("display") == "none"){   
@@ -54,4 +50,3 @@ $(function(){
 
 
 });
->>>>>>> branch 'master' of https://github.com/kxz424/Baemin.git

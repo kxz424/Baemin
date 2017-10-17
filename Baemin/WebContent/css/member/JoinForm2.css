@@ -55,17 +55,9 @@
 
 	.cau{
 		width: 440px;
-<<<<<<< HEAD
 		height: 170px;
-=======
-		height: 145px;
->>>>>>> branch 'master' of https://github.com/kxz424/Baemin.git
 		background-color: #f5f5f5;
-<<<<<<< HEAD
-		display: none;
-=======
 		display: none;	
->>>>>>> branch 'master' of https://github.com/kxz424/Baemin.git
 	}
 	
 	
@@ -189,6 +181,11 @@
 	overflow: auto;	
 }
 
+.p {
+		color : Coral;
+		font-size: 13px;
+		font-weight: bold;
+	}
 
 
 	

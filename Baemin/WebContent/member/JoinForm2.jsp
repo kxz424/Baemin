@@ -9,11 +9,11 @@
 <title> 일반 회원가입2 </title>
 <link rel="stylesheet" type="text/css" href="<%= projectName %>/css/member/JoinForm2.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="<%= projectName %>/js/member/JoinForm2.js"></script>
+<%-- <script type="text/javascript" src="<%= projectName %>/js/member/JoinForm2.js"></script> --%>
 <script type="text/javascript">
 $(function(){
 	var toggle = true;
-	var all = false;
+	var birth;
 	
 	$(".btn-caution").click(function() {
 		$(".cau").slideToggle();
@@ -31,18 +31,46 @@ $(function(){
 	});
 	
 	$(".chk").click(function() {
-		
 		for(var i = 1 ; i < 6 ; i++) {
-// 			alert($("#chk"+i).prop("checked"));
 			if(!$("#chk"+i).prop("checked")) {
-				alert(i + " " + $("#chk"+i).checked);
-				$("#chk-all").prop("checked", $("#chk"+i).checked);
+				$("#chk-all").prop("checked", $("#chk"+i).prop("checked"));
 				i=6;
+			} else if( i == 5 && $("#chk"+i).prop("checked") ) {
+				$("#chk-all").prop("checked", $("#chk"+i).prop("checked"));
 			}
 		}
 	});
 	
-	$("#join").click(function() {
+	$("#birth").keyup(function() {
+		birth = $(this).val();
+		if(birth > 8) {
+			this.value = this.value.slice(0, 8);
+		}
+	});
+	
+	$("#join").click(function() {		
+		
+		
+		var tel = 0;
+		
+		$(".tel").each(function(){
+			if($(this).val() == "")
+				tel++;
+		});
+		
+		if( tel != 0 ) {
+			$("#ptel").html("전화번호를 입력해주세요.");
+			$("#pbirth").html("");
+		} else if(birth == "") {
+			$("#ptel").html("");
+			$("#pbirth").html("생년월일을 입력해주세요.");
+// 		} else if () {
+// 			$("#ptel").html("");
+// 			$("#pbirth").html("생년월일을 8자리로 입력해 주세요.");
+// 		} else if() {
+// 			$("#ptel").html("");
+// 			$("#pbirth").html("만 14세 미만은 회원가입이 제한됩니다.");
+		}
 		
 	});
 	
@@ -60,13 +88,14 @@ $(function(){
 		<p>아래 정보를 추가 입력해야 회원가입이 완료됩니다.</p>
 		
 		<h3>휴대폰 번호<span>배달 시 정확한 주문정보가 필요합니다.</span></h3>
-		<input class="tel" type="text" value=""/><input class="tel" type="text" value="" /><input class="tel" type="text" value="" /><br>
-		
+		<input class="tel" min="0" max="999" type="number" value=""/><input class="tel" maxlength="4" type="number" value="" /><input class="tel" maxlength="4" type="number" value="" /><br>
+		<p id="ptel" class="p"></p>
 		
 		<h3>생년월일<span>회원가입은 만 14세 이상 고객만 가능합니다.</span></h3>
 		
-		<input class="year" type="text" value="" placeholder="예:19870321"/> <br/>
-
+		<input id="birth" class="year" type="date" /> <br/>
+		<p id="pbirth" class="p"></p>
+		
 <!-- 		<input  type="button" value="주의사항 안내 ▼"> -->
 		<div class="btn-caution">주의사항 안내<span>▼</span></div>
 
@@ -101,8 +130,8 @@ $(function(){
 		<div class="checkbox">
 		<input type="checkbox" id="chk-all"><label for="chk-all">아래 약관에 모두 동의합니다.</label><br/>
 		<hr/>
-		<input type="checkbox" id="chk1" class="chk" value="1"><label for="chk1">이용약관 동의 (필수)</label><br/>
-		<input type="checkbox" id="chk2" class="chk" value="2"><label for="chk2">전자금융거래 이용약관 동의 (필수)</label><br/>
+		<input type="checkbox" id="chk1" class="chk"><label for="chk1">이용약관 동의 (필수)</label><br/>
+		<input type="checkbox" id="chk2" class="chk"><label for="chk2">전자금융거래 이용약관 동의 (필수)</label><br/>
 		<input type="checkbox" id="chk3" class="chk"><label for="chk3">개인정보 수집이용 동의 (필수)</label><br/>
 		<input type="checkbox" id="chk4" class="chk"><label for="chk4">개인정보 제 3자 제공 동의 (선택)</label><br/>
 		<label class="label1">배달의민족 제휴사에 마케팅정보를 제공합니다.</label><br/>
@@ -112,13 +141,10 @@ $(function(){
 		
 		
 		<div>
-<<<<<<< HEAD
-			<a href="<%= projectName %>/baemin?cmd=main-page"><input type="reset" class="btn btn-cancel" value=취소></a>
-			<a href="#open"><input id="join" type="button" class="btn btn-finish" value=완료></a>
-=======
 			<a href="<%= projectName %>/baemin?cmd=main-page"><input type="submit" class="btn btn-cancel" value=취소></a>
-			<a href="" id="finish"><input type="button" class="btn btn-finish" value=완료></a>
->>>>>>> branch 'master' of https://github.com/kxz424/Baemin.git
+<!-- 			<a href="#open"> -->
+			<input id="join" type="button" class="btn btn-finish" value=완료>
+<!-- 			</a> -->
 		</div>
 		</form>
 	</div>
