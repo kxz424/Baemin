@@ -1,17 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
  	pageEncoding="UTF-8"%> 
+ 	
+<% String projectName = "/Baemin"; %>  	
+ 	
 <!DOCTYPE>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>우리반 연습</title>
 
-<link rel="stylesheet" href="../css/member/ReviewForm.css"/>
+<link rel="stylesheet" href="<%= projectName %>/css/member/ReviewForm.css"/>
 
 
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script type="text/javascript" src="ReviewForm.js"></script>
+<script type="text/javascript" src="<%= projectName %>/js/member/ReviewForm.js"></script>
 
 </head>
 <body>
@@ -29,7 +32,7 @@
 				<section class="view-review">
 					<div class="media small">
 						<a class="pull-left"><span class="inner-brd"><img
-								class="media-object" src="../배달의민족/ㄴ치킨.jpg" /></span></a>
+								class="media-object" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg" /></span></a>
 						<div class="media-body">
 							<div class="pull-center media-heading">
 								<strong class="nick"> <span>알려드립니다</span>
@@ -41,7 +44,7 @@
 					</div>
 					<div class="media small">
 						<a class="pull-left"><span class="inner-brd"><img
-								class="media-object" src="../배달의민족/ㄴ치킨.jpg" /></span></a>
+								class="media-object" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg" /></span></a>
 						<div class="media-body">
 							<div class="pull-center media-heading">
 								<strong class="nick"> <span>jongsang</span>

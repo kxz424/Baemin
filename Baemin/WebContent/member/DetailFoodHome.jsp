@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<% String projectName = "/Baemin"; %>    
+    
 <!DOCTYPE>
 <html>
 <head>
@@ -12,14 +15,14 @@
 <!-- 부가적인 테마 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<link rel="stylesheet" href="../css/member/DetailFoodHome.css"/>
+<link rel="stylesheet" href="<%= projectName %>/css/member/DetailFoodHome.css"/>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="DetailFoodHome.js"></script>
+<script type="text/javascript" src="<%= projectName %>/js/member/DetailFoodHome.js"></script>
 
 <script type="text/javascript">
 
@@ -32,7 +35,7 @@
 	<div class="container">
  		<section class="shop-info">
 			<ol class="breadcrumb">
-				<li><a href="Main.jsp">홈</a></li>
+				<li><a href="<%= projectName %>/baemin?cmd=main-page">홈</a></li>
 				<li>
 					<strong>
 						<span>치킨</span>
@@ -77,7 +80,7 @@
 							<div class="login hidden-xs hidden-sm">
 	<!-- 							<p class="notice small text-center">바로결제를 사용하시려면<br/>로그인을 해주세요.</p> -->
 								
-								<form id="cart" method="post" action="/Baemin/baemin?cmd=order-page" class="form-inline">
+								<form id="cart" method="post" action="<%= projectName %>/baemin?cmd=order-page" class="form-inline">
 								
 <!-- 									<div class="form-group"> -->
 <!-- 										<div class="cartMenu"> -->
