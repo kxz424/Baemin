@@ -112,8 +112,13 @@ $(function(){
 		
 		
 		<div>
+<<<<<<< HEAD
 			<a href="<%= projectName %>/baemin?cmd=main-page"><input type="reset" class="btn btn-cancel" value=취소></a>
 			<a href="#open"><input id="join" type="button" class="btn btn-finish" value=완료></a>
+=======
+			<a href="<%= projectName %>/baemin?cmd=main-page"><input type="submit" class="btn btn-cancel" value=취소></a>
+			<a href="" id="finish"><input type="button" class="btn btn-finish" value=완료></a>
+>>>>>>> branch 'master' of https://github.com/kxz424/Baemin.git
 		</div>
 		</form>
 	</div>

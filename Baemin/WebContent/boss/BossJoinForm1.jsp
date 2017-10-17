@@ -34,7 +34,7 @@
           		050서비스 이용약관, 개인정보 수집 및<br>
           		이용, 광고운영정책, 광고성 정보 수신에<br>
 	          	<label class="label-title1" ><strong>모두</strong> 동의합니다.</label>
-           		<input type="checkbox" id="" class="">
+           		<input type="checkbox" id="chk-all">
            		<hr/>
         		</div>
 
@@ -42,8 +42,8 @@
           			<li>
           				<div class="terms-check">
           					<label class="label-title" >배달의민족 사장님사이트 이용약관 (필수)</label>
-              				<label class="label-agree">동의</label>
-              				<input type="checkbox" id="" class="">
+              				<label class="label-agree" for="chk1">동의</label>
+              				<input type="checkbox" id="chk1">
             			</div>
             
            				<div class="terms-box">
@@ -61,8 +61,8 @@
          			<li>
          				<div class="terms-check">
               				<label class="label-title">050서비스 이용약관 (필수)</label>
-               				<label class="label-agree">동의</label>
-              				<input type="checkbox" id="" class="">
+               				<label class="label-agree" for="chk2">동의</label>
+              				<input type="checkbox" id="chk2" >
              			</div>
 						
 						<div class="terms-box">
@@ -83,8 +83,8 @@
           			<li>
             			<div class="terms-check">
               				<label class="label-title">개인정보 수집 및 이용 (필수)</label>
-               				<label class="label-agree">동의</label>
-							<input type="checkbox" id="" class="">
+               				<label class="label-agree" for="chk3">동의</label>
+							<input type="checkbox" id="chk3" >
             			</div>
             			
            		 		<div class="terms-box">
@@ -113,8 +113,8 @@
          			 <li>
             			<div class="terms-check">
               				<label class="label-title">광고운영정책 (필수)</label>
-               				<label class="label-agree">동의</label>
-							<input type="checkbox" id="" class="">
+               				<label class="label-agree" for="chk4">동의</label>
+							<input type="checkbox" id="chk4" >
             			</div>
             			
             			<div class="terms-box">
@@ -134,8 +134,8 @@
           			<li>
             			<div class="terms-check">	
 	              			<label class="label-title">광고성 정보 수신 (선택)</label>
-	               			<label class="label-agree">동의</label>
-							<input type="checkbox" id="" class="">
+	               			<label class="label-agree" for="chk5">동의</label>
+							<input type="checkbox" id="chk5" >
             			</div>
           			</li>
         		</ul>

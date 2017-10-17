@@ -29,5 +29,16 @@ public class CommentRepository {
 	public Integer insertComment(Member m) {
 		return null;
 	}
+
+	
+	
+	public Integer insertBossJoin(Member m) {
+		
+		
+		
+		return null;
+	}
+	
+	
 	
 }

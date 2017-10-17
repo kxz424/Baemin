@@ -93,4 +93,9 @@ alter table order_list
 add constraint fk_order_boss foreign key(o_boss)
 references food_home(f_boss);
 
-
+--리뷰 시퀀스
+create SEQUENCE seq_review;
+--주문 시퀀스
+create SEQUENCE seq_order;
+--메뉴 시퀀스
+create SEQUENCE seq_menu;

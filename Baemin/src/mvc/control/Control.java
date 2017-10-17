@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import mvc.command.Command;
+import mvc.command.CommandBossJoin;
 import mvc.command.CommandException;
 import mvc.command.CommandNull;
 
@@ -37,7 +38,7 @@ public class Control extends HttpServlet {
     	map.put("boss-main", new CommandNull("../boss/BossMain.jsp"));
     	map.put("boss-join1", new CommandNull("../boss/BossJoinForm2.jsp"));
     	map.put("boss-join2", new CommandNull("../boss/BossJoinForm3.jsp"));
-    	map.put("boss-join3", new CommandNull("../boss/BossMain.jsp"));
+    	map.put("boss-join3", new CommandBossJoin("../boss/BossMain.jsp"));
     	
     	map.put("boss-add-menu", new CommandNull("../boss/AddMenuForm.jsp"));
     	map.put("boss-edit", new CommandNull("../boss/EditForm.jsp"));
