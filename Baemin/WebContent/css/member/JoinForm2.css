@@ -55,9 +55,9 @@
 
 	.cau{
 		width: 440px;
-		height: 120px;
+		height: 145px;
 		background-color: #f5f5f5;
-		display: table;
+		display: none;	
 	}
 	
 	
@@ -172,9 +172,9 @@
 .white_content > div {
 	position: absolute;
 	top: 30%;
-	left: 38%;
-	width: 20%;
-	height: 20%;
+	left: 35%;
+	width: 25%;
+	height: 25%;
 	padding: 16px;
 	border: 16px solid orange;
 	background-color: white;
