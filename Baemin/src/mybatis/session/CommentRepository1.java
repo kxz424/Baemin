@@ -48,6 +48,19 @@ public class CommentRepository1 {
 		
 	}
 	
+	public void updateSoldOut(Menu m) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+//		int result = sess.update(namespace + ".updateSoldOut", m);
+//		
+//		
+//		if(result > 0) {
+//			sess.commit();
+//		}else {
+//			sess.rollback();
+//		}
+		
+	}
+	
 	public void insertJoin(Member m) {
 		
 	}
