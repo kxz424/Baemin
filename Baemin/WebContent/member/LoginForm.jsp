@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String projectName = "/Baemin"; %>
+<% String projectName = "/Baemin";
+	String result = (String)session.getAttribute("join");
+%>
 
 <!DOCTYPE>
 <html>
@@ -19,11 +21,11 @@
 		<img alt="" src="/Baemin/배달의민족/로고2.jpg" id="logo" />
 	</div>
 
-	<form id="joinTerms" action="<%= projectName %>/baemin?cmd=login">
+	<form id="joinTerms" action="<%= projectName %>/baemin?cmd=login-db">
 	
 		<div id="input-padding">
-			<input type="text" name="mId" placeholder="배민ID(이메일 또는 아이디)" class="input"/><br/> 
-			<input type="text" name="mPassword" placeholder="비밀번호 (4~20자)" class="input" /><br/> 
+			<input type="text" name="mId" id="userId" placeholder="배민ID(이메일 또는 아이디)" class="input"/><br/> 
+			<input type="text" name="mPassword" id="userPassword" placeholder="비밀번호 (4~20자)" class="input" /><br/> 
 		</div>
 		
 		<div id="login-padding">

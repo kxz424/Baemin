@@ -1,7 +1,10 @@
 package mybatis.service;
 
+import java.util.List;
+
 import model.Boss;
 import model.FoodHome;
+import model.Member;
 import mybatis.session.CommentRepository;
 import mybatis.session.CommentRepository2;
 
@@ -17,8 +20,8 @@ public class ServiceLogin {
 		return service;
 	} 
 	
-	public void insertBossJoin(Boss b) {
-		repo.insertBossJoin(b);
+	public void selectMember(String id, String password) {
+		repo.selectMember(id, password);
 
 	}
 	

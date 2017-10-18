@@ -2,11 +2,16 @@ package mybatis.session;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
+
+import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+import com.sun.org.apache.regexp.internal.recompile;
 
 import model.Boss;
 import model.FoodHome;
@@ -45,6 +50,20 @@ public class CommentRepository2 {
 				sess.rollback();
 			
 			return result;
+		} finally {
+			sess.close();
+		}
+	}
+	
+	public Member selectMember(String id, String password) {
+		
+		SqlSession sess = getSqlSessionFactory().openSession();
+		
+		try {
+			HashMap hash = new HashMap();
+			hash.put("mId", id);
+			hash.put("mPassword", password);
+			return sess.selectOne(namespace + ".selectUser", hash);
 		} finally {
 			sess.close();
 		}
