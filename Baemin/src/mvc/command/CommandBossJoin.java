@@ -26,6 +26,7 @@ public class CommandBossJoin implements Command{
 		
 		boss = (Boss)session.getAttribute("boss");
 		
+		
 		FoodHome foodHome = new FoodHome();
 		
 		foodHome.setfBoss(boss.getbNum());

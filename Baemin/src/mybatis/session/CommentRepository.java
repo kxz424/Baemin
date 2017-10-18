@@ -36,9 +36,14 @@ public class CommentRepository {
 	
 	
 	public void insertBossJoin(Boss b) {
-		
 		SqlSession sess = getSqlSessionFactory().openSession();
-		sess.insert(namespace + ".insertBossJoin", b);
+		int result = sess.insert(namespace + ".insertBossJoin", b);
+		
+		if(result > 0) {
+			sess.commit();
+		}else {
+			sess.rollback();
+		}
 		
 	}
 
