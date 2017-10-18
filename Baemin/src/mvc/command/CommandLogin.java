@@ -26,9 +26,6 @@ public class CommandLogin implements Command {
 		String id = request.getParameter("mId");
 		String password = request.getParameter("mPassword");
 		
-		System.out.println("id " + id);
-		System.out.println("password " + password);
-		
 		Member m = ServiceLogin.getInstance().selectMember(id, password);
 		
 		if(m == null) {
