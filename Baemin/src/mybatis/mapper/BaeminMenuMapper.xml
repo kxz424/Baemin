@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.BaeminMenuMapper">
+
+	
+	
+	
+	
+	<!-- 메뉴 테이블 -->
+	<insert id="insertAddMenu" parameterType="menu">
+		insert into menu(menu_num, menu_name, menu_price, menu_boss, menu_img)
+		values(seq_menu.nextval, #{menuName}, #{menuPrice}, #{menuBoss}, #{menuImg})
+	</insert>
+	
+	<!-- 업소 테이블 -->
+<!-- 	<insert id="insertFoodHome" parameterType="foodHome"> -->
+<!-- 		insert into food_home (f_boss, f_name, f_location, f_open, f_close, f_tel, f_category) -->
+<!-- 		values ( #{fBoss}, #{fName}, #{fLocation}, #{fOpen}, #{fClose}, #{fTel}, #{fCategory}) -->
+<!-- 	</insert> -->
+	
+	
+
+</mapper>

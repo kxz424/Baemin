@@ -55,7 +55,7 @@
 										<div class="caption">
 											<div class="small">
 												<span class="text-ellipsis">쌀통닭</span> <strong
-													class="text-ellipsis pull-right">15,900원</strong>
+													class="text-ellipsis pull-right">15900원</strong>
 											</div>
 										</div>
 									</div>
@@ -66,7 +66,7 @@
 										<div class="caption">
 											<div class="small">
 												<span class="text-ellipsis">쌀통닭순살</span> <strong
-													class="text-ellipsis pull-right">16,900원</strong>
+													class="text-ellipsis pull-right">16900원</strong>
 											</div>
 										</div>
 									</div>
@@ -77,7 +77,7 @@
 										<div class="caption">
 											<div class="small">
 												<span class="text-ellipsis">불닭발</span> <strong
-													class="text-ellipsis pull-right">16,900원</strong>
+													class="text-ellipsis pull-right">16900원</strong>
 											</div>
 										</div>
 									</div>
@@ -88,7 +88,7 @@
 										<div class="caption">
 											<div class="small">
 												<span class="text-ellipsis">양파뿌린닭</span> <strong
-													class="text-ellipsis pull-right">19,900원</strong>
+													class="text-ellipsis pull-right">19900원</strong>
 											</div>
 										</div>
 									</div>
@@ -99,7 +99,7 @@
 										<div class="caption">
 											<div class="small">
 												<span class="text-ellipsis">똥집세트</span> <strong
-													class="text-ellipsis pull-right">22,900원</strong>
+													class="text-ellipsis pull-right">22900원</strong>
 											</div>
 										</div>
 									</div>
@@ -110,7 +110,7 @@
 										<div class="caption">
 											<div class="small">
 												<span class="text-ellipsis">옛날통닭두마리</span> <strong
-													class="text-ellipsis pull-right">19,900원</strong>
+													class="text-ellipsis pull-right">19900원</strong>
 											</div>
 										</div>
 									</div>

@@ -101,7 +101,7 @@
 									<div>
 										<div class="form-group">
 											<label><h4>주문합계금액</h4></label>
-											<label name="oMoney" class="text-right">19,900원</label>
+											<label name="oMoney" class="text-right">19900원</label>
 										</div>
 									</div>
 								

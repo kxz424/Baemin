@@ -53,20 +53,20 @@
 						</dd>
 					</dl>
 				</div>
-				<form>
+				<form action="<%= projectName %>/baemin?cmd=boss-add-menu-db" enctype="multipart/form-data" method="post">
 					<div class="form-group">
 						<div class="row">
 							<div class="col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
 									<label class="input-group-addon">메뉴명</label> <input type="text"
-										id="menuName" class="form-control" placeholder="메뉴명을 입력하세요." />
+										id="menuName" name="menuName" class="form-control" placeholder="메뉴명을 입력하세요." />
 								</div>
 							</div>
 
 							<div class="col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
 									<label class="input-group-addon">가격</label> <input type="text"
-										id="menuPrice" class="form-control" placeholder="가격을 입력하세요." />
+										id="menuPrice" name="menuPrice" class="form-control" placeholder="가격을 입력하세요." />
 								</div>
 							</div>
 						</div>
@@ -74,7 +74,7 @@
 
 					<div class="form-group">
 						<label for="exampleInputFile">파일 업로드</label> <input type="file"
-							id="exampleInputFile">
+							id="exampleInputFile" name="menuImg">
 						<p class="help-block">여기에 블록레벨 도움말 예제</p>
 					</div>
 
@@ -82,6 +82,7 @@
 						<input type="button" id="modify" class="btn btn-primary" value="수정"> <input
 							type="button" id="insert" class="btn btn-success" value="등록">
 					</div>
+					<input type="hidden" name="menuBoss" value="123-45-67890"/>
 				</form>
 
 				<table class="table table-hover">

@@ -9,6 +9,7 @@ public class FoodHome {
 	String fTel;		// 전화번호
 	String fIng;		// 운영중
 	String fCategory;	// 카테고리
+	String fImg;		// 이미지 경로
 	
 	public String getfBoss() {
 		return fBoss;
@@ -57,6 +58,12 @@ public class FoodHome {
 	}
 	public void setfCategory(String fCategory) {
 		this.fCategory = fCategory;
+	}
+	public String getfImg() {
+		return fImg;
+	}
+	public void setfImg(String fImg) {
+		this.fImg = fImg;
 	}
 	
 }

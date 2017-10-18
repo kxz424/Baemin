@@ -19,8 +19,13 @@ $(function(){
 				for(var i = 0; i < mn.length; i++){
 					if(mn.eq(i).text() == $(this).find('.small span').text()){
 //						alert("중복");
-//						mn.next().eq(i).val(parseInt(mn.next().eq(i).val()) + 1);
+						mn.next().eq(i).attr('value', parseInt(mn.next().eq(i).val()) + 1);
 						flag = true;
+//						var mnPrice = mn.next().next().next().next();
+//						var oMoney = $('label[name="oMoney"]');
+//						alert(mnPrice.text().substr(0, mnPrice.val()-1));
+//						oMoney.text(parseInt(oMoney.text()) + parseInt(mnPrice.val().substr(0, mnPrice.val()-1)));
+						
 					}
 				}
 				
@@ -30,19 +35,18 @@ $(function(){
 					var menuName = $('<label name="menuName">' + $(this).find('.small span').text() + '</label>');
 					var menuCnt	= $('<input type="text" name="menuCnt" class="cnt" value="1"></input>');
 					var menuMinus = $('<input type="button" class="minus" value="-" />');
-					var menuPlus = $('<input type="button" class="plus" value="+" /><br/>');
+					var menuPlus = $('<input type="button" class="plus" value="+"/><br/>');
 					var menuPrice = $('<label name="menuPrice">' + $(this).find('.small strong').text() + '</label>');
-					
-					var menuBtn = $('<input type="button" class="mBtn" value="X" />');
 					
 					cartMenu.append(menuName);
 					cartMenu.append(menuCnt);
 					cartMenu.append(menuMinus);
 					cartMenu.append(menuPlus);
 					cartMenu.append(menuPrice);
-					cartMenu.append(menuBtn);
 					group.append(cartMenu);
 					$('#cart').prepend(group);
+					
+//					flag = true;
 					
 				}
 			}else{
@@ -53,38 +57,16 @@ $(function(){
 				var menuMinus = $('<input type="button" class="minus" value="-" />');
 				var menuPlus = $('<input type="button" class="plus" value="+" /><br/>');
 				var menuPrice = $('<label name="menuPrice">' + $(this).find('.small strong').text() + '</label>');
-				var menuBtn = $('<input type="button" class="mBtn" value="X" />');
 				
 				cartMenu.append(menuName);
 				cartMenu.append(menuCnt);
 				cartMenu.append(menuMinus);
 				cartMenu.append(menuPlus);
 				cartMenu.append(menuPrice);
-				cartMenu.append(menuBtn);
 				group.append(cartMenu);
 				$('#cart').prepend(group);
 				
-				
-				
 			}			
-			
-			$('.mBtn').each(function(){
-				$(this).click(function(){
-					$(this).parent().parent().remove();
-				});
-			});
-			
-			$('.minus').each(function(){
-				$(this).click(function(){
-					$(this).prev().val($(this).prev().val() - 1);
-				});
-			});
-			
-			$('.plus').each(function(){
-				$(this).click(function(){
-					$(this).prev().prev().val(parseInt($(this).prev().prev().val()) + 1);
-				});
-			});
 			
 			
 		});
@@ -93,7 +75,23 @@ $(function(){
 	});
 	
 	
-	
-	
-	
 });
+
+//동적 이벤트처리
+$(document).on('click','.plus',function(){
+	var cnt = parseInt($(this).prev().prev().val()) + 1;
+//	alert( cnt );	
+	$(this).prev().prev().attr('value', cnt);
+});
+
+$(document).on('click','.minus',function(){
+	var cnt = parseInt($(this).prev().val()) - 1;
+//	alert( cnt );
+	if(cnt < 1){
+		$(this).parent().parent().remove();
+	}else{
+		$(this).prev().attr('value', cnt);
+	}
+});
+
+

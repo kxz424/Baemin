@@ -2,18 +2,18 @@ package mybatis.session;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.ResultSet;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import model.Boss;
-import model.FoodHome;
 import model.Member;
+import model.Menu;
 // 종상오빠
 public class CommentRepository1 {
-	private String namespace = "mapper.BaeminMapper";
+	private String namespace = "mapper.BaeminMenuMapper";
 	
 	SqlSessionFactory getSqlSessionFactory() {
 		InputStream in = null;
@@ -35,9 +35,10 @@ public class CommentRepository1 {
 
 	
 	
-	public void insertBossJoin(Boss b) {
+	public void insertAddMenu(Menu m) {
 		SqlSession sess = getSqlSessionFactory().openSession();
-		int result = sess.insert(namespace + ".insertBossJoin", b);
+		int result = sess.insert(namespace + ".insertAddMenu", m);
+		
 		
 		if(result > 0) {
 			sess.commit();

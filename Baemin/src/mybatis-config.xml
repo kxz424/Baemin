@@ -34,5 +34,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- 여러개의 mapper 설정 -->
 	<mappers>
 		<mapper resource="mybatis/mapper/BaeminMapper.xml" />
+		<mapper resource="mybatis/mapper/BaeminMenuMapper.xml" />
 	</mappers>
 </configuration>
