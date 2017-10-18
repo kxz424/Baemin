@@ -32,9 +32,10 @@
 </head>
 <body>
 	<p id="quickmenu">
-		<a href="<%=projectName%>/baemin?cmd=login-page">로그인</a> ㅣ <a
-			href="<%=projectName%>/baemin?cmd=join-first">회원가입</a> ㅣ <a
-			href="<%=projectName%>/baemin?cmd=boss-main">사장님</a>
+
+		<a href="<%=projectName%>/baemin?cmd=login-page">로그인</a> ㅣ
+		<a href="<%=projectName%>/baemin?cmd=join-first">회원가입</a> ㅣ 
+		<a href="<%=projectName%>/baemin?cmd=boss-main">사장님</a>
 	</p>
 
 	<div class="center">

@@ -25,12 +25,12 @@
 <div class="cen">
 	<div class="center">
 		<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=join-finish">
-		<img id="step1" src="<%= projectName %>/배달의민족/가입2.png">
+		<img id="step2" src="<%= projectName %>/배달의민족/가입2.png">
 
 		<p>아래 정보를 추가 입력해야 회원가입이 완료됩니다.</p>
 		
 		<h3>휴대폰 번호<span>배달 시 정확한 주문정보가 필요합니다.</span></h3>
-		<input class="tel" min="0" max="999" type="number" value=""/><input class="tel" maxlength="4" type="number" value="" /><input class="tel" maxlength="4" type="number" value="" /><br>
+		<input class="tel" name="tel1" min="0" max="999" type="number" value=""/><input class="tel" maxlength="4" name="tel2" type="number" value="" /><input class="tel" name="tel3" maxlength="4" type="number" value="" /><br>
 		<p id="ptel" class="p"></p>
 		
 		<h3>생년월일<span>회원가입은 만 14세 이상 고객만 가능합니다.</span></h3>
@@ -54,15 +54,15 @@
 		
 		<ul class="gen">
 			<li>
-				<input class="gender" type="radio" name="mGender" id="man">
+				<input class="gender" value="남성" type="radio" name="mGender" id="man">
 				<label for="man">남성</label>
 			</li>
 			<li>
-				<input class="gender" type="radio" name="mGender" id="woman">
+				<input class="gender" value="여성" type="radio" name="mGender" id="woman">
 				<label for="woman">여성</label>
 			</li>
 			<li>
-				<input class="gender" type="radio" name="mGender" id="none" checked="checked">
+				<input class="gender" value="안함" type="radio" name="mGender" id="none" checked="checked">
 				<label for="none">선택 안 함</label>
 			</li>
 		</ul>
@@ -84,9 +84,9 @@
 		
 		<div>
 			<a href="<%= projectName %>/baemin?cmd=main-page"><input type="submit" class="btn btn-cancel" value="취소"></a>
-<!-- 			<a href="#open"> -->
+			<a href="#open">
 			<input id="join" type="button" class="btn btn-finish" value="완료">
-<!-- 			</a> -->
+			</a>
 		</div>
 		</form>
 	</div>
@@ -96,7 +96,7 @@
 	<div class="white_content" id="open">
 		<div>
 			<p>가입이 완료되었습니다.</p>
-			<a href="#close"><input type="button" class="close" value="닫기" /></a>
+			<a href="#close"><input id="finish" type="button" class="close" value="닫기" /></a>
 		</div>
 	</div>
 

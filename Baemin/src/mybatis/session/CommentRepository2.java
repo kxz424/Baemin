@@ -2,11 +2,16 @@ package mybatis.session;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
+
+import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+import com.sun.org.apache.regexp.internal.recompile;
 
 import model.Boss;
 import model.FoodHome;
@@ -32,32 +37,37 @@ public class CommentRepository2 {
 	public Integer insertComment(Member m) {
 		return null;
 	}
-
 	
-	
-	public void insertBossJoin(Boss b) {
+	public int insertJoin(Member m) {
 		SqlSession sess = getSqlSessionFactory().openSession();
-		int result = sess.insert(namespace + ".insertBossJoin", b);
 		
-		if(result > 0) {
-			sess.commit();
-		}else {
-			sess.rollback();
+		try {
+			int result = sess.insert( namespace + ".insertJoin", m);
+		
+			if( result > 0 )
+				sess.commit();
+			else
+				sess.rollback();
+			
+			return result;
+		} finally {
+			sess.close();
 		}
-		
 	}
 	
-	public void insertJoin(Member m) {
+	public Member selectMember(String id, String password) {
 		
+		SqlSession sess = getSqlSessionFactory().openSession();
+		
+		try {
+			HashMap hash = new HashMap();
+			hash.put("mId", id);
+			hash.put("mPassword", password);
+			return sess.selectOne(namespace + ".selectUser", hash);
+		} finally {
+			sess.close();
+		}
 	}
 
-//	public void insertFoodHome(FoodHome h) {
-//		
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		sess.insert(namespace + ".insertFoodHome", h);
-//		
-//	}
-	
-	
 	
 }

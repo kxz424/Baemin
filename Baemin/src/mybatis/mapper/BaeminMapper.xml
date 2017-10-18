@@ -5,21 +5,35 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="mapper.BaeminMapper">
 
 	
-	
-	
+	<!-- 회원 테이블 삽입 -->
+	<insert id="insertJoin" parameterType="Member">
+		INSERT INTO member(m_id, m_password, m_tel, m_birth, m_gender)
+		VALUES(#{mId}, #{mPassword}, #{mTel}, #{mBirth}, #{mGender})
+	</insert>
 	
 	<!-- 사장님 테이블 -->
 	<insert id="insertBossJoin" parameterType="boss">
-		insert into boss(b_num, b_id, b_password, b_name, b_mail, b_birth, b_tel)
-		values(#{bNum}, #{bId}, #{bPassword}, #{bName}, #{bMail}, #{bBirth}, #{bTel})
+		INSERT INTO boss(b_num, b_id, b_password, b_name, b_mail, b_birth, b_tel)
+		VALUES(#{bNum}, #{bId}, #{bPassword}, #{bName}, #{bMail}, #{bBirth}, #{bTel})
 	</insert>
 	
 	<!-- 업소 테이블 -->
-<!-- 	<insert id="insertFoodHome" parameterType="foodHome"> -->
-<!-- 		insert into food_home (f_boss, f_name, f_location, f_open, f_close, f_tel, f_category) -->
-<!-- 		values ( #{fBoss}, #{fName}, #{fLocation}, #{fOpen}, #{fClose}, #{fTel}, #{fCategory}) -->
-<!-- 	</insert> -->
+	<insert id="insertFoodHome" parameterType="foodHome">
+		insert into food_home (f_boss, f_name, f_location, f_open, f_close, f_tel, f_category)
+		values ( #{fBoss}, #{fName}, #{fLocation}, #{fOpen}, #{fClose}, #{fTel}, #{fCategory})
+	</insert>
 	
+	<!-- user인지 아닌지 확인 -->
+	<select id="selectUser" parameterType="hashmap" resultType="Member">
+		SELECT *
+		FROM member
+		<where>
+			m_id = #{mId}
+			<if test="mPassword != null">
+				AND m_password = #{mPassword} 
+			</if>
+		</where>
+	</select>
 	
 
 </mapper>

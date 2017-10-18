@@ -110,11 +110,12 @@ $(function(){
 // 		} else if() {
 // 			$("#ptel").html("");
 // 			$("#pbirth").html("만 14세 미만은 회원가입이 제한됩니다.");
-		} else {
-			$("form").submit();
 		}
 		
 	});
 	
+	$("#finish").click(function() {
+		$("form").submit();
+	});
 
 });
