@@ -20,7 +20,7 @@ public class ServiceJoin {
 		
 		repo.insertBossJoin(b); 
 //		repo.insertFoodHome(h);
-
+ 
 	}
 	
 
