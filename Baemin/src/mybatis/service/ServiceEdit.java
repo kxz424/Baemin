@@ -18,7 +18,7 @@ public class ServiceEdit {
 	
 	public void insertBossJoin(Boss b) {
 		
-		repo.insertBossJoin(b); 
+		repo.insertBossJoin(b);  
 //		repo.insertFoodHome(h); 
 
 	}

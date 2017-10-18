@@ -17,7 +17,7 @@ public class ServiceSoldOut {
 	} 
 	
 	public void insertBossJoin(Boss b) {
-		
+		 
 		repo.insertBossJoin(b);  
 //		repo.insertFoodHome(h);
 

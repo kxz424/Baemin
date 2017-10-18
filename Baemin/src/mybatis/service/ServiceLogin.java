@@ -19,7 +19,7 @@ public class ServiceLogin {
 	public void insertBossJoin(Boss b) {
 		
 		repo.insertBossJoin(b); 
-//		repo.insertFoodHome(h); 
+//		repo.insertFoodHome(h);  
 
 	}
 	
