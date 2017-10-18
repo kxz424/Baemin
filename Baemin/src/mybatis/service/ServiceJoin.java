@@ -18,8 +18,8 @@ public class ServiceJoin {
 		return service;
 	} 
 	
-	public void insertJoin(Member m) {
-		repo.insertJoin(m);
+	public int insertJoin(Member m) {
+		return repo.insertJoin(m);
 		
 	}
 	

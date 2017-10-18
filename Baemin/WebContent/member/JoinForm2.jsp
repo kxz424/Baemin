@@ -62,7 +62,7 @@
 				<label for="woman">여성</label>
 			</li>
 			<li>
-				<input class="gender" value="선택안함" type="radio" name="mGender" id="none" checked="checked">
+				<input class="gender" value="안함" type="radio" name="mGender" id="none" checked="checked">
 				<label for="none">선택 안 함</label>
 			</li>
 		</ul>
@@ -96,7 +96,7 @@
 	<div class="white_content" id="open">
 		<div>
 			<p>가입이 완료되었습니다.</p>
-			<a href="#close"><input type="button" class="close" value="닫기" /></a>
+			<a href="#close"><input id="finish" type="button" class="close" value="닫기" /></a>
 		</div>
 	</div>
 

@@ -25,6 +25,7 @@
 		<p id="title"> 배달의민족 가입하기</p><p id="question"> <a href="<%= projectName %>/baemin?cmd=login-page" >이미 배민 ID가 있으세요?</a> </p> <br/>
 		<form method="post" action="<%= projectName %>/baemin?cmd=join-second">
 			<input class="in" name="mId" id="userid" type="text" placeholder="배민ID(이메일)" /> 
+			<input class="in" id="isId" type="button" value="ID 중복확인" />
 			<p id="pid" class="p"></p><br/>
 			<input class="in" name="mPassword" id="userpassword" type="password" placeholder="비밀번호 (8~20자)" /> <br/>
 			<input class="in" id="userconfirm"type="password" placeholder="비밀번호 재입력 (8~20지)" />

@@ -28,7 +28,8 @@ public class CommandJoin implements Command {
 		m.setmBirth(request.getParameter("mBirth"));
 		m.setmGender(request.getParameter("mGender"));
 		
-		ServiceJoin.getInstance().insertJoin(m);
+		int result = ServiceJoin.getInstance().insertJoin(m);
+		request.setAttribute("join", result);
 		
 		return next;
 	}
