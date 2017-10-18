@@ -21,8 +21,8 @@
 		<img alt="" src="/Baemin/배달의민족/로고2.jpg" id="logo" />
 	</div>
 
-	<form id="joinTerms" action="<%= projectName %>/baemin?cmd=login-db">
-	
+	<form id="joinTerms" action="<%= projectName %>/baemin">
+		<input type='hidden' name='cmd' value='login-db'/>
 		<div id="input-padding">
 			<input type="text" name="mId" id="userId" placeholder="배민ID(이메일 또는 아이디)" class="input"/><br/> 
 			<input type="password" name="mPassword" id="userPassword" placeholder="비밀번호 (4~20자)" class="input" /><br/> 
