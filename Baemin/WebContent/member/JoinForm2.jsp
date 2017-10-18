@@ -8,6 +8,9 @@
 	<jsp:setProperty name="member" property="*"></jsp:setProperty>
 </jsp:useBean>
 
+<% 
+	session.setAttribute("member", member);
+%>
 <!DOCTYPE>
 <html>
 <head>
@@ -15,76 +18,7 @@
 <title> 일반 회원가입2 </title>
 <link rel="stylesheet" type="text/css" href="<%= projectName %>/css/member/JoinForm2.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<%-- <script type="text/javascript" src="<%= projectName %>/js/member/JoinForm2.js"></script> --%>
-<script type="text/javascript">
-$(function(){
-	var toggle = true;
-	var birth;
-	
-	$(".btn-caution").click(function() {
-		$(".cau").slideToggle();
-		if(toggle) {
-			$(".btn-caution>span").html("▲");
-			toggle=false;
-		} else {
-			$(".btn-caution>span").html("▼");
-			toggle=true;
-		}
-	});
-	
-	$("#chk-all").click(function() {
-		$(".chk").prop("checked", this.checked);
-	});
-	
-	$(".chk").click(function() {
-		for(var i = 1 ; i < 6 ; i++) {
-			if(!$("#chk"+i).prop("checked")) {
-				$("#chk-all").prop("checked", $("#chk"+i).prop("checked"));
-				i=6;
-			} else if( i == 5 && $("#chk"+i).prop("checked") ) {
-				$("#chk-all").prop("checked", $("#chk"+i).prop("checked"));
-			}
-		}
-	});
-	
-	$("#birth").keyup(function() {
-		birth = $(this).val();
-		if(birth > 8) {
-			this.value = this.value.slice(0, 8);
-		}
-	});
-	
-	$("#join").click(function() {		
-		
-		
-		var tel = 0;
-		
-		$(".tel").each(function(){
-			if($(this).val() == "")
-				tel++;
-		});
-		
-		if( tel != 0 ) {
-			$("#ptel").html("전화번호를 입력해주세요.");
-			$("#pbirth").html("");
-		} else if(birth == "") {
-			$("#ptel").html("");
-			$("#pbirth").html("생년월일을 입력해주세요.");1
-// 		} else if () {
-// 			$("#ptel").html("");
-// 			$("#pbirth").html("생년월일을 8자리로 입력해 주세요.");
-// 		} else if() {
-// 			$("#ptel").html("");
-// 			$("#pbirth").html("만 14세 미만은 회원가입이 제한됩니다.");
-		} else {
-			$("form").submit();
-		}
-		
-	});
-	
-
-});
-</script>
+<script type="text/javascript" src="<%= projectName %>/js/member/JoinForm2.js"></script>
 </head>
 <body>
 
@@ -101,7 +35,7 @@ $(function(){
 		
 		<h3>생년월일<span>회원가입은 만 14세 이상 고객만 가능합니다.</span></h3>
 		
-		<input id="birth" class="year" type="text" placeholder="예:951005" /> <br/>
+		<input id="birth" name="mBirth" class="year" type="text" placeholder="예:951005" /> <br/>
 		<p id="pbirth" class="p"></p>
 		
 <!-- 		<input  type="button" value="주의사항 안내 ▼"> -->
@@ -120,15 +54,15 @@ $(function(){
 		
 		<ul class="gen">
 			<li>
-				<input class="gender" type="radio" name="chk_info" id="man">
+				<input class="gender" type="radio" name="mGender" id="man">
 				<label for="man">남성</label>
 			</li>
 			<li>
-				<input class="gender" type="radio" name="chk_info" id="woman">
+				<input class="gender" type="radio" name="mGender" id="woman">
 				<label for="woman">여성</label>
 			</li>
 			<li>
-				<input class="gender" type="radio" name="chk_info" id="none" checked="checked">
+				<input class="gender" type="radio" name="mGender" id="none" checked="checked">
 				<label for="none">선택 안 함</label>
 			</li>
 		</ul>

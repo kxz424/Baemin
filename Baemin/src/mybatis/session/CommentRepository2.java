@@ -12,7 +12,7 @@ import model.Boss;
 import model.FoodHome;
 import model.Member;
 
-public class CommentRepository {
+public class CommentRepository2 {
 	private String namespace = "mapper.BaeminMapper";
 	
 	SqlSessionFactory getSqlSessionFactory() {

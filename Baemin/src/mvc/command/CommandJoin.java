@@ -15,7 +15,7 @@ public class CommandJoin implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 		
-		Member m = new Member();
+		
 		
 		
 		return next;
