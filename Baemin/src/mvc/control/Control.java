@@ -19,6 +19,7 @@ import mvc.command.CommandFoodHome;
 import mvc.command.CommandIng;
 import mvc.command.CommandJoin;
 import mvc.command.CommandLogin;
+import mvc.command.CommandLogout;
 import mvc.command.CommandMenuList;
 import mvc.command.CommandNull;
 import mvc.command.CommandOrder;
@@ -48,6 +49,7 @@ public class Control extends HttpServlet {
         map.put("join-first", new CommandNull("JoinForm1.jsp"));
         map.put("join-second", new CommandNull("JoinForm2.jsp")); 
         map.put("join-finish", new CommandJoin("LoginForm.jsp"));
+        map.put("logout-page", new CommandLogout("Main.jsp"));
         map.put("cate-search", new CommandFoodHome("FoodHomeForm.jsp"));
         map.put("order-page", new CommandNull("OrderForm.jsp"));
         map.put("order-db", new CommandOrder("Main.jsp"));
