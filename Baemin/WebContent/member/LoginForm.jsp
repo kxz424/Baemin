@@ -1,7 +1,13 @@
+<%@page import="model.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% String projectName = "/Baemin";
-	String result = (String)session.getAttribute("join");
+	Member member = (Member)request.getAttribute("user");
+	Object login = request.getAttribute("login");
+	
+	if(login == null) {
+		login = "false";
+	}
 %>
 
 <!DOCTYPE>
@@ -26,6 +32,7 @@
 		<div id="input-padding">
 			<input type="text" name="mId" id="userId" placeholder="배민ID(이메일 또는 아이디)" class="input"/><br/> 
 			<input type="password" name="mPassword" id="userPassword" placeholder="비밀번호 (4~20자)" class="input" /><br/> 
+			<p><% if(login.equals("true") && member == null) { %> 계정 정보가 일치하지 않습니다. 다시 입력해주세요. <% } %></p>
 		</div>
 		
 		<div id="login-padding">

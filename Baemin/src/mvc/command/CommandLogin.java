@@ -32,15 +32,14 @@ public class CommandLogin implements Command {
 		Member m = ServiceLogin.getInstance().selectMember(id, password);
 		
 		if(m == null) {
-			System.out.println("값없음");
-		} else {
-			request.setAttribute("user", m);
-			System.out.println(m.getmBirth());
-			System.out.println(m.getmGender());
-			System.out.println(m.getmId());
-			System.out.println(m.getmPassword());
-			System.out.println(m.getmTel());
+			request.setAttribute("user", null);
+			request.setAttribute("login", "true");
+			
+			return "LoginForm.jsp";
+			
 		}
+		
+		request.setAttribute("user", m);
 		
 		return next;
 		
