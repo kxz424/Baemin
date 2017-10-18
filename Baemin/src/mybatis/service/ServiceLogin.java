@@ -25,5 +25,9 @@ public class ServiceLogin {
 
 	}
 	
+	public Boss selectBoss(String id, String password) {
+		return repo.selectBoss(id, password);
+	}
+	
 
 }

@@ -68,6 +68,21 @@ public class CommentRepository2 {
 			sess.close();
 		}
 	}
+	
+	public Boss selectBoss(String id, String password) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		
+		try {
+			HashMap hash = new HashMap();
+			hash.put("bId", id);
+			hash.put("bPassword", password);
+			
+			return sess.selectOne(namespace + ".selectBoss", hash);
+			
+		} finally {
+			sess.close();
+		}
+	}
 
 	
 }
