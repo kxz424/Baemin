@@ -2,12 +2,14 @@ package mybatis.service;
 
 import model.Boss;
 import model.FoodHome;
+import model.Member;
 import mybatis.session.CommentRepository;
+import mybatis.session.CommentRepository2;
 
 public class ServiceJoin {
 	
 	private static ServiceJoin service;
-	CommentRepository repo = new CommentRepository();
+	CommentRepository2 repo = new CommentRepository2();
 	
 	private ServiceJoin() { }
 	
@@ -16,11 +18,9 @@ public class ServiceJoin {
 		return service;
 	} 
 	
-	public void insertBossJoin(Boss b) {
+	public void insertJoin(Member m) {
+		repo.insertJoin(m);
 		
-		repo.insertBossJoin(b); 
-//		repo.insertFoodHome(h);
-  
 	}
 	
 

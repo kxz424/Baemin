@@ -32,32 +32,23 @@ public class CommentRepository2 {
 	public Integer insertComment(Member m) {
 		return null;
 	}
-
 	
-	
-	public void insertBossJoin(Boss b) {
+	public int insertJoin(Member m) {
 		SqlSession sess = getSqlSessionFactory().openSession();
-		int result = sess.insert(namespace + ".insertBossJoin", b);
 		
-		if(result > 0) {
-			sess.commit();
-		}else {
-			sess.rollback();
+		try {
+			int result = sess.insert( namespace + ".insertJoin", m);
+		
+			if( result > 0 )
+				sess.commit();
+			else
+				sess.rollback();
+			
+			return result;
+		} finally {
+			sess.close();
 		}
-		
-	}
-	
-	public void insertJoin(Member m) {
-		
 	}
 
-//	public void insertFoodHome(FoodHome h) {
-//		
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		sess.insert(namespace + ".insertFoodHome", h);
-//		
-//	}
-	
-	
 	
 }
