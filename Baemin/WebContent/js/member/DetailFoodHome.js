@@ -28,37 +28,36 @@ $(function(){
 					var group = $('<div class="form-group"></div>');
 					var cartMenu = $('<div class="cartMenu"></div>');
 					var menuName = $('<label name="menuName">' + $(this).find('.small span').text() + '</label>');
+					var menuCnt	= $('<input type="text" name="menuCnt" class="cnt" value="1"></input>');
 					var menuMinus = $('<input type="button" class="minus" value="-" />');
-					var menuCnt	= $('<input type="text" name="menuCnt" value="1"></input>');
-					var menuPlus = $('<input type="button" class="plus" value="+" />');
+					var menuPlus = $('<input type="button" class="plus" value="+" /><br/>');
 					var menuPrice = $('<label name="menuPrice">' + $(this).find('.small strong').text() + '</label>');
 					
 					var menuBtn = $('<input type="button" class="mBtn" value="X" />');
 					
 					cartMenu.append(menuName);
-					cartMenu.append(menuMinus);
 					cartMenu.append(menuCnt);
+					cartMenu.append(menuMinus);
 					cartMenu.append(menuPlus);
 					cartMenu.append(menuPrice);
 					cartMenu.append(menuBtn);
 					group.append(cartMenu);
 					$('#cart').prepend(group);
 					
-					menuCnt.val('1');
 				}
 			}else{
 				var group = $('<div class="form-group"></div>');
 				var cartMenu = $('<div class="cartMenu"></div>');
 				var menuName = $('<label name="menuName">' + $(this).find('.small span').text() + '</label>');
+				var menuCnt	= $('<input type="text" name="menuCnt" class="cnt" value="1"></input>');
 				var menuMinus = $('<input type="button" class="minus" value="-" />');
-				var menuCnt	= $('<input type="text" name="menuCnt" value="1"></input>');
-				var menuPlus = $('<input type="button" class="plus" value="+" />');
+				var menuPlus = $('<input type="button" class="plus" value="+" /><br/>');
 				var menuPrice = $('<label name="menuPrice">' + $(this).find('.small strong').text() + '</label>');
 				var menuBtn = $('<input type="button" class="mBtn" value="X" />');
 				
 				cartMenu.append(menuName);
-				cartMenu.append(menuMinus);
 				cartMenu.append(menuCnt);
+				cartMenu.append(menuMinus);
 				cartMenu.append(menuPlus);
 				cartMenu.append(menuPrice);
 				cartMenu.append(menuBtn);
@@ -77,13 +76,13 @@ $(function(){
 			
 			$('.minus').each(function(){
 				$(this).click(function(){
-					$(this).next().val($(this).next().val() - 1);
+					$(this).prev().val($(this).prev().val() - 1);
 				});
 			});
 			
 			$('.plus').each(function(){
 				$(this).click(function(){
-					$(this).prev().val(parseInt($(this).prev().val()) + 1);
+					$(this).prev().prev().val(parseInt($(this).prev().prev().val()) + 1);
 				});
 			});
 			
