@@ -8,7 +8,7 @@ public class ServiceAddMenu {
 	private static ServiceAddMenu service;
 	CommentRepository1 repo = new CommentRepository1();
 	
-	private ServiceAddMenu() { }
+	private ServiceAddMenu() { } 
 	
 	public static ServiceAddMenu getInstance() {
 		if(service == null) service = new ServiceAddMenu();

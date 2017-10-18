@@ -32,7 +32,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	</environments>
 	
 	<!-- 여러개의 mapper 설정 -->
-	<mappers>
+	<mappers> 
 		<mapper resource="mybatis/mapper/BaeminMapper.xml" />
 		<mapper resource="mybatis/mapper/BaeminMenuMapper.xml" />
 	</mappers>

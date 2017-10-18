@@ -31,7 +31,7 @@ public class CommentRepository1 {
 	
 	public Integer insertComment(Member m) {
 		return null;
-	}
+	} 
 
 	
 	
