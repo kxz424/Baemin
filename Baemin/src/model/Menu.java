@@ -8,7 +8,7 @@ public class Menu {
 	String menuImg;			// 이미지 경로
 	String menuBoss;		// 사업자등록번호
 	 
-	public String getMenuNum() { 
+	public String getMenuNum() {
 		return menuNum;
 	}
 	public void setMenuNum(String menuNum) {
