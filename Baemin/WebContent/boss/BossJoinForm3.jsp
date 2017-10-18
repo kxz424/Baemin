@@ -56,7 +56,7 @@
 		</div>
 
 		<div class="terms-content">
-			<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=boss-join3">
+			<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=boss-join-db">
 				<fieldset>
 					<div>
 						<ul>

@@ -11,8 +11,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import model.Boss;
 import model.FoodHome;
 import model.Member;
-// 명환오빠
-public class CommentRepository {
+// 현희
+public class CommentRepository2 {
 	private String namespace = "mapper.BaeminMapper";
 	
 	SqlSessionFactory getSqlSessionFactory() {
