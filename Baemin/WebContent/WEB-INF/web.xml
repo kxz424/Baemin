@@ -9,15 +9,15 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-    <servlet>
-  	<servlet-name>Control</servlet-name>
-  	<servlet-class>mvc.control.Control</servlet-class>
+  <servlet>
+    <servlet-name>Control</servlet-name>
+    <servlet-class>mvc.control.Control</servlet-class>
   </servlet>
 
   <servlet-mapping>
-  	<servlet-name>Control</servlet-name>
-  	<url-pattern>/Control</url-pattern>
-  	<url-pattern>/control</url-pattern>
-  	<url-pattern>/baemin</url-pattern>
+    <servlet-name>Control</servlet-name>
+    <url-pattern>/Control</url-pattern>
+    <url-pattern>/control</url-pattern>
+    <url-pattern>/baemin</url-pattern>
   </servlet-mapping>
 </web-app>

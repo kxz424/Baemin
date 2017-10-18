@@ -63,13 +63,15 @@ $(function(){
 			$("#pbirth").html("");
 		} else if(birth == "") {
 			$("#ptel").html("");
-			$("#pbirth").html("생년월일을 입력해주세요.");
+			$("#pbirth").html("생년월일을 입력해주세요.");1
 // 		} else if () {
 // 			$("#ptel").html("");
 // 			$("#pbirth").html("생년월일을 8자리로 입력해 주세요.");
 // 		} else if() {
 // 			$("#ptel").html("");
 // 			$("#pbirth").html("만 14세 미만은 회원가입이 제한됩니다.");
+		} else {
+			$("form").submit();
 		}
 		
 	});
@@ -82,7 +84,7 @@ $(function(){
 
 <div class="cen">
 	<div class="center">
-		<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=main-page">
+		<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=join-finish">
 		<img id="step1" src="<%= projectName %>/배달의민족/가입2.png">
 
 		<p>아래 정보를 추가 입력해야 회원가입이 완료됩니다.</p>
@@ -93,7 +95,7 @@ $(function(){
 		
 		<h3>생년월일<span>회원가입은 만 14세 이상 고객만 가능합니다.</span></h3>
 		
-		<input id="birth" class="year" type="date" /> <br/>
+		<input id="birth" class="year" type="text" placeholder="예:951005" /> <br/>
 		<p id="pbirth" class="p"></p>
 		
 <!-- 		<input  type="button" value="주의사항 안내 ▼"> -->
@@ -141,9 +143,9 @@ $(function(){
 		
 		
 		<div>
-			<a href="<%= projectName %>/baemin?cmd=main-page"><input type="submit" class="btn btn-cancel" value=취소></a>
+			<a href="<%= projectName %>/baemin?cmd=main-page"><input type="submit" class="btn btn-cancel" value="취소"></a>
 <!-- 			<a href="#open"> -->
-			<input id="join" type="button" class="btn btn-finish" value=완료>
+			<input id="join" type="button" class="btn btn-finish" value="완료">
 <!-- 			</a> -->
 		</div>
 		</form>
