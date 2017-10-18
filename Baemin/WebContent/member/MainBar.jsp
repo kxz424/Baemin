@@ -1,7 +1,19 @@
+<%@page import="model.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
 	String projectName = "/Baemin";
+	Object obj = request.getAttribute("user"); 
+	Member member = null;
+	String name[] = new String[2];
+	String mName = null;
+	
+	if(obj != null) { 
+		member = (Member)obj;
+		name = member.getmId().split("@");
+		mName = name[0];
+	}
+
 %>
 <!DOCTYPE>
 <html>
@@ -32,9 +44,10 @@
 </head>
 <body>
 	<p id="quickmenu">
-
-		<a href="<%=projectName%>/baemin?cmd=login-page">로그인</a> ㅣ
-		<a href="<%=projectName%>/baemin?cmd=join-first">회원가입</a> ㅣ 
+		<% if( member != null ) { %> <%= mName %>님 환영합니다 ㅣ 
+		<a href="<%=projectName%>/baemin?cmd=logout-page">로그아웃 </a> <% } else { %>
+		<a href="<%=projectName%>/baemin?cmd=login-page">로그인</a>  ㅣ
+		<a href="<%=projectName%>/baemin?cmd=join-first">회원가입</a> <% } %> ㅣ 
 		<a href="<%=projectName%>/baemin?cmd=boss-main">사장님</a>
 	</p>
 
