@@ -7,5 +7,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	
 	
+	
+	<!-- 사장님 테이블 -->
+	<insert id="insertBossJoin" parameterType="boss">
+		insert into boss(b_num, b_id, b_password, b_name, b_mail, b_birth, b_tel)
+		values(#{bNum}, #{bId}, #{bPassword}, #{bName}, #{bMail}, #{bBirth}, #{bTel})
+	</insert>
+	
+	<!-- 업소 테이블 -->
+<!-- 	<insert id="insertFoodHome" parameterType="foodHome"> -->
+<!-- 		insert into food_home (f_boss, f_name, f_location, f_open, f_close, f_tel, f_category) -->
+<!-- 		values ( #{fBoss}, #{fName}, #{fLocation}, #{fOpen}, #{fClose}, #{fTel}, #{fCategory}) -->
+<!-- 	</insert> -->
+	
+	
 
 </mapper>

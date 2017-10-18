@@ -37,6 +37,7 @@ public class Control extends HttpServlet {
     	map.put("join-finish", new CommandJoin(""));
 
     	map.put("boss-main", new CommandNull("../boss/BossMain.jsp"));
+    	map.put("boss-join", new CommandNull("../boss/BossJoinForm1.jsp"));
     	map.put("boss-join1", new CommandNull("../boss/BossJoinForm2.jsp"));
     	map.put("boss-join2", new CommandNull("../boss/BossJoinForm3.jsp"));
     	map.put("boss-join3", new CommandBossJoin("../boss/BossMain.jsp"));

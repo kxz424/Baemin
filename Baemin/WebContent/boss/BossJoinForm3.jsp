@@ -28,14 +28,6 @@
 	boss.setbTel(bTel);
 	
 	session.setAttribute("boss", boss);
-// 	session.setAttribute("bName", bName);
-// 	session.setAttribute("bBirth", bBirth);
-// 	session.setAttribute("bTel", bTel);
-// 	session.setAttribute("bMail", bMail);
-// 	session.setAttribute("bNum", bNum);
-// 	session.setAttribute("bId", bId);
-// 	session.setAttribute("bPassword", bPassword);
-	
 	
 %>
 
@@ -88,7 +80,7 @@
 								<input type="file" value="" class="" />
 								
 							</li>
-		
+			
 
 							<li class="li-margin">
 								<h3>운영정보</h3> <label>전화번호</label><br/> 

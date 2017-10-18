@@ -13,6 +13,7 @@
     <servlet-name>Control</servlet-name>
     <servlet-class>mvc.control.Control</servlet-class>
   </servlet>
+
   <servlet-mapping>
     <servlet-name>Control</servlet-name>
     <url-pattern>/Control</url-pattern>
