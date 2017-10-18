@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% String projectName = "/Baemin"; %>
+<% 
+	String projectName = "/Baemin"; 
+	request.setCharacterEncoding("UTF-8");
+%>
+<jsp:useBean id="member" class="model.Member">
+	<jsp:setProperty name="member" property="*"></jsp:setProperty>
+</jsp:useBean>
 
 <!DOCTYPE>
 <html>
