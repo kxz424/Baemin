@@ -41,7 +41,9 @@
 
 			<div class="panel panel-default col-sm-4">
 				<div class="panel-body">
+					<form action="<%= projectName %>/baemin?cmd=boss-sold-db" method="post">
 					<div class="select">
+						<input type="hidden" name="menuNum" value="2"/>
 						<select>
 							<option>쌀통닭-신천점</option>
 							<option>굽네치킨-가락점</option>
@@ -50,9 +52,11 @@
 					<div class="check">
 						<input type="checkbox" />품절유무
 					</div>
+					
 					<div class="insertBtn">
-						<input type="button" value="적용">
+						<input type="button" id="soldBtn" value="적용">
 					</div>
+					</form>
 				</div>
 			</div>
 

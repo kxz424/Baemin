@@ -24,16 +24,23 @@ public class CommandAddMenu implements Command {
 		
 		Menu m = new Menu();
 		
-		m.setMenuName(request.getParameter("menuName"));		// 메뉴명
-		m.setMenuPrice(Integer.parseInt(request.getParameter("menuPrice")));// 가격
-		m.setMenuImg(request.getParameter("menuImg"));			// 이미지 경로
-		m.setMenuBoss(request.getParameter("menuBoss"));		// 사업자등록번호
+//		m.setMenuName(request.getParameter("menuName"));		// 메뉴명
+//		//m.setMenuPrice(Integer.parseInt(request.getParameter("menuPrice")));// 가격
+//		m.setMenuImg(request.getParameter("menuImg"));			// 이미지 경로
+//		m.setMenuBoss(request.getParameter("menuBoss"));		// 사업자등록번호
+//		
+//		ServiceAddMenu.getInstance().insertAddMenu(m);
 		
-		ServiceAddMenu.getInstance().insertAddMenu(m);
+		try {
+			PrintWriter out = response.getWriter();
+			System.out.println("1111-----------------------------");
+			out.write("1111");
+			//out.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
-		
-		
-		return next;
+		return null;
 		
 	}
 }

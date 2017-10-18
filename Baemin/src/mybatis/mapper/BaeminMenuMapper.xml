@@ -14,6 +14,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values(seq_menu.nextval, #{menuName}, #{menuPrice}, #{menuBoss}, #{menuImg})
 	</insert>
 	
+	<!-- 메뉴 품절 관리 -->
+	<update id="updateSoldOut" parameterType="menu">
+		UPDATE menu SET menu_soldout = #{menuSoldOut}
+		WHERE menu_num = #{menuNum}
+	</update>
+	
 	<!-- 업소 테이블 -->
 <!-- 	<insert id="insertFoodHome" parameterType="foodHome"> -->
 <!-- 		insert into food_home (f_boss, f_name, f_location, f_open, f_close, f_tel, f_category) -->

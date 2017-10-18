@@ -52,7 +52,7 @@
 							<strong class="text-primary">050-4994-3230</strong>
 						</dd>
 					</dl>
-				</div> 
+				</div>
 				<form action="<%= projectName %>/baemin?cmd=boss-add-menu-db" enctype="multipart/form-data" method="post">
 					<div class="form-group">
 						<div class="row">

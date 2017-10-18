@@ -3,6 +3,9 @@ package mvc.command;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Menu;
+import mybatis.service.ServiceSoldOut;
+
 
 public class CommandSoldOut implements Command {
 
@@ -16,6 +19,9 @@ public class CommandSoldOut implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 	
+		Menu m = new Menu();
+		
+		ServiceSoldOut.getInstance().updateSoldOut(m);
 		
 		return next;
 		
