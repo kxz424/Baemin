@@ -20,8 +20,8 @@ public class ServiceLogin {
 		return service;
 	} 
 	
-	public void selectMember(String id, String password) {
-		repo.selectMember(id, password);
+	public Member selectMember(String id, String password) {
+		return repo.selectMember(id, password);
 
 	}
 	

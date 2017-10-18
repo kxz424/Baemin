@@ -18,11 +18,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 	<!-- 업소 테이블 -->
-<!-- 	<insert id="insertFoodHome" parameterType="foodHome"> -->
-<!-- 		insert into food_home (f_boss, f_name, f_location, f_open, f_close, f_tel, f_category) -->
-<!-- 		values ( #{fBoss}, #{fName}, #{fLocation}, #{fOpen}, #{fClose}, #{fTel}, #{fCategory}) -->
-<!-- 	</insert> -->
+	<insert id="insertFoodHome" parameterType="foodHome">
+		insert into food_home (f_boss, f_name, f_location, f_open, f_close, f_tel, f_category)
+		values ( #{fBoss}, #{fName}, #{fLocation}, #{fOpen}, #{fClose}, #{fTel}, #{fCategory})
+	</insert>
 	
+	<!-- user인지 아닌지 확인 -->
+	<select id="selectUser" parameterType="hashmap" resultType="Member">
+		SELECT *
+		FROM member
+		<where>
+			m_id = #{mId}
+			<if test="mPassword != null">
+				AND m_password = #{mPassword} 
+			</if>
+		</where>
+	</select>
 	
 
 </mapper>

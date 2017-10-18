@@ -25,7 +25,7 @@
 	
 		<div id="input-padding">
 			<input type="text" name="mId" id="userId" placeholder="배민ID(이메일 또는 아이디)" class="input"/><br/> 
-			<input type="text" name="mPassword" id="userPassword" placeholder="비밀번호 (4~20자)" class="input" /><br/> 
+			<input type="password" name="mPassword" id="userPassword" placeholder="비밀번호 (4~20자)" class="input" /><br/> 
 		</div>
 		
 		<div id="login-padding">
