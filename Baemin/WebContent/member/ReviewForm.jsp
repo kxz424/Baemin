@@ -1,7 +1,13 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.Review"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
  	pageEncoding="UTF-8"%> 
  	
 <% String projectName = "/Baemin"; %>  	
+
+<%
+	ArrayList<Review> list = (ArrayList) request.getAttribute("reviewList");
+%>
  	
 <!DOCTYPE>
 <html>
@@ -30,18 +36,24 @@
 		<div class="box no-tp-brd">
 			<section class="review-sect">
 				<section class="view-review">
-<!-- 					<div class="media small"> -->
-<!-- 						<a class="pull-left"><span class="inner-brd"><img -->
-<%-- 								class="media-object" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg" /></span></a> --%>
-<!-- 						<div class="media-body"> -->
-<!-- 							<div class="pull-center media-heading"> -->
-<!-- 								<strong class="nick"> <span>알려드립니다</span> -->
-<!-- 								</strong> <em>|</em> <span><input type="datetime" -->
-<!-- 									value="2017-10-12" /></span> -->
-<!-- 							</div> -->
-<!-- 							<p id="Review_Cont1">너무맛있어요!!!!</p> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
+				
+				<% for(Review r : list){ %>
+				
+					<div class="media small">
+						<a class="pull-left"><span class="inner-brd"><img
+								class="media-object" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg" /></span></a>
+						<div class="media-body">
+							<div class="pull-center media-heading">
+								<strong class="nick"> <span>알려드립니다</span>
+								</strong> <em>|</em> <span><input type="datetime"
+									value="2017-10-12" /></span>
+							</div>
+							<p id="Review_Cont1">너무맛있어요!!!!</p>
+						</div>
+					</div>
+					
+				<%} %>
+					
 <!-- 					<div class="media small"> -->
 <!-- 						<a class="pull-left"><span class="inner-brd"><img -->
 <%-- 								class="media-object" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg" /></span></a> --%>
