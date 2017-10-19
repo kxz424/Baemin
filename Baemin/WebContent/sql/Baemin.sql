@@ -95,18 +95,26 @@ references food_home(f_boss);
 
 --리뷰 시퀀스
 create SEQUENCE seq_review;
+drop SEQUENCE seq_review;
 --주문 시퀀스
 create SEQUENCE seq_order;
+drop SEQUENCE seq_order;
 --메뉴 시퀀스
 create SEQUENCE seq_menu;
+drop SEQUENCE seq_menu;
 
 insert into member values ('kxz424@naver.com', '1234', '010-4781-0364', '910424', '남');
 insert into boss values ('123-45-67890', 'kxz424', '1234', '김종상', 'kxz424@naver.com', '910424', '010-4781-0364');
-insert into food_home values('123-45-67890', '쌀통닭', '서울특별시 송파구 석촌동 120-9', '09', '23', '010-4781-0364', 'Y', '석촌동', '메뉴_쌀통닭.png');
-insert into menu values (seq_menu.nextval, '쌀통닭', 'N', 16900, '123-45-67890', '메뉴_쌀통닭.png'
+insert into food_home values('123-45-67890', '쌀통닭', '서울특별시 송파구 석촌동 120-9', '09', '23', '010-4781-0364', 'Y', 'chicken', '메뉴_쌀통닭.png');
+insert into menu values (seq_menu.nextval, '쌀통닭', 'N', 16900, '123-45-67890', '메뉴_쌀통닭.png');
+insert into order_list values (seq_order.nextval, '010-4781-0364', '서울특별시 송파구 석촌동 111-222', sysdate, '빠른배달 부탁드립니다', 38800, 'kxz424@naver.com', '123-45-67890');
 
-
-
+select * from boss;
+select * from menu;
+select * from review;
+select * from food_home;
+select * from order_list;
+select * from member;
 
 
 

@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -89,37 +90,47 @@ public class CommentRepository {
 	
 	
 	
-	public void insertAddMenu(Menu m) {
-		
-		SqlSession sess = getSqlSessionFactory().openSession();
-		
-		int result = sess.insert(namespace2 + ".insertAddMenu", m);
-		
-		
-		if(result > 0) {
-			sess.commit();
-		}else {
-			sess.rollback();
-		}
-		
-		
-	}
+//	public void insertAddMenu(Menu m) {
+//		
+//		SqlSession sess = getSqlSessionFactory().openSession();
+//		
+//		int result = sess.insert(namespace2 + ".insertAddMenu", m);
+//		
+//		
+//		if(result > 0) {
+//			sess.commit();
+//		}else {
+//			sess.rollback();
+//		}
+//		
+//		
+//	}
 
 
 	
-	public ArrayList selectAddMenu(Menu m) {
-		SqlSession sess = getSqlSessionFactory().openSession();		
+	public ArrayList selectAddMenu(String m) {
 		
-		ResultSet rs = (ResultSet) sess.selectList(namespace2 + ".selectAddMenu",m);
+		SqlSession sess = getSqlSessionFactory().openSession();	
+		
+		HashMap map = new HashMap();
+		map.put("article_id", m);
+		
+		ResultSet rs = (ResultSet) sess.selectList(namespace2 + ".selectAddMenu", m);
 		
 		ArrayList result = new ArrayList();
 		
 		try {
 			while (rs.next()) {
+				
 				result.add(rs.getString("menu_name"));
+				System.out.println(rs.getString("menu_name"));
 				result.add(rs.getString("menu_price"));
+				System.out.println(rs.getString("menu_price"));
 				result.add(rs.getString("menu_soldout"));
+				System.out.println(rs.getString("menu_soldout"));
 			}
+
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

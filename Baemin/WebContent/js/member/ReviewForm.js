@@ -5,7 +5,7 @@ $(function(){
  		alert(queryString);
  		$.ajax({
  			type : "get",
- 			url : "/Baemin/baemin?cmd=Review-db",
+ 			url : "/Baemin/baemin",
  			data : queryString,
  			datatype : "text",
  			success : function(data){

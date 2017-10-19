@@ -22,16 +22,16 @@ public class CommandReview implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 	
+		System.out.println("1>>>>"+request.getParameter("id"));
 		Review r = new Review();
 		r.setrMember(request.getParameter("id"));
 		r.setrContent(request.getParameter("review"));
 		r.setrBoss(request.getParameter("boss"));
 		
 		ServiceReview.getInstance().insertReview(r);
-		
+		System.out.println("2>>>"+request.getParameter("id"));
 		try {
-			PrintWriter out = response.getWriter();
-			out.write("저장");
+			response.getWriter().print("success");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -18,7 +18,6 @@
 
 <link rel="stylesheet" href="<%= projectName %>/css/boss/AddMenuForm.css"/>
 
-
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
@@ -54,7 +53,7 @@
 					</dl>
 				</div>
 				
-				<form action="<%= projectName %>/baemin?cmd=boss-add-menu-db" enctype="multipart/form-data" method="post">
+				<form action="<%= projectName %>/baemin?cmd=boss-add-menu-db" method="post">
 					<div class="form-group">
 						<div class="row">
 							<div class="col-sm-6 col-md-6 col-lg-6">
@@ -73,11 +72,11 @@
 						</div>
 					</div>
 
-					<div class="form-group">
-						<label for="exampleInputFile">파일 업로드</label> <input type="file"
-							id="exampleInputFile" name="menuImg">
-						<p class="help-block">여기에 블록레벨 도움말 예제</p>
-					</div>
+<!-- 					<div class="form-group"> -->
+<!-- 						<label for="exampleInputFile">파일 업로드</label> <input type="file" -->
+<!-- 							id="exampleInputFile" name="menuImg"> -->
+<!-- 						<p class="help-block">여기에 블록레벨 도움말 예제</p> -->
+<!-- 					</div> -->
 
 					<div class="form-group">
 						<input type="button" id="modify" class="btn btn-primary" value="수정"> <input
