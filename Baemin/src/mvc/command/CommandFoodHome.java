@@ -24,6 +24,7 @@ public class CommandFoodHome implements Command {
 		
 		String cate = request.getParameter("cate");
 		List<FoodHome> foodhome = null;
+		
 		if(cate != null) {
 			foodhome = ServiceFoodHome.getInstance().selectCategory(cate);			
 		} else {

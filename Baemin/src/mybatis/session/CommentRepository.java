@@ -127,4 +127,24 @@ public class CommentRepository {
 	
 	
 	
+	public void updateSoldOut(Menu m) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		int result = sess.update(namespace2 + ".updateSoldOut", m);
+		 
+		
+		
+		if(result > 0) {
+			sess.commit();
+		}else {
+			sess.rollback();
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 }

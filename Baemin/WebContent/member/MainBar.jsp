@@ -28,16 +28,16 @@
 <script type="text/javascript">
 	$(function() {
 		$("#selectlocation").focus(function () {
-			this.value = "";
+			this.placeholder = "";
 		});
 		$("#selectfoodhome").focus(function () {
-			this.value = "";
+			this.placeholder = "";
 		});
 		$("#selectlocation").blur(function() {
-			this.value = "위치를 지정하세요";
+			this.placeholder = "위치를 지정하세요";
 		});
 		$("#selectfoodhome").blur(function () {
-			this.value = "업소명을 검색하세요";
+			this.placeholder = "업소명을 검색하세요";
 		});
 		
 	});
@@ -60,13 +60,14 @@
 			<!-- 		<input type="text" id="SelectFoodHome" name="SelectFoodHome" value="업소명을 검색하세요"> -->
 			<div class="d1">
 				<form>
-					<input id="selectlocation" name="" type="text" value="위치를 지정하세요">
+					<input id="selectlocation" name="" type="text" placeholder="위치를 지정하세요">
 					<button type="submit"></button>
 				</form>
 			</div>
 			<div class="d1">
-				<form action="<%= projectName %>/baemin?cmd=search-db">
-					<input id="selectfoodhome" name="searchfoodhome" type="text" value="업소명을 검색하세요">
+				<form method="get" action="<%= projectName %>/baemin">
+					<input id="selectfoodhome" name="searchfoodhome" type="text" placeholder="업소를 검색하세요"/>
+					<input type='hidden' name='cmd' value='search-db'/>
 					<button type="submit"></button>
 				</form>
 			</div>
