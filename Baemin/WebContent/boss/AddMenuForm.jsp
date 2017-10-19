@@ -82,7 +82,7 @@
 						<input type="button" id="modify" class="btn btn-primary" value="수정"> <input
 							type="button" id="insert" class="btn btn-success" value="등록">
 					</div>
-					<input type="hidden" name="menuBoss" value="123-45-67890"/>
+					<input type="hidden" name="menuFood" value="123-45-67890"/>
 				</form>
 
 				<table class="table table-hover">
