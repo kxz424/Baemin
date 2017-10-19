@@ -77,7 +77,24 @@
 								</select><br/><br/> 
 								
 								<label>업소이미지첨부</label><br/> 
-								<input type="file" value="" class="" />
+								<input type="file" value="" class="" /><br/><br/>
+								
+								
+								<label>카테고리</label><br/>
+								<select name="cate">
+									<option value="chicken">치킨</option>
+									<option value="Chinese">중국집</option>
+									<option value="fastfood">패스트푸드</option>
+									<option value="pizza">피자</option>
+									<option value="korean">한식,분식</option>
+									<option value="Japanese">돈까스,회,일식</option>
+									<option value="pig">족발,보쌈</option>
+									<option value="dosirak">도시락</option>
+									<option value="night">야식</option>
+									<option value="night">찜,탕</option>
+								</select>
+								
+								
 								
 							</li>
 			

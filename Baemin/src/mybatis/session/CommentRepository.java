@@ -29,12 +29,7 @@ public class CommentRepository {
 		
 	}
 	
-	public Integer insertComment(Member m) {
-		return null;
-	}
 
-	
-	
 	public void insertBossJoin(Boss b) {
 		SqlSession sess = getSqlSessionFactory().openSession();
 		int result = sess.insert(namespace + ".insertBossJoin", b);
@@ -46,18 +41,32 @@ public class CommentRepository {
 		}
 		
 	}
-	
-	public void insertJoin(Member m) {
-		
-	}
 
-//	public void insertFoodHome(FoodHome h) {
-//		
+	public void insertFoodHome(FoodHome h) {
+		
+		SqlSession sess = getSqlSessionFactory().openSession();
+		int result = sess.insert(namespace + ".insertFoodHome", h);
+		
+		if(result > 0) {
+			sess.commit();
+		}else {
+			sess.rollback();
+		}
+
+	}
+	
+	public int BossLogin(String id, String password) {
+		
 //		SqlSession sess = getSqlSessionFactory().openSession();
-//		sess.insert(namespace + ".insertFoodHome", h);
+//		int result = sess.selectOne(namespace + ".BossLogin");
+	
+		
+//		ResultSet  = 
 //		
-//	}
+		int result = 1;
+		
+		
+		return result;
 	
-	
-	
+	}
 }

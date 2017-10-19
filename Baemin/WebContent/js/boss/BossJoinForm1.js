@@ -3,14 +3,22 @@ $(function(){
 	
 	
 	
-	
-	$("#chk-all").click(function(){
-		if($("#chk-all").prop("checked")){
-			$("input[type=checkbox]").prop("checked",true);
-		}else{
-			$("input[type=checkbox]").prop("checked",false);
-		}
+	$("#chk-all").click(function() {
+		$(".chk").prop("checked", this.checked);
 	});
+	
+	$(".chk").click(function() {
+	for(var i = 1 ; i < 6 ; i++) {
+		if(!$("#chk"+i).prop("checked")) {
+			$("#chk-all").prop("checked", $("#chk"+i).prop("checked"));
+			i=6;
+		} 
+		else if( i == 5 && $("#chk"+i).prop("checked") ) {
+			$("#chk-all").prop("checked", $("#chk"+i).prop("checked"));
+		}
+	}
+  });
+	
 	
 	
 	$(".btn-select :eq(0)").click(function(){	
@@ -24,12 +32,16 @@ $(function(){
 			alert("필수항목을 체크해주세요.");
 			return;
 		}
-		
 
 		$('#joinTerms').attr('action','/Baemin/baemin?cmd=boss-join1');
+		
 		$('#joinTerms').submit();
+		
 	});
 	
+	
+	
+
 	
 	
 
