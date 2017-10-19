@@ -33,9 +33,8 @@ public class CommandBossJoin implements Command{
 		foodHome.setfOpen(request.getParameter("fOpen1")+":"+request.getParameter("fOpen2"));
 		foodHome.setfClose(request.getParameter("fClose1")+":"+request.getParameter("fClose2"));
 		foodHome.setfTel(request.getParameter("fTel"));
-		foodHome.setfCategory(request.getParameter("cate"));
+		foodHome.setfCategory(request.getParameter("fCategory"));		
 		
-
 		ServiceBossJoin.getInstance().insertBossJoin(boss, foodHome);
 		
 		

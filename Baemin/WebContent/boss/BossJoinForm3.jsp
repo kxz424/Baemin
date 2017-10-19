@@ -71,7 +71,7 @@
 								
 								
 								<label>카테고리</label><br/>
-								<select name="cate">
+								<select name="fCategory">
 									<option value="chicken">치킨</option>
 									<option value="Chinese">중국집</option>
 									<option value="fastfood">패스트푸드</option>

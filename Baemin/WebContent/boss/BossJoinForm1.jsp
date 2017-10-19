@@ -56,7 +56,7 @@
   								</div>
   							</div>
   						</div>
-         			</li>
+         			</li>.
          	  
          			<li>
          				<div class="terms-check">

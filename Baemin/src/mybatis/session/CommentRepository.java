@@ -15,8 +15,10 @@ import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 import model.Boss;
 import model.FoodHome;
+
 import model.Member;
 import model.Menu;
+
 // 명환오빠
 
 public class CommentRepository {
@@ -63,20 +65,26 @@ public class CommentRepository {
 
 	}
 	
-	public int BossLogin(String id, String password) {
-		
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		int result = sess.selectOne(namespace + ".BossLogin");
-	
-		
-//		ResultSet  = 
+//	public int BossLogin(String id, String password) {
 //		
-		int result = 1;
-		
-		
-		return result;
-	
-	}
+////		SqlSession sess = getSqlSessionFactory().openSession();
+////		int result = sess.selectOne(namespace + ".BossLogin");
+//	
+//		
+////		ResultSet  = 
+////		
+//		int result = 1;
+//		
+//		
+//		return result;
+//	
+//	}
+//		int result = 1;
+//		
+//		
+//		return result;
+//	
+//	}
 	
 	
 	
@@ -119,9 +127,6 @@ public class CommentRepository {
 		return result;
 
 	}
-	
-	
-	
 	
 	
 	

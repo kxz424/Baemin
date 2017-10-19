@@ -37,7 +37,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		INSERT INTO review (r_num, r_content, r_date, r_member, r_boss)
 		VALUES (seq_review.nextval, #{rContent}, sysdate, #{rMember}, #{rBoss})
 	</insert>
-	
+
 	
 	<!-- 메뉴 검색 -->
 	<select id="selectAddMenu" parameterType="menu">
@@ -51,7 +51,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <!-- 		insert into food_home (f_boss, f_name, f_location, f_open, f_close, f_tel, f_category) -->
 <!-- 		values ( #{fBoss}, #{fName}, #{fLocation}, #{fOpen}, #{fClose}, #{fTel}, #{fCategory}) -->
 <!-- 	</insert> -->
-	
 	
 
 </mapper>
