@@ -18,15 +18,15 @@ public class ServiceAddMenu {
 		return service;
 	} 
 	
-	public void insertAddMenu(Menu m) {
-		 
-		repo.insertAddMenu(m); 
-		 
- 
-	}
+//	public void insertAddMenu(Menu m) {
+//		 
+//		repo.insertAddMenu(m); 
+//		 
+// 
+//	}
 
-	public ArrayList selectAddMenu(Menu m) {
-		
+	public ArrayList selectAddMenu(String m) {
+		 
 		return repo.selectAddMenu(m); 
 		
 	}

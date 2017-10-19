@@ -9,10 +9,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	 
 	
 	<!-- 메뉴 테이블 -->
-	<insert id="insertAddMenu" parameterType="menu">
-		INSERT INTO menu(menu_num, menu_name, menu_price, menu_boss, menu_img)
-		VALUES(seq_menu.nextval, #{menuName}, #{menuPrice}, #{menuBoss}, #{menuImg})
-	</insert>
+<!-- 	<insert id="insertAddMenu" parameterType="menu"> -->
+<!-- 		INSERT INTO menu(menu_num, menu_name, menu_price, menu_boss, menu_img) -->
+<!-- 		VALUES(seq_menu.nextval, #{menuName}, #{menuPrice}, #{menuBoss}, #{menuImg}) -->
+<!-- 	</insert> -->
 	
 	<!-- 메뉴 품절 관리 -->
 	<update id="updateSoldOut" parameterType="menu">
@@ -39,9 +39,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 	
-	<!-- 메뉴 검색 -->
-	<select id="selectAddMenu" parameterType="menu">
-		select * from menu where  menu_boss = #{menuBoss}
+	<!-- 메뉴 검색 --> 
+	<select id="selectAddMenu" parameterType="String">
+		select menu_name,menu_price, menu_soldout  from menu where menu_boss=#{menuBoss}
 	</select>
 	
 	

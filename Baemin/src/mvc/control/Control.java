@@ -107,6 +107,7 @@ public class Control extends HttpServlet {
     		nextPage = error;
     		System.out.println( "오류 : " + e.getMessage() );
     	}
+    	
     	if(nextPage != null) {
 	    	RequestDispatcher rd = getServletContext().getRequestDispatcher( jspDir + nextPage);
 	    	rd.forward(request, response);
