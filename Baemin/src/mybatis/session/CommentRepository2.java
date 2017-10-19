@@ -110,6 +110,8 @@ public class CommentRepository2 {
 			sess.close();
 		}
 	}
+	
+	
 
 	
 }

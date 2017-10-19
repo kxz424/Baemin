@@ -38,7 +38,7 @@ public class CommandReview implements Command {
 		
 		
 		try {
-			list = ServiceMenuList.getInstance().selectReview(r.getrFood());
+			list = ServiceReview.getInstance().selectReview(r.getrFood());
 			JSONArray ja = new JSONArray();
 			for(int i = 0; i < list.size(); i++) {
 				JSONObject jo = new JSONObject();

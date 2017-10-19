@@ -31,12 +31,8 @@ public class CommandReviewList implements Command {
 //		System.out.println(rFood);
 		List<Review> list = new ArrayList<Review>();
 		
-		try {
-			list = ServiceMenuList.getInstance().selectReview(rFood);
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		list = ServiceReview.getInstance().selectReview(rFood);
+		
 		
 		request.setAttribute("reviewList", list);
 		

@@ -23,7 +23,9 @@ public class CommandMenuList implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 	
+		String bossNum = request.getParameter("fboss");
 		
+		ServiceMenuList.getInstance();
 		
 		return next;
 		

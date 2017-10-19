@@ -36,6 +36,7 @@
 			
 			<% for(int i = 0 ; i < foodhome.size() ; i++ ) { %>
 			<div class="food">
+				<input type="hidden" name="fboss" value="<%= foodhome.get(i).getfBoss() %>">
 				<div class="home1">
 					<img class="img" src="<%= projectName %>/배달의민족/<%= foodhome.get(i).getfImg()  %>">
 				<div class="home2">
