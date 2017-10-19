@@ -1,6 +1,7 @@
 package mvc.command;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,13 +24,16 @@ public class CommandMenuList implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 	
 		String rFood = request.getParameter("rFood");
+		List<Review> list = new ArrayList<Review>();
 		
 		try {
-			List<Review> list = ServiceMenuList.getInstance().selectReview(rFood);
-			request.setAttribute("reviewList", list);
+			list = ServiceMenuList.getInstance().selectReview(rFood);
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
+		request.setAttribute("reviewList", list);
 		
 		return next;
 		
