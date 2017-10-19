@@ -97,6 +97,19 @@ public class CommentRepository2 {
 			sess.close();
 		}
 	}
+	
+	public List<FoodHome> selectText(String search) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		 
+		try {
+			HashMap hash = new HashMap();
+			hash.put("fCategory", search);
+			
+			return sess.selectList(namespace + ".selectCate", hash);
+		} finally {
+			sess.close();
+		}
+	}
 
 	
 }
