@@ -1,6 +1,17 @@
+<%@page import="model.Boss"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <% String projectName = "/Baemin"; %>
+    <%
+    	String projectName = "/Baemin";
+    
+    	Object obj = session.getAttribute("boss");
+    	Boss boss = null;
+    	
+    	if(obj != null) {
+    		boss = (Boss)obj;
+    	}
+    	
+    %>
 <!DOCTYPE>
 <html>
 <head>
@@ -18,7 +29,7 @@
 	</div>
 	
 	<table class="content" >
-	<tr>
+	<% if( boss == null ) { %><tr>
 		<th>
 			<div class="bosslogin">
 				<img src="<%= projectName %>/배달의민족/g.jpg"> <br/>
@@ -33,7 +44,8 @@
 				<a href="https://ceo.baemin.com/#/ad/guide"><img class="z" src="<%= projectName %>/배달의민족/광고가이드.png"></a>
 			</div>
 		</th>
-	</tr>
+	</tr> 
+	<% } %>
 	</table>
 	
 	<img id="bottom" src="<%= projectName %>/배달의민족/사장님하단.png">

@@ -7,6 +7,7 @@
  		text-align:center;
  	}
 	.quickmenu {
+		width:100%; 
 		background-color : #E0E0E0;
 		height : 150px;
  		padding : 35px 0 0 150px; 

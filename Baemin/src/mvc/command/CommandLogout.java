@@ -10,11 +10,11 @@ import model.Member;
 import mybatis.service.ServiceLogin;
 
 
-public class CommandLogin implements Command {
+public class CommandLogout implements Command {
 
 	private String next;
 	
-	public CommandLogin( String next ) {
+	public CommandLogout( String next ) {
 		this.next = next;
 	}
 	 
@@ -23,20 +23,7 @@ public class CommandLogin implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 		HttpSession session = request.getSession();
 		
-		String id = request.getParameter("mId");
-		String password = request.getParameter("mPassword");
-		
-		Member m = ServiceLogin.getInstance().selectMember(id, password);
-		
-		if(m == null) {
-			request.setAttribute("user", null);
-			request.setAttribute("login", "true");
-			
-			return "LoginForm.jsp";
-			
-		}
-		
-		session.setAttribute("user", m);
+		session.setAttribute("user", null);
 		
 		return next;
 		

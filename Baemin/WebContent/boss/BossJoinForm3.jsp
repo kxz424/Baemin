@@ -5,32 +5,23 @@
 
 <%
 	String projectName = "/Baemin";
+	request.setCharacterEncoding("UTF-8");
 %>
+
+<jsp:useBean id="boss" class="model.Boss">
+	<jsp:setProperty name="boss" property="*"></jsp:setProperty>
+</jsp:useBean>
 
 <%
+	String tel = "";
+	for(int i = 1 ; i < 4 ; i++)
+		tel += request.getParameter("bTel"+i);
 	
-	String bName = request.getParameter("bName");
-	String bBirth = request.getParameter("bBirth");
-	String bTel = request.getParameter("bTel1") + request.getParameter("bTel2") + request.getParameter("bTel3");
-	String bMail = request.getParameter("bMail");
-	String bNum = request.getParameter("bNum");
-	String bId = request.getParameter("bId");
-	String bPassword = request.getParameter("bPassword");
-	
-	Boss boss = new Boss();
-	
-	boss.setbBirth(bBirth);
-	boss.setbId(bId);
-	boss.setbMail(bMail);
-	boss.setbName(bName);
-	boss.setbNum(bNum);
-	boss.setbPassword(bPassword);
-	boss.setbTel(bTel);
+	boss.setbTel(tel);
 	
 	session.setAttribute("boss", boss);
-	
 %>
-
+ 
 
 <!DOCTYPE>
 <html>
@@ -43,7 +34,6 @@
 <script type="text/javascript" src="<%=projectName%>/js/boss/BossJoinForm3.js"></script>
 </head>
 <body>
-
 	<div>
 		<div class="logo">
 			<h2>사장님사이트 회원가입</h2>
@@ -77,7 +67,24 @@
 								</select><br/><br/> 
 								
 								<label>업소이미지첨부</label><br/> 
-								<input type="file" value="" class="" />
+								<input type="file" value="" class="" /><br/><br/>
+								
+								
+								<label>카테고리</label><br/>
+								<select name="cate">
+									<option value="chicken">치킨</option>
+									<option value="Chinese">중국집</option>
+									<option value="fastfood">패스트푸드</option>
+									<option value="pizza">피자</option>
+									<option value="korean">한식,분식</option>
+									<option value="Japanese">돈까스,회,일식</option>
+									<option value="pig">족발,보쌈</option>
+									<option value="dosirak">도시락</option>
+									<option value="night">야식</option>
+									<option value="night">찜,탕</option>
+								</select>
+								
+								
 								
 							</li>
 			

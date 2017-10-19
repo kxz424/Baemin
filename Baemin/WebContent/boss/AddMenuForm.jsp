@@ -53,6 +53,7 @@
 						</dd>
 					</dl>
 				</div>
+				
 				<form action="<%= projectName %>/baemin?cmd=boss-add-menu-db" enctype="multipart/form-data" method="post">
 					<div class="form-group">
 						<div class="row">
@@ -62,7 +63,7 @@
 										id="menuName" name="menuName" class="form-control" placeholder="메뉴명을 입력하세요." />
 								</div>
 							</div>
-
+	
 							<div class="col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
 									<label class="input-group-addon">가격</label> <input type="text"

@@ -3,7 +3,8 @@
 	pageEncoding="UTF-8"%>
 <%
 	String projectName = "/Baemin";
-	Object obj = request.getAttribute("user"); 
+
+	Object obj = session.getAttribute("user");
 	Member member = null;
 	String name[] = new String[2];
 	String mName = null;

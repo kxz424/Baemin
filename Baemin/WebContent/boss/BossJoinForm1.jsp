@@ -43,7 +43,7 @@
           				<div class="terms-check">
           					<label class="label-title" >배달의민족 사장님사이트 이용약관 (필수)</label>
               				<label class="label-agree" for="chk1">동의</label>
-              				<input type="checkbox" id="chk1">
+              				<input type="checkbox" id="chk1" class="chk">
             			</div>
             
            				<div class="terms-box">
@@ -62,7 +62,7 @@
          				<div class="terms-check">
               				<label class="label-title">050서비스 이용약관 (필수)</label>
                				<label class="label-agree" for="chk2">동의</label>
-              				<input type="checkbox" id="chk2" >
+              				<input type="checkbox" id="chk2" class="chk">
              			</div>
 						
 						<div class="terms-box">
@@ -84,7 +84,7 @@
             			<div class="terms-check">
               				<label class="label-title">개인정보 수집 및 이용 (필수)</label>
                				<label class="label-agree" for="chk3">동의</label>
-							<input type="checkbox" id="chk3" >
+							<input type="checkbox" id="chk3" class="chk">
             			</div>
             			
            		 		<div class="terms-box">
@@ -114,7 +114,7 @@
             			<div class="terms-check">
               				<label class="label-title">광고운영정책 (필수)</label>
                				<label class="label-agree" for="chk4">동의</label>
-							<input type="checkbox" id="chk4" >
+							<input type="checkbox" id="chk4" class="chk">
             			</div>
             			
             			<div class="terms-box">
@@ -135,7 +135,7 @@
             			<div class="terms-check">	
 	              			<label class="label-title">광고성 정보 수신 (선택)</label>
 	               			<label class="label-agree" for="chk5">동의</label>
-							<input type="checkbox" id="chk5" >
+							<input type="checkbox" id="chk5" class="chk">
             			</div>
           			</li>
         		</ul>

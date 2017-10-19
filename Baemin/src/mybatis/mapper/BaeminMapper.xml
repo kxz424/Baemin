@@ -35,5 +35,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</where>
 	</select>
 	
+	<!-- 사장님인지 아닌지 확인 -->
+	<select id="selectBoss" parameterType="hashmap" resultType="Boss">
+		SELECT *
+		FROM boss
+		<where>
+			b_id = #{bId}
+			<if test="bPassword != null">
+				AND b_password = #{bPassword} 
+			</if>
+		</where>
+	</select>
 
 </mapper>
