@@ -55,6 +55,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="fCategory != null">
 				f_category = #{fCategory}
 			</if>
+			<if test="fName != null">
+				f_name LIKE #{fName}
+			</if>
 		</where>
 	</select>
 
