@@ -29,13 +29,13 @@ public class CommandAddMenu implements Command {
 //		m.setMenuName(request.getParameter("menuName"));		// 메뉴명
 //		m.setMenuPrice(Integer.parseInt(request.getParameter("menuPrice")));// 가격
 //		m.setMenuImg("img.jpg");			// 이미지 경로
-		m.setMenuBoss("1111111111");		// 사업자등록번호
+		m.setMenuFood("1111111111");		// 사업자등록번호
 //		
 //		
 //		ServiceAddMenu.getInstance().insertAddMenu(m);
 		
 		
-		result = ServiceAddMenu.getInstance().selectAddMenu(m.getMenuBoss());
+		result = ServiceAddMenu.getInstance().selectAddMenu(m.getMenuFood());
 		
 		
 		

@@ -117,7 +117,7 @@ public class CommentRepository1 {
 			r.setrContent(rs.getString("r_content"));
 			r.setrDate(rs.getString("r_date"));
 			r.setrMember(rs.getString("r_member"));
-			r.setrBoss(rs.getString("r_boss"));
+			r.setrFood(rs.getString("r_boss"));
 			list.add(r);
 		}
 		

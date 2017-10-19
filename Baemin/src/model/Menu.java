@@ -6,8 +6,8 @@ public class Menu {
 	char menuSoldOut;		// 품절유무
 	int menuPrice;			// 가격
 	String menuImg;			// 이미지 경로
-	String menuBoss;		// 사업자등록번호
-	 
+	String menuFood;		// 사업자등록번호
+	
 	public String getMenuNum() {
 		return menuNum;
 	}
@@ -38,13 +38,10 @@ public class Menu {
 	public void setMenuImg(String menuImg) {
 		this.menuImg = menuImg;
 	}
-	public String getMenuBoss() {
-		return menuBoss;
+	public String getMenuFood() {
+		return menuFood;
 	}
-	public void setMenuBoss(String menuBoss) {
-		this.menuBoss = menuBoss;
+	public void setMenuFood(String menuFood) {
+		this.menuFood = menuFood;
 	}
-	
-
-	
 }

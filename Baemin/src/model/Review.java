@@ -5,7 +5,7 @@ public class Review {
 	String rContent;	// 글내용
 	String rDate;		// 등록날짜
 	String rMember;		// 회원 이메일
-	String rBoss;		// 사업자등록번호
+	String rFood;		// 사업자등록번호
 	
 	public String getrNum() {
 		return rNum;
@@ -31,13 +31,11 @@ public class Review {
 	public void setrMember(String rMember) {
 		this.rMember = rMember;
 	}
-	public String getrBoss() {
-		return rBoss;
+	public String getrFood() {
+		return rFood;
 	}
-	public void setrBoss(String rBoss) {
-		this.rBoss = rBoss;
+	public void setrFood(String rFood) {
+		this.rFood = rFood;
 	}
-	
-	
 	
 }
