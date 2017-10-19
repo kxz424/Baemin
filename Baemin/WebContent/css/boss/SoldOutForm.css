@@ -11,6 +11,11 @@
 .panel-default{
 
 }
+.panel-body{
+	display: inline-table;
+	
+}
+
 
 .check{
 	float: left;
