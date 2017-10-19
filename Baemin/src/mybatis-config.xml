@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	
 	<typeAliases>
 		<typeAlias type="model.Boss" alias="boss"/>
-		<typeAlias type="model.FoodHome" alias="foodHome"/>
+		<typeAlias type="model.FoodHome" alias="foodhome"/>
 		<typeAlias type="model.Member" alias="member"/>
 		<typeAlias type="model.Menu" alias="menu"/>
 		<typeAlias type="model.Order" alias="order"/>

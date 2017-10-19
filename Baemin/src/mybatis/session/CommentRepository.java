@@ -10,7 +10,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import model.Boss;
 import model.FoodHome;
-import model.Member;
 // 명환오빠
 public class CommentRepository {
 	private String namespace = "mapper.BaeminMapper";
@@ -55,18 +54,18 @@ public class CommentRepository {
 
 	}
 	
-	public int BossLogin(String id, String password) {
-		
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		int result = sess.selectOne(namespace + ".BossLogin");
-	
-		
-//		ResultSet  = 
+//	public int BossLogin(String id, String password) {
 //		
-		int result = 1;
-		
-		
-		return result;
-	
-	}
+////		SqlSession sess = getSqlSessionFactory().openSession();
+////		int result = sess.selectOne(namespace + ".BossLogin");
+//	
+//		
+////		ResultSet  = 
+////		
+//		int result = 1;
+//		
+//		
+//		return result;
+//	
+//	}
 }
