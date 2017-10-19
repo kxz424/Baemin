@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -110,18 +112,25 @@ public class CommentRepository {
 
 
 	
-	public  void selectAddMenu(String m) {
+	public List<Menu> selectAddMenu(String m) {
 		
 		SqlSession sess = getSqlSessionFactory().openSession();	
 		
-		List rs = null;
+		List<Menu> rs = new ArrayList<Menu>();
+		boolean isEmpty = true;
 		
 		HashMap map = new HashMap();
 		map.put("menuFood", m);
 		
 		rs = sess.selectList(namespace2 + ".selectAddMenu", map);
 		
+		isEmpty = false;
 		
+		if(isEmpty) return Collections.emptyList();
+		
+		 
+		
+		return rs;
  
 	}
 	

@@ -1,12 +1,12 @@
 package mybatis.service;
 
 import model.Menu;
-import mybatis.session.CommentRepository1;
+import mybatis.session.CommentRepository;
 
 public class ServiceSoldOut {
 	
 	private static ServiceSoldOut service;
-	CommentRepository1 repo = new CommentRepository1();
+	CommentRepository repo = new CommentRepository();
 	
 	private ServiceSoldOut() { }
 	
@@ -18,7 +18,7 @@ public class ServiceSoldOut {
 	public void updateSoldOut(Menu m) {
 		 
 		repo.updateSoldOut(m);  
-//		repo.insertFoodHome(h);
+
 
 	}
 	
