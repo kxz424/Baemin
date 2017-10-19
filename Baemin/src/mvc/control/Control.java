@@ -25,6 +25,7 @@ import mvc.command.CommandMenuList;
 import mvc.command.CommandNull;
 import mvc.command.CommandOrder;
 import mvc.command.CommandReview;
+import mvc.command.CommandReviewList;
 import mvc.command.CommandSoldOut;
 
 public class Control extends HttpServlet {
@@ -56,6 +57,7 @@ public class Control extends HttpServlet {
         map.put("order-page", new CommandNull("OrderForm.jsp"));
         map.put("order-db", new CommandOrder("Main.jsp"));
         map.put("MenuList-page", new CommandMenuList("DetailFoodHome.jsp"));
+        map.put("Review-page", new CommandReviewList("DetailFoodHome.jsp"));
         map.put("Review-db", new CommandReview("DetailFoodHome.jsp"));
 
 //      boss

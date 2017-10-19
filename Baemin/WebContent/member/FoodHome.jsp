@@ -15,7 +15,7 @@
 <script type="text/javascript">
 	$(function() {
 		$(".food").click(function() {
-			window.location = "Baemin/baemin?cmd=detailfood";
+			window.location = "baemin?cmd=MenuList-page";
 		});
 	});
 </script>

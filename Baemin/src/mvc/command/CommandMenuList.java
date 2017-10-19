@@ -23,18 +23,7 @@ public class CommandMenuList implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 	
-		String rFood = request.getParameter("rFood");
-//		System.out.println(rFood);
-		List<Review> list = new ArrayList<Review>();
 		
-		try {
-			list = ServiceMenuList.getInstance().selectReview(rFood);
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		request.setAttribute("reviewList", list);
 		
 		return next;
 		
