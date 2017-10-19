@@ -30,34 +30,35 @@
 		<div class="box no-tp-brd">
 			<section class="review-sect">
 				<section class="view-review">
-					<div class="media small">
-						<a class="pull-left"><span class="inner-brd"><img
-								class="media-object" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg" /></span></a>
-						<div class="media-body">
-							<div class="pull-center media-heading">
-								<strong class="nick"> <span>알려드립니다</span>
-								</strong> <em>|</em> <span><input type="datetime"
-									value="2017-10-12" /></span>
-							</div>
-							<p id="Review_Cont1">너무맛있어요!!!!</p>
-						</div>
-					</div>
-					<div class="media small">
-						<a class="pull-left"><span class="inner-brd"><img
-								class="media-object" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg" /></span></a>
-						<div class="media-body">
-							<div class="pull-center media-heading">
-								<strong class="nick"> <span>jongsang</span>
-								</strong> <em>|</em> <span><input type="datetime"
-									value="2017-10-11" /></span>
-							</div>
-							<p id="Review_Cont2">그냥 그래요... 그래도 배달은 빠르네요</p>
-						</div>
-					</div>
+<!-- 					<div class="media small"> -->
+<!-- 						<a class="pull-left"><span class="inner-brd"><img -->
+<%-- 								class="media-object" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg" /></span></a> --%>
+<!-- 						<div class="media-body"> -->
+<!-- 							<div class="pull-center media-heading"> -->
+<!-- 								<strong class="nick"> <span>알려드립니다</span> -->
+<!-- 								</strong> <em>|</em> <span><input type="datetime" -->
+<!-- 									value="2017-10-12" /></span> -->
+<!-- 							</div> -->
+<!-- 							<p id="Review_Cont1">너무맛있어요!!!!</p> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="media small"> -->
+<!-- 						<a class="pull-left"><span class="inner-brd"><img -->
+<%-- 								class="media-object" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg" /></span></a> --%>
+<!-- 						<div class="media-body"> -->
+<!-- 							<div class="pull-center media-heading"> -->
+<!-- 								<strong class="nick"> <span>jongsang</span> -->
+<!-- 								</strong> <em>|</em> <span><input type="datetime" -->
+<!-- 									value="2017-10-11" /></span> -->
+<!-- 							</div> -->
+<!-- 							<p id="Review_Cont2">그냥 그래요... 그래도 배달은 빠르네요</p> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
 					
 					<form id="frm" class="form-horizontal" method="post">
 						<label class="control-label">리뷰작성</label>
-						<input type="hidden" name="id" value="kxz424"/>
+						<input type="hidden" name="cmd" value="Review-db"/>
+						<input type="hidden" name="id" value="kxz424@naver.com"/>
 						<input type="hidden" name="boss" value="123-45-67890"/>
 						<div class="form-group">
 							<div class="col-sm-10">
