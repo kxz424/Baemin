@@ -1,7 +1,13 @@
 package mvc.command;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.Review;
+import mybatis.service.ServiceReview;
 
 
 public class CommandReview implements Command {
@@ -16,8 +22,22 @@ public class CommandReview implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 	
+		Review r = new Review();
+		r.setrMember(request.getParameter("id"));
+		r.setrContent(request.getParameter("review"));
+		r.setrBoss(request.getParameter("boss"));
 		
-		return next;
+		ServiceReview.getInstance().insertReview(r);
+		
+		try {
+			PrintWriter out = response.getWriter();
+			out.write("저장");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
 		
 	}
 }

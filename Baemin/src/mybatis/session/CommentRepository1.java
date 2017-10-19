@@ -92,6 +92,12 @@ public class CommentRepository1 {
 		SqlSession sess = getSqlSessionFactory().openSession();
 		
 		int result = sess.insert(namespace + ".insertReview", r);
+		
+		if(result > 0) {
+			sess.commit();
+		}else {
+			sess.rollback();
+		}
 	}
 	
 	public void insertJoin(Member m) {

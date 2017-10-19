@@ -33,7 +33,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</update>
 	
 	<!-- 리뷰 등록 -->
-	<insert id="insertReview" parameterType="">
+	<insert id="insertReview" parameterType="review">
 		INSERT INTO review (r_num, r_content, r_date, r_member, r_boss)
 		VALUES (seq_review.nextval, #{rContent}, sysdate, #{rMember}, #{rBoss})
 	</insert>
