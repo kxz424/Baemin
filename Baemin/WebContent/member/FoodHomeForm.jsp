@@ -30,10 +30,12 @@
 		</div>
 		<div id="test">
 			<% for(int i = 0 ; i < foodhome.size() ; i++ ) { %>
-			<img class="test" src="<%= projectName %>/배달의민족/<%= foodhome.get(i).getfImg()  %>">
-<%-- 			<img class="test" src="<%= projectName %>/배달의민족/가입1.png"> --%>
-<%-- 			<img class="test" src="<%= projectName %>/배달의민족/가입1.png"> --%>
-<%-- 			<img class="test" src="<%= projectName %>/배달의민족/가입1.png"> --%>
+			<div class="food">
+				<span>
+				<br/> <img class="test" src="<%= projectName %>/배달의민족/<%= foodhome.get(i).getfImg()  %>">
+				</span>
+				<span>안녕하세요</span>
+			</div>
 			<% } %>
 		</div>
 	</div>

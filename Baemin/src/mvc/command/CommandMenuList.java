@@ -24,6 +24,7 @@ public class CommandMenuList implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 	
 		String rFood = request.getParameter("rFood");
+//		System.out.println(rFood);
 		List<Review> list = new ArrayList<Review>();
 		
 		try {
