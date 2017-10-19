@@ -1,14 +1,12 @@
 package mybatis.service;
 
-import model.Boss;
 import model.FoodHome;
-import model.Member;
-import mybatis.session.CommentRepository;
+import mybatis.session.CommentRepository1;
 
 public class ServiceIng {
 	
 	private static ServiceIng service;
-	CommentRepository repo = new CommentRepository();
+	CommentRepository1 repo = new CommentRepository1();
 	
 	private ServiceIng() { }
 	
@@ -17,9 +15,9 @@ public class ServiceIng {
 		return service;
 	} 
 	
-	public void insertJoin(Member m) {
+	public void updateIng(FoodHome fh) {
 		  
-		repo.insertJoin(m); 
+		repo.updateIng(fh); 
 
 	}
 	

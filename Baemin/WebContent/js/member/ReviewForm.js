@@ -2,11 +2,12 @@ $(function(){
  	$('#revBtn').click(function(){
  		alert("222");
  		var queryString = $("#frm").serialize();
+ 		alert(queryString);
  		$.ajax({
- 			url : "DetailFoodHome.jsp",
+ 			url : "/Baemin/baemin?cmd=Review-db",
  			type : "post",
- 			datatype : "json",
  			data : queryString,
+ 			datatype : "json",
  			success : function(data){
  				alert(data);
  			}

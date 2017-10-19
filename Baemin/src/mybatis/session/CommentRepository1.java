@@ -2,15 +2,16 @@ package mybatis.session;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.ResultSet;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import model.FoodHome;
 import model.Member;
 import model.Menu;
+import model.Review;
 // 종상오빠
 public class CommentRepository1 {
 	private String namespace = "mapper.BaeminMenuMapper";
@@ -37,14 +38,14 @@ public class CommentRepository1 {
 	
 	public void insertAddMenu(Menu m) {
 		SqlSession sess = getSqlSessionFactory().openSession();
-		int result = sess.insert(namespace + ".insertAddMenu", m);
-		
-		
-		if(result > 0) {
-			sess.commit();
-		}else {
-			sess.rollback();
-		}
+//		int result = sess.insert(namespace + ".insertAddMenu", m);
+//		
+//		
+//		if(result > 0) {
+//			sess.commit();
+//		}else {
+//			sess.rollback();
+//		}
 		
 	}
 	
@@ -59,6 +60,38 @@ public class CommentRepository1 {
 //			sess.rollback();
 //		}
 		
+	}
+	
+	public void updateEdit(FoodHome fh) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+//		int result = sess.update(namespace + ".updateEdit", fh);
+//		
+//		
+//		if(result > 0) {
+//			sess.commit();
+//		}else {
+//			sess.rollback();
+//		}
+		
+	}
+	
+	public void updateIng(FoodHome fh) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+//		int result = sess.update(namespace + ".updateEdit", fh);
+//		
+//		
+//		if(result > 0) {
+//			sess.commit();
+//		}else {
+//			sess.rollback();
+//		}
+		
+	}
+	
+	public void insertReview(Review r) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		
+		int result = sess.insert(namespace + ".insertReview", r);
 	}
 	
 	public void insertJoin(Member m) {

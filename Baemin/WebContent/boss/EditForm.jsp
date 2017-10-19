@@ -53,20 +53,20 @@
 						</dd>
 					</dl>
 				</div>
-				<form>
+				<form action="<%= projectName %>/baemin?cmd=boss-edit-db" method="post">
 					<div class="form-group">
 						<div class="row">
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
 									<label class="input-group-addon">오픈시간</label> <input
-										id="openTime" type="text" class="form-control" placeholder="예) 09" />
+										id="openTime" name="fOpen" type="text" class="form-control" placeholder="예) 09" />
 								</div>
 							</div>
 
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
 									<label class="input-group-addon">마감시간</label> <input
-										id="closeTime" type="text" class="form-control" placeholder="예) 23" />
+										id="closeTime" name="fClose" type="text" class="form-control" placeholder="예) 23" />
 								</div>
 							</div>
 						</div>
@@ -75,7 +75,7 @@
 					<div class="form-group">
 						<div class="input-group">
 							<label class="input-group-addon">전화번호</label> <input type="text"
-								id="tel" class="form-control" placeholder="예) 010-1234-5678" />
+								id="tel" name="fTel" class="form-control" placeholder="예) 010-1234-5678" />
 						</div>
 					</div>
 

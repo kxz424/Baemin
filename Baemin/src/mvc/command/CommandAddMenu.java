@@ -31,14 +31,14 @@ public class CommandAddMenu implements Command {
 //		
 //		ServiceAddMenu.getInstance().insertAddMenu(m);
 		
-		try {
-			PrintWriter out = response.getWriter();
-			System.out.println("1111-----------------------------");
-			out.write("1111");
-			//out.flush();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			PrintWriter out = response.getWriter();
+//			System.out.println("1111-----------------------------");
+//			out.write("1111");
+//			//out.flush();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		
 		return null;
 		

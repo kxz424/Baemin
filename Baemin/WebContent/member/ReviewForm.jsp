@@ -55,7 +55,7 @@
 						</div>
 					</div>
 					
-					<form id="frm" class="form-horizontal">
+					<form id="frm" class="form-horizontal" method="post">
 						<label class="control-label">리뷰작성</label>
 						<input type="hidden" name="id" value="kxz424"/>
 						<div class="form-group">

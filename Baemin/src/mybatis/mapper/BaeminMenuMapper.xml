@@ -10,8 +10,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 메뉴 테이블 -->
 	<insert id="insertAddMenu" parameterType="menu">
-		insert into menu(menu_num, menu_name, menu_price, menu_boss, menu_img)
-		values(seq_menu.nextval, #{menuName}, #{menuPrice}, #{menuBoss}, #{menuImg})
+		INSERT INTO menu(menu_num, menu_name, menu_price, menu_boss, menu_img)
+		VALUES(seq_menu.nextval, #{menuName}, #{menuPrice}, #{menuBoss}, #{menuImg})
 	</insert>
 	
 	<!-- 메뉴 품절 관리 -->
@@ -19,6 +19,24 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		UPDATE menu SET menu_soldout = #{menuSoldOut}
 		WHERE menu_num = #{menuNum}
 	</update>
+	
+	<!-- 운영 정보 수정 -->
+	<update id="updateEdit" parameterType="foodhome">
+		UPDATE food_home SET f_open = #{fOpen}, f_close = #{fClose}, f_tel = #{fTel}
+		WHERE f_boss = #{fBoss}
+	</update>
+	
+	<!-- 일시 운영 중지 -->
+	<update id="updateIng" parameterType="foodhome">
+		UPDATE food_home SET f_ing = #{fIng}
+		WHERE f_boss = #{fBoss}
+	</update>
+	
+	<!-- 리뷰 등록 -->
+	<insert id="insertReview" parameterType="">
+		INSERT INTO review (r_num, r_content, r_date, r_member, r_boss)
+		VALUES (seq_review.nextval, #{rContent}, sysdate, #{rMember}, #{rBoss})
+	</insert>
 	
 	<!-- 업소 테이블 -->
 <!-- 	<insert id="insertFoodHome" parameterType="foodHome"> -->

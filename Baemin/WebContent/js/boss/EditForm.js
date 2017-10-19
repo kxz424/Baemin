@@ -4,6 +4,7 @@ $(function(){
 	});
 	
 	$('#modifyBtn').click(function(){
-		alert($('#openTime').val() + " " + $('#closeTime').val() + " " + $('#tel').val() + " " + $('#content').val());
+//		alert($('#openTime').val() + " " + $('#closeTime').val() + " " + $('#tel').val() + " " + $('#content').val());
+		$('form').submit();
 	});
 });

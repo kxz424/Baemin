@@ -24,6 +24,7 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="<%= projectName %>/js/boss/IngForm.js"></script>
 
 </head>
 <body>
@@ -45,9 +46,13 @@
 						<option>굽네치킨-가락점</option>
 					</select>
 				</div>
-				<div class="check">
-					<input type="radio" /> 운영중지
-				</div>
+				<form action="<%= projectName %>/baemin?cmd=boss-ing-db">
+					<div class="check">
+						<input type="radio" name="fIng" /> 운영중지
+					</div>
+					<input type="button" id="ingBtn" value="적용"/>
+				</form>
+				
 			</div>
 		</div>
 		

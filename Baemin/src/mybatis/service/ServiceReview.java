@@ -1,13 +1,12 @@
 package mybatis.service;
 
 import model.Boss;
-import model.FoodHome;
-import mybatis.session.CommentRepository;
+import mybatis.session.CommentRepository1;
 
 public class ServiceReview {
 	
 	private static ServiceReview service;
-	CommentRepository repo = new CommentRepository();
+	CommentRepository1 repo = new CommentRepository1();
 	
 	private ServiceReview() { }
 	
@@ -18,7 +17,7 @@ public class ServiceReview {
 	
 	public void insertBossJoin(Boss b) {
 		
-		repo.insertBossJoin(b); 
+//		repo.insertBossJoin(b); 
 //		repo.insertFoodHome(h);
   
 	}
