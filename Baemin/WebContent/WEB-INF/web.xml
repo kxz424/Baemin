@@ -20,4 +20,23 @@
     <url-pattern>/control</url-pattern>
     <url-pattern>/baemin</url-pattern>
   </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+	<servlet-name>FileUploadServlet</servlet-name>
+	<servlet-class>file.upload.FileUploadServlet</servlet-class>
+	<!-- fileuploading -->
+	<multipart-config>
+		<location>C:\\JavaClass\\web_workspace\\Baemin\\WebContent\\FoodHome</location>  <!-- 임시경로 지정 -->
+		<file-size-threshold>102400</file-size-threshold>
+	</multipart-config>
+</servlet>
+	<servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern>/file</url-pattern>
+	</servlet-mapping>
+  
+  
 </web-app>

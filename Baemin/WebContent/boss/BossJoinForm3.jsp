@@ -46,7 +46,7 @@
 		</div>
 
 		<div class="terms-content">
-			<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=boss-join-db">
+			<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=boss-join-db" enctype="multipart/form-data">
 				<fieldset>
 					<div>
 						<ul>
@@ -67,7 +67,7 @@
 								</select><br/><br/> 
 								
 								<label>업소이미지첨부</label><br/> 
-								<input type="file" value="" class="" /><br/><br/>
+								<input type="file" name="file" /><br/><br/>
 								
 								
 								<label>카테고리</label><br/>

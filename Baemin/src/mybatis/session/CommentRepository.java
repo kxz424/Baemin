@@ -57,7 +57,7 @@ public class CommentRepository {
 		
 	}
 
-	public void insertFoodHome(FoodHome h) {
+	public int insertFoodHome(FoodHome h) {
 		
 		SqlSession sess = getSqlSessionFactory().openSession();
 		int result = sess.insert(namespace1 + ".insertFoodHome", h);
@@ -67,6 +67,8 @@ public class CommentRepository {
 		}else {
 			sess.rollback();
 		}
+		
+		return result;
 
 	}
 	
