@@ -77,14 +77,14 @@
 <!-- 						</div> -->
 <!-- 					</div> -->
 					
-					<form id="frm" class="form-horizontal" method="post">
+					<form id="frm" class="form-horizontal">
 						<label class="control-label">리뷰작성</label>
 						<input type="hidden" name="cmd" value="Review-db"/>
 						<input type="hidden" name="rMember" value="kxz424@naver.com"/>
 						<input type="hidden" name="rFood" value="123-45-67890"/>
 						<div class="form-group">
 							<div class="col-sm-10">
-								<textarea name="rContent" class="form-control" rows="3"></textarea>
+								<textarea name="rCentent" class="form-control" rows="3"></textarea>
 							</div>
 							<div class="col-sm-2 bb">
 								<input id="revBtn" type="button" class="btn btn-info btn-lg bb" value="등록"/>
