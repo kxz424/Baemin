@@ -115,6 +115,8 @@ public class CommentRepository1 {
 		
 		list = (List) sess.selectList(namespace + ".selectReview", map);
 		
+		isEmpty = false;
+		
 		if( isEmpty ) return Collections.emptyList();
 		
 		return list;

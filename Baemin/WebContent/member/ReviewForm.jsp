@@ -43,9 +43,9 @@
 		<div class="box no-tp-brd">
 			<section class="review-sect">
 				<section class="view-review">
-<%-- 				<% if(list.isEmpty()){ %> --%>
+				<% if(list.isEmpty()){ %>
 					<h3>등록된 리뷰가 존재하지 않습니다.</h3>
-<%-- 				<% }else {%> --%>
+				<% }else {%>
 					<% for(Review r : list){ %>
 				
 						<div class="media small">
@@ -62,7 +62,7 @@
 						</div>
 					
 					<%} %>
-<%-- 				<%} %> --%>
+				<%} %>
 					
 <!-- 					<div class="media small"> -->
 <!-- 						<a class="pull-left"><span class="inner-brd"><img -->
