@@ -4,12 +4,16 @@ $(function(){
  		var queryString = $("#frm").serialize();
  		alert(queryString);
  		$.ajax({
+ 			type : "get",
  			url : "/Baemin/baemin?cmd=Review-db",
- 			type : "post",
  			data : queryString,
- 			datatype : "json",
+ 			datatype : "text",
  			success : function(data){
+ 				alert("등록 성공");
  				alert(data);
+ 			},
+ 			error : function(err){
+ 				alert("등록 실패 : " + err);
  			}
  		});
  	});
