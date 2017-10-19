@@ -94,21 +94,21 @@ public class CommentRepository {
 	
 	
 	
-//	public void insertAddMenu(Menu m) {
-//		
-//		SqlSession sess = getSqlSessionFactory().openSession();
-//		
-//		int result = sess.insert(namespace2 + ".insertAddMenu", m);
-//		
-//		
-//		if(result > 0) {
-//			sess.commit();
-//		}else {
-//			sess.rollback();
-//		}
-//		
-//		
-//	}
+	public void insertAddMenu(Menu m) {
+		
+		SqlSession sess = getSqlSessionFactory().openSession();
+		
+		int result = sess.insert(namespace2 + ".insertAddMenu", m);
+		
+		
+		if(result > 0) {
+			sess.commit();
+		}else {
+			sess.rollback();
+		}
+		
+		
+	}
 
 
 	
@@ -152,7 +152,19 @@ public class CommentRepository {
 	
 	
 	
-	
+	public void updateEdit(FoodHome fh) {
+		
+		SqlSession sess = getSqlSessionFactory().openSession();
+		int result = sess.update(namespace2 + ".updateEdit", fh);
+		
+		
+		if(result > 0) {
+			sess.commit();
+		}else {
+			sess.rollback();
+		}
+		
+	}
 	
 	
 	

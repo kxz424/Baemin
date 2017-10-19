@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>우리반 연습</title>
+<title>운영 정보 수정</title>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet"
@@ -58,15 +58,15 @@
 						<div class="row">
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
-									<label class="input-group-addon">오픈시간</label> <input
-										id="openTime" name="fOpen" type="text" class="form-control" placeholder="예) 09" />
+									<label class="input-group-addon">오픈시간</label> 
+									<input id="openTime" name="fOpen" type="text" class="form-control" placeholder="예) 0930" />
 								</div>
 							</div>
 
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
-									<label class="input-group-addon">마감시간</label> <input
-										id="closeTime" name="fClose" type="text" class="form-control" placeholder="예) 23" />
+									<label class="input-group-addon">마감시간</label> 
+									<input id="closeTime" name="fClose" type="text" class="form-control" placeholder="예) 2330" />
 								</div>
 							</div>
 						</div>
@@ -74,15 +74,15 @@
 
 					<div class="form-group">
 						<div class="input-group">
-							<label class="input-group-addon">전화번호</label> <input type="text"
-								id="tel" name="fTel" class="form-control" placeholder="예) 010-1234-5678" />
+							<label class="input-group-addon">전화번호</label> 
+							<input type="text" id="tel" name="fTel" class="form-control" placeholder="예) 01012345678" />
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div id="area" class="input-group">
 							<label>업소소개</label>
-							<textarea id="content" class="form-control" rows="3"></textarea>
+							<textarea id="content" class="form-control" rows="3" name="foodHome-info"></textarea>
 						</div>
 					</div>
 

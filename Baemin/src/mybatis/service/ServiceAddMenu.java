@@ -19,12 +19,12 @@ public class ServiceAddMenu {
 		return service;
 	} 
 	
-//	public void insertAddMenu(Menu m) {
-//		 
-//		repo.insertAddMenu(m); 
-//		 
-// 
-//	}
+	public void insertAddMenu(Menu m) {
+		 
+		repo.insertAddMenu(m); 
+		 
+ 
+	}
 
 	public List<Menu> selectAddMenu(String m) {
 		   
