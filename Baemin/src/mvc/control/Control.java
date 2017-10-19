@@ -51,6 +51,7 @@ public class Control extends HttpServlet {
         map.put("join-finish", new CommandJoin("LoginForm.jsp"));
         map.put("logout-page", new CommandLogout("Main.jsp"));
         map.put("cate-search", new CommandFoodHome("FoodHomeForm.jsp"));
+        map.put("search-db", new CommandFoodHome("FoodHomeForm.jsp"));
         map.put("order-page", new CommandNull("OrderForm.jsp"));
         map.put("order-db", new CommandOrder("Main.jsp"));
         map.put("MenuList-page", new CommandMenuList("DetailFoodHome.jsp"));
