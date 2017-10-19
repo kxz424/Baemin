@@ -16,9 +16,9 @@ public class CommentService {
 		return service;
 	} 
 	
-	public Integer insertComment(Member m) {
-		return repo.insertComment(m);
-	}
+//	public Integer insertComment(Member m) {
+//		return repo.insertComment(m);
+//	}
 	
 	
 	
