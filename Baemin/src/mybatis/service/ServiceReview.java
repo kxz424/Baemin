@@ -1,5 +1,7 @@
 package mybatis.service;
 
+import java.sql.SQLException;
+
 import model.Review;
 import mybatis.session.CommentRepository1;
 
@@ -21,6 +23,8 @@ public class ServiceReview {
 //		repo.insertFoodHome(h);
   
 	}
+	
+
 	
 
 }

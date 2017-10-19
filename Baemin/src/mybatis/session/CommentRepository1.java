@@ -2,6 +2,10 @@ package mybatis.session;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -99,6 +103,28 @@ public class CommentRepository1 {
 			sess.rollback();
 		}
 	}
+	
+	public ArrayList<Review> selectReview(String boss) throws SQLException {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		HashMap<String, String> map = new HashMap<>();
+		map.put("boss", boss);
+		
+		ResultSet rs = (ResultSet) sess.selectList(namespace + ".selectReview", map);
+		
+		Review r = new Review();
+		ArrayList<Review> list = new ArrayList<>();
+		while(rs.next()) {
+			r.setrContent(rs.getString("r_content"));
+			r.setrDate(rs.getString("r_date"));
+			r.setrMember(rs.getString("r_member"));
+			r.setrBoss(rs.getString("r_boss"));
+			list.add(r);
+		}
+		
+		return list;
+	}
+	
+	
 	
 	public void insertJoin(Member m) {
 		

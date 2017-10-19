@@ -37,12 +37,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		INSERT INTO review (r_num, r_content, r_date, r_member, r_boss)
 		VALUES (seq_review.nextval, #{rContent}, sysdate, #{rMember}, #{rBoss})
 	</insert>
+	
+	<!-- 리뷰 목록 조회 -->
+	<select id="selectReview" resultType="review" parameterType="hashmap">
+		SELECT r_content, r_date, r_member, r_boss FROM review
+		WHERE r_boss = #{rBoss} ORDER BY r_num DESC
+	</select>
 
 	
 	<!-- 메뉴 검색 --> 
 	<select id="selectAddMenu" parameterType="String">
 		select menu_name,menu_price, menu_soldout  from menu where menu_boss=#{menuBoss}
 	</select>
+	
 	
 	
 	

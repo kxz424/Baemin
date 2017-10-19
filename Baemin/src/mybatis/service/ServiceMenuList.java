@@ -1,13 +1,15 @@
 package mybatis.service;
 
-import model.Boss;
-import model.FoodHome;
-import mybatis.session.CommentRepository;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import model.Review;
+import mybatis.session.CommentRepository1;
 
 public class ServiceMenuList {
 	
 	private static ServiceMenuList service;
-	CommentRepository repo = new CommentRepository();
+	CommentRepository1 repo = new CommentRepository1();
 	
 	private ServiceMenuList() { }
 	
@@ -16,11 +18,13 @@ public class ServiceMenuList {
 		return service;
 	} 
 	
-	public void insertBossJoin(Boss b) {
+	public ArrayList<Review> selectReview(String boss) throws SQLException {
 		
-		repo.insertBossJoin(b); 
-//		repo.insertFoodHome(h);  
-
+		ArrayList<Review> list = repo.selectReview(boss); 
+//		repo.insertFoodHome(h);
+		
+		return list;
+  
 	}
 	
 
