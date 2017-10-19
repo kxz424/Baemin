@@ -58,6 +58,7 @@
 					<form id="frm" class="form-horizontal" method="post">
 						<label class="control-label">리뷰작성</label>
 						<input type="hidden" name="id" value="kxz424"/>
+						<input type="hidden" name="boss" value="123-45-67890"/>
 						<div class="form-group">
 							<div class="col-sm-10">
 								<textarea name="review" class="form-control" rows="3"></textarea>

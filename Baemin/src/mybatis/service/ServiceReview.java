@@ -1,6 +1,6 @@
 package mybatis.service;
 
-import model.Boss;
+import model.Review;
 import mybatis.session.CommentRepository1;
 
 public class ServiceReview {
@@ -15,9 +15,9 @@ public class ServiceReview {
 		return service;
 	} 
 	
-	public void insertBossJoin(Boss b) {
+	public void insertReview(Review r) {
 		
-//		repo.insertBossJoin(b); 
+		repo.insertReview(r); 
 //		repo.insertFoodHome(h);
   
 	}

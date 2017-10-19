@@ -7,9 +7,12 @@ $(function(){
  			url : "/Baemin/baemin?cmd=Review-db",
  			type : "post",
  			data : queryString,
- 			datatype : "json",
+ 			datatype : "text",
  			success : function(data){
- 				alert(data);
+ 				alert("등록 성공");
+ 			},
+ 			error : function(err){
+ 				alert("등록 실패 : " + err);
  			}
  		});
  	});
