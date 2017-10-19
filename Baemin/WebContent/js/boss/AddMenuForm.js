@@ -1,4 +1,5 @@
 $(function(){
+	
 	$('.select').change(function(){
 		alert($('.select option:selected').val());
 	});
@@ -8,6 +9,9 @@ $(function(){
 	});
 	
 	$('#insert').click(function(){
+		
+		
+		
 //		alert($('#menuName').val() + " " + $('#menuPrice').val() + " " + $('#exampleInputFile').val());
 		
 //		$.ajax({
