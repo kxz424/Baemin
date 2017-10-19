@@ -106,20 +106,25 @@ public class CommentRepository1 {
 		}
 	}
 	
-	public List<Review> selectReview(String rFood) throws SQLException {
+	public List<Review> selectReview(String rFood) {
 		SqlSession sess = getSqlSessionFactory().openSession();
-		List<Review> list = new ArrayList<>();
-		boolean isEmpty = true;
-		HashMap<String, String> map = new HashMap<>();
-		map.put("rFood", rFood);
 		
-		list = (List) sess.selectList(namespace + ".selectReview", map);
+		try {
+			List<Review> list = new ArrayList<>();
+			boolean isEmpty = true;
+			HashMap<String, String> map = new HashMap<>();
+			map.put("rFood", rFood);
 		
-		isEmpty = false;
+			list = (List) sess.selectList(namespace + ".selectReview", map);
 		
-		if( isEmpty ) return Collections.emptyList();
+			isEmpty = false;
 		
-		return list;
+			if( isEmpty ) return Collections.emptyList();
+		
+			return list;
+		} finally {
+			sess.close();
+		}
 	}
 	
 	

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import mvc.command.Command;
 import mvc.command.CommandAddMenu;
+import mvc.command.CommandAddMenuDB;
 import mvc.command.CommandBossJoin;
 import mvc.command.CommandBossLogin;
 import mvc.command.CommandEdit;
@@ -24,6 +25,7 @@ import mvc.command.CommandMenuList;
 import mvc.command.CommandNull;
 import mvc.command.CommandOrder;
 import mvc.command.CommandReview;
+import mvc.command.CommandReviewList;
 import mvc.command.CommandSoldOut;
 
 public class Control extends HttpServlet {
@@ -55,6 +57,7 @@ public class Control extends HttpServlet {
         map.put("order-page", new CommandNull("OrderForm.jsp"));
         map.put("order-db", new CommandOrder("Main.jsp"));
         map.put("MenuList-page", new CommandMenuList("DetailFoodHome.jsp"));
+        map.put("Review-page", new CommandReviewList("DetailFoodHome.jsp"));
         map.put("Review-db", new CommandReview("DetailFoodHome.jsp"));
 
 //      boss
@@ -65,8 +68,11 @@ public class Control extends HttpServlet {
         map.put("boss-join1", new CommandNull("../boss/BossJoinForm2.jsp"));
         map.put("boss-join2", new CommandNull("../boss/BossJoinForm3.jsp"));
         map.put("boss-join-db", new CommandBossJoin("../boss/BossMain.jsp"));
-        map.put("boss-add-menu", new CommandNull("../boss/AddMenuForm.jsp"));
-        map.put("boss-add-menu-db", new CommandAddMenu("../boss/AddMenuForm.jsp")); 
+
+        map.put("boss-add-menu", new CommandAddMenuDB("../boss/AddMenuForm.jsp"));
+        map.put("boss-add-menu-db", new CommandAddMenu("../boss/AddMenuForm.jsp"));
+        
+
         map.put("boss-edit", new CommandNull("../boss/EditForm.jsp"));
         map.put("boss-edit-db", new CommandEdit("../boss/EditFrom.jsp"));
         map.put("boss-sold", new CommandNull("../boss/SoldOutForm.jsp"));

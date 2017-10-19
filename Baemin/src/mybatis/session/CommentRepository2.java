@@ -12,6 +12,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import com.sun.glass.ui.Menu;
 import com.sun.org.apache.regexp.internal.recompile;
 
 import model.Boss;
@@ -106,6 +107,19 @@ public class CommentRepository2 {
 			hash.put("fName", '%'+search+'%');
 			
 			return sess.selectList(namespace + ".selectCate", hash);
+		} finally {
+			sess.close();
+		}
+	}
+	
+	public List<Menu> selectMenuList(String fboss) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		
+		try {
+			HashMap hash = new HashMap();
+			hash.put("fBoss", fboss);
+			return sess.selectList(namespace + ".selectMenu", hash);
+			
 		} finally {
 			sess.close();
 		}

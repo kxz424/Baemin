@@ -4,13 +4,17 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sun.glass.ui.Menu;
+
+import model.FoodHome;
 import model.Review;
 import mybatis.session.CommentRepository1;
+import mybatis.session.CommentRepository2;
 
 public class ServiceMenuList {
 	
 	private static ServiceMenuList service;
-	CommentRepository1 repo = new CommentRepository1();
+	CommentRepository2 repo = new CommentRepository2();
 	
 	private ServiceMenuList() { }
 	
@@ -19,12 +23,10 @@ public class ServiceMenuList {
 		return service;
 	} 
 	
-	public List<Review> selectReview(String rFood) throws SQLException {
+	public List<Menu> selectMenuList(String fboss) {
 		
-//		repo.insertFoodHome(h);
+		return repo.selectMenuList(fboss);
 		
-		return repo.selectReview(rFood);
-  
 	}
 	
 

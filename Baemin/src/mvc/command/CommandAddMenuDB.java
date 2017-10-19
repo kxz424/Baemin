@@ -12,11 +12,13 @@ import model.Menu;
 import mybatis.service.ServiceAddMenu;
 
 
-public class CommandAddMenu implements Command {
+public class CommandAddMenuDB implements Command{
+
+	
 
 	private String next;
 	
-	public CommandAddMenu( String next ) {
+	public CommandAddMenuDB( String next ) {
 		this.next = next;
 	}
 	 
@@ -25,23 +27,22 @@ public class CommandAddMenu implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 		
 		Menu m = new Menu();
+		
+		List<Menu> result = new ArrayList<Menu>();
 
-		m.setMenuName(request.getParameter("menuName"));		// 메뉴명
-		m.setMenuPrice(Integer.parseInt(request.getParameter("menuPrice")));// 가격
-		m.setMenuImg("img.jpg");			// 이미지 경로
 		m.setMenuFood("1111111111");		// 사업자등록번호
+
+		result = ServiceAddMenu.getInstance().selectAddMenu(m.getMenuFood());
 		
-		
-		ServiceAddMenu.getInstance().insertAddMenu(m);
-		
-		try {
-			response.sendRedirect("baemin?cmd=boss-add-menu");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		request.setAttribute("result", result);
+
 		
 		return next;
 		
 	}
+	
+	
+	
+	
+	
 }
-
