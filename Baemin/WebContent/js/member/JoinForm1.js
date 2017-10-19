@@ -53,9 +53,9 @@ $(function() {
 		} else if(lo != last) {
 			$("#pid").html("'@' 다음 부분에 '@' 기호가 포함되면 안됩니다.");
 			$("#ppassword").html("");
-		} else if( pass.length < 8 || pass.length > 20 ) {
+		} else if( pass.length < 4 || pass.length > 20 ) {
 			$("#pid").html("");
-			$("#ppassword").html("비밀번호를 8~20자로 입력해주세요. 현재 " + pass.length + "자 입니다.");
+			$("#ppassword").html("비밀번호를 4~20자로 입력해주세요. 현재 " + pass.length + "자 입니다.");
 		} else if( pass != word ) {
 			$("#pid").html("");
 			$("#ppassword").html("비밀번호가 서로 다릅니다. 다시 입력해 주세요.");
