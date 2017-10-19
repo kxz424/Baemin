@@ -17,7 +17,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 메뉴 품절 관리 -->
 	<update id="updateSoldOut" parameterType="menu">
 		UPDATE menu SET menu_soldout = #{menuSoldOut}
-		WHERE menu_num = #{menuNum}
+		WHERE menu_food = #{menuFood} and menu_name = #{menuName}
 	</update>
 	
 	<!-- 운영 정보 수정 -->

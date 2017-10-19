@@ -3,6 +3,7 @@ package mvc.command;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,7 +25,8 @@ public class CommandAddMenu implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 		
 		Menu m = new Menu();
-//		ArrayList result = new ArrayList();
+		
+		List<Menu> result = new ArrayList<Menu>();
 
 		
 //		m.setMenuName(request.getParameter("menuName"));		// 메뉴명
@@ -36,8 +38,12 @@ public class CommandAddMenu implements Command {
 //		ServiceAddMenu.getInstance().insertAddMenu(m);
 		
 		
-		 ServiceAddMenu.getInstance().selectAddMenu(m.getMenuFood());
+		result = ServiceAddMenu.getInstance().selectAddMenu(m.getMenuFood());
 		
+		request.setAttribute("result", result);
+		  
+		 
+		 
 		  
 //		request.setAttribute("result", result);
 		

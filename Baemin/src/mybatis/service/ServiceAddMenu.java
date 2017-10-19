@@ -1,6 +1,7 @@
 package mybatis.service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import model.Menu;
 import mybatis.session.CommentRepository;
@@ -25,9 +26,9 @@ public class ServiceAddMenu {
 // 
 //	}
 
-	public void selectAddMenu(String m) {
-		 
-		repo.selectAddMenu(m); 
+	public List<Menu> selectAddMenu(String m) {
+		   
+		return repo.selectAddMenu(m); 
 		
 	}
 	

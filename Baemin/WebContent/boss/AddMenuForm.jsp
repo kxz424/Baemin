@@ -1,7 +1,16 @@
+<%@page import="java.util.List"%>
+<%@page import="model.Menu"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	
 <% String projectName = "/Baemin"; %>
+
+<%
+	
+	List<Menu> list = (List)request.getAttribute("result");
+ 	
+
+%>
 	
 <!DOCTYPE>
 <html>
@@ -93,16 +102,31 @@
 							<th>품절유무</th>
 						</tr>
 					</thead>
+					
+					
+					<% if(list.isEmpty()){ %>
+	
+						<td></td><td></td><td></td>
+
+					<% }else{ %>
+
+					<% for(Menu m : list){  %>
 					<tr>
-						<td>쌀통닭</td>
-						<td>16,900원</td>
-						<td>N</td>
+						<td>
+						<%= m.getMenuName() %>
+						</td>
+						<td>
+						<%= m.getMenuPrice() %>원
+						</td>
+						<td>
+						<%= m.getMenuSoldOut() %>
+						</td>
 					</tr>
-					<tr>
-						<td>양파올린닭</td>
-						<td>19,900원</td>
-						<td>N</td>
-					</tr>
+					<% } %>
+					<% } %>
+				
+					
+					
 				</table>
 
 			</div>
