@@ -35,7 +35,7 @@ public class FileUploadServlet extends HttpServlet {
 			RequestDispatcher dispatcher = req
 					.getRequestDispatcher("/09_upload_class/2_pds/invalid.jsp");
 //			dispatcher.forward(req, resp);
-		}
+		} 
 	}
 
 	private PdsItem saveUploadFile(HttpServletRequest req) throws IOException,

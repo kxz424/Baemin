@@ -40,7 +40,7 @@ public class CommandBossJoin implements Command{
 		foodHome.setfTel(request.getParameter("fTel"));
 		foodHome.setfCategory(request.getParameter("fCategory"));
 		foodHome.setfImg(request.getParameter("file"));
-		
+		 
 		FileUploadServlet fus = new FileUploadServlet();
 		
 		request.setAttribute("boss", boss);
