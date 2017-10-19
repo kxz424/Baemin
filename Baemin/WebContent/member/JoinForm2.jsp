@@ -35,7 +35,7 @@
 		
 		<h3>생년월일<span>회원가입은 만 14세 이상 고객만 가능합니다.</span></h3>
 		
-		<input id="birth" name="mBirth" class="year" type="text" placeholder="예:951005" /> <br/>
+		<input id="birth" name="mBirth" class="year" type="text" placeholder="예:19951005" /> <br/>
 		<p id="pbirth" class="p"></p>
 		
 <!-- 		<input  type="button" value="주의사항 안내 ▼"> -->

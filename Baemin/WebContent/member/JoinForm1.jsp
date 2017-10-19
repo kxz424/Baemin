@@ -27,8 +27,8 @@
 			<input class="in" name="mId" id="userid" type="text" placeholder="배민ID(이메일)" /> 
 			<input class="in" id="isId" type="button" value="ID 중복확인" />
 			<p id="pid" class="p"></p><br/>
-			<input class="in" name="mPassword" id="userpassword" type="password" placeholder="비밀번호 (8~20자)" /> <br/>
-			<input class="in" id="userconfirm"type="password" placeholder="비밀번호 재입력 (8~20지)" />
+			<input class="in" name="mPassword" id="userpassword" type="password" placeholder="비밀번호 (4~20자)" /> <br/>
+			<input class="in" id="userconfirm"type="password" placeholder="비밀번호 재입력 (4~20자)" />
 			<p id="ppassword" class="p"></p><br/>
 
 			<button id="btn" class="disabled">다음</button>
