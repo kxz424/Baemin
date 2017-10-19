@@ -1,6 +1,11 @@
+<%@page import="model.FoodHome"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <% String projectName = "/Baemin"; %>
+    <% String projectName = "/Baemin"; 
+    	List<FoodHome> foodhome = (List<FoodHome>)request.getAttribute("foodhome");
+    	
+    %>
 <!DOCTYPE>
 <html>
 <head>
@@ -24,10 +29,12 @@
 		</select>
 		</div>
 		<div id="test">
-		<img class="test" src="<%= projectName %>/배달의민족/가입1.png">
-		<img class="test" src="<%= projectName %>/배달의민족/가입1.png">
-		<img class="test" src="<%= projectName %>/배달의민족/가입1.png">
-		<img class="test" src="<%= projectName %>/배달의민족/가입1.png">
+			<% for(int i = 0 ; i < foodhome.size() ; i++ ) { %>
+			<img class="test" src="<%= projectName %>/배달의민족/<%= foodhome.get(i).getfImg()  %>">
+<%-- 			<img class="test" src="<%= projectName %>/배달의민족/가입1.png"> --%>
+<%-- 			<img class="test" src="<%= projectName %>/배달의민족/가입1.png"> --%>
+<%-- 			<img class="test" src="<%= projectName %>/배달의민족/가입1.png"> --%>
+			<% } %>
 		</div>
 	</div>
 </div>
