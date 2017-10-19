@@ -68,11 +68,11 @@ public class Control extends HttpServlet {
         map.put("boss-add-menu", new CommandNull("../boss/AddMenuForm.jsp"));
         map.put("boss-add-menu-db", new CommandAddMenu("../boss/AddMenuForm.jsp")); 
         map.put("boss-edit", new CommandNull("../boss/EditForm.jsp"));
-        map.put("boss-edit-db", new CommandEdit("../boss/BossMain.jsp"));
+        map.put("boss-edit-db", new CommandEdit("../boss/EditFrom.jsp"));
         map.put("boss-sold", new CommandNull("../boss/SoldOutForm.jsp"));
-        map.put("boss-sold-db", new CommandSoldOut("../boss/BossMain.jsp"));
+        map.put("boss-sold-db", new CommandSoldOut("../boss/SoldOutForm.jsp"));
         map.put("boss-ing", new CommandNull("../boss/IngForm.jsp"));
-        map.put("boss-ing-db", new CommandIng("../boss/BossMain.jsp"));
+        map.put("boss-ing-db", new CommandIng("../boss/IngForm.jsp"));
 
     }
     

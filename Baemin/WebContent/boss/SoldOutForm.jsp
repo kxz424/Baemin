@@ -30,6 +30,7 @@
 </head>
 <body>
 	<div class="container">
+		
 		<div class="text-center">
 			<img alt="메뉴품절관리" src="<%= projectName %>/배달의민족/품절관리.png" />
 		</div>
@@ -37,41 +38,45 @@
 
 		<div class="row">
 
-			<div class="col-sm-4"></div>
-
-			<div class="panel panel-default col-sm-4">
-				<div class="panel-body">
-					<form action="<%= projectName %>/baemin?cmd=boss-sold-db" method="post">
-					
-					<div class="select-foodHome">
-						<select>
-							<option>쌀통닭-신천점</option>
-							<option>굽네치킨-가락점</option>
-						</select>
-					</div>
-					
-					<div class="select-menu">
-						<select>
-							<option>쌀통닭</option>
-							<option>양파올린닭</option>
-						</select>
-					</div>
-					
-					
-					<div class="check">
-						<input type="checkbox" />품절유무
-					</div>
-					
-					<div class="insertBtn">
-						<input type="button" id="soldBtn" value="적용">
-					</div>
-					</form>
-				</div>
+			<div class="col-sm-3">
+			
 			</div>
+				
+			<div class="panel panel-default col-sm-6">
 
-			<div class="col-sm-4"></div>
-
+				<form action="<%= projectName %>/baemin?cmd=boss-sold-db" method="post">
+					<div class="panel-body">
+					
+						<div class="select-foodHome">
+							<select>
+								<option>쌀통닭-신천점</option>
+								<option>굽네치킨-가락점</option>
+							</select>
+						</div>
+				
+						<div class="select-menu">
+							<select>
+								<option>쌀통닭</option>
+								<option>양파올린닭</option>
+							</select>
+						</div>
+					 
+					
+						<div class="check">
+							<input type="checkbox" class="chk"/>품절유무
+						</div>
+						
+						<div class="insertBtn">
+							<input type="button" id="soldBtn" value="적용">
+						</div>
+						
+					</div>
+				</form>
+				
+			</div>
+			
 		</div>
+		
 	</div>
 
 </body>
