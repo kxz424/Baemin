@@ -23,9 +23,7 @@ public class CommandBossJoin implements Command{
 		HttpSession session = request.getSession();
 		
 		Boss boss = new Boss();
-		
 		boss = (Boss)session.getAttribute("boss");
-		
 		
 		FoodHome foodHome = new FoodHome();
 		

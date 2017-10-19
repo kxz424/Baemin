@@ -18,6 +18,7 @@ public class CommandJoin implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 		
 		HttpSession session = request.getSession();
+		
 		Member m = new Member();
 		m = (Member)session.getAttribute("member");
 		
