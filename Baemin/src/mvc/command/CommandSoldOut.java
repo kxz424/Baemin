@@ -20,6 +20,9 @@ public class CommandSoldOut implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 	
 		Menu m = new Menu();
+		request.getParameter("");
+		
+	
 		
 		ServiceSoldOut.getInstance().updateSoldOut(m);
 		

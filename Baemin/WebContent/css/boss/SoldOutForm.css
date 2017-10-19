@@ -4,20 +4,34 @@
 	margin-bottom: 30px;
 }
 
-.select {
+	
+.select-foodHome {
+	float: left;
+	margin-left:40px;
+	margin-right: 30px;
+}
+
+.select-menu {
+	float: left;
+	margin-right: 30px;
+	
+}
+
+.check {
 	float: left;
 	margin-right: 20px;
 }
-.panel-default{
 
-}
-.panel-body{
-	display: inline-table;
+
+.insertBtn {
+	
+	float: left;
+	margin-right: 20px;
 	
 }
 
 
-.check{
-	float: left;
-	margin-right: 20px;
+#soldBtn {
+	
+	width: 80px;
 }
