@@ -2,6 +2,7 @@ package mybatis.service;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 
 import model.Review;
 import mybatis.session.CommentRepository1;
@@ -18,9 +19,9 @@ public class ServiceMenuList {
 		return service;
 	} 
 	
-	public ArrayList<Review> selectReview(String boss) throws SQLException {
+	public List<Review> selectReview(String rFood) throws SQLException {
 		
-		ArrayList<Review> list = repo.selectReview(boss); 
+		List<Review> list = (List<Review>) repo.selectReview(rFood); 
 //		repo.insertFoodHome(h);
 		
 		return list;

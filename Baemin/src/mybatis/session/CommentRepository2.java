@@ -3,6 +3,7 @@ package mybatis.session;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -79,6 +80,19 @@ public class CommentRepository2 {
 			
 			return sess.selectOne(namespace + ".selectBoss", hash);
 			
+		} finally {
+			sess.close();
+		}
+	}
+	
+	public List<FoodHome> selectCategory(String cate) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		 
+		try {
+			HashMap hash = new HashMap();
+			hash.put("fCategory", cate);
+			
+			return sess.selectList(namespace + ".selectCate", hash);
 		} finally {
 			sess.close();
 		}

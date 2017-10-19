@@ -1,12 +1,19 @@
-<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@page import="model.Review"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
  	pageEncoding="UTF-8"%> 
  	
+<%  //웹브라우저가 게시글 목록을 캐싱할 경우 새로운 글이 추가되더라도 새글이 목록에 안 보일 수 있기 때문에 설정
+	response.setHeader("Pragma","No-cache");		// HTTP 1.0 version
+	response.setHeader("Cache-Control","no-cache");	// HTTP 1.1 version
+	response.setHeader("Cache-Control","no-store"); // 일부 파이어폭스 버스 관련
+	response.setDateHeader("Expires", 1L);			// 현재 시간 이전으로 만료일을 지정함으로써 응답결과가 캐쉬되지 않도록 설정
+%>
+ 	
 <% String projectName = "/Baemin"; %>  	
 
 <%
-	ArrayList<Review> list = (ArrayList) request.getAttribute("reviewList");
+	List<Review> list = (List) request.getAttribute("reviewList");
 %>
  	
 <!DOCTYPE>
@@ -36,22 +43,25 @@
 		<div class="box no-tp-brd">
 			<section class="review-sect">
 				<section class="view-review">
+				<% if(list.isEmpty()){ %>
+					<h3>등록된 리뷰가 존재하지 않습니다.</h3>
+				<% }else {%>
+					<% for(Review r : list){ %>
 				
-				<% for(Review r : list){ %>
-				
-					<div class="media small">
-						<a class="pull-left"><span class="inner-brd"><img
-								class="media-object" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg" /></span></a>
-						<div class="media-body">
-							<div class="pull-center media-heading">
-								<strong class="nick"> <span>알려드립니다</span>
-								</strong> <em>|</em> <span><input type="datetime"
-									value="2017-10-12" /></span>
+						<div class="media small">
+							<a class="pull-left"><span class="inner-brd"><img
+									class="media-object" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg" /></span></a>
+							<div class="media-body">
+								<div class="pull-center media-heading">
+									<strong class="nick"> <span><%=r.getrMember() %></span>
+									</strong> <em>|</em> <span><input type="datetime"
+										value="<%=r.getrDate() %>" /></span>
+								</div>
+								<p id="Review_Cont1"><%=r.getrContent() %></p>
 							</div>
-							<p id="Review_Cont1">너무맛있어요!!!!</p>
 						</div>
-					</div>
 					
+					<%} %>
 				<%} %>
 					
 <!-- 					<div class="media small"> -->
@@ -70,11 +80,11 @@
 					<form id="frm" class="form-horizontal" method="post">
 						<label class="control-label">리뷰작성</label>
 						<input type="hidden" name="cmd" value="Review-db"/>
-						<input type="hidden" name="id" value="kxz424@naver.com"/>
-						<input type="hidden" name="boss" value="123-45-67890"/>
+						<input type="hidden" name="rMember" value="kxz424@naver.com"/>
+						<input type="hidden" name="rFood" value="123-45-67890"/>
 						<div class="form-group">
 							<div class="col-sm-10">
-								<textarea name="review" class="form-control" rows="3"></textarea>
+								<textarea name="rContent" class="form-control" rows="3"></textarea>
 							</div>
 							<div class="col-sm-2 bb">
 								<input id="revBtn" type="button" class="btn btn-info btn-lg bb" value="등록"/>

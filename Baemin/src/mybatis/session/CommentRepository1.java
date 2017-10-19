@@ -5,7 +5,9 @@ import java.io.InputStream;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -104,22 +106,16 @@ public class CommentRepository1 {
 		}
 	}
 	
-	public ArrayList<Review> selectReview(String boss) throws SQLException {
+	public List<Review> selectReview(String rFood) throws SQLException {
 		SqlSession sess = getSqlSessionFactory().openSession();
+		List<Review> list = new ArrayList<>();
+		boolean isEmpty = true;
 		HashMap<String, String> map = new HashMap<>();
-		map.put("boss", boss);
+		map.put("rFood", rFood);
 		
-		ResultSet rs = (ResultSet) sess.selectList(namespace + ".selectReview", map);
+		list = (List) sess.selectList(namespace + ".selectReview", map);
 		
-		Review r = new Review();
-		ArrayList<Review> list = new ArrayList<>();
-		while(rs.next()) {
-			r.setrContent(rs.getString("r_content"));
-			r.setrDate(rs.getString("r_date"));
-			r.setrMember(rs.getString("r_member"));
-			r.setrFood(rs.getString("r_food"));
-			list.add(r);
-		}
+		if( isEmpty ) return Collections.emptyList();
 		
 		return list;
 	}
