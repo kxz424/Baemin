@@ -25,5 +25,10 @@ public class ServiceFoodHome {
 
 	}
 	
+	public List<FoodHome> selectText(String search) {
+		return repo.selectText(search);
+
+	}
+	
 
 }

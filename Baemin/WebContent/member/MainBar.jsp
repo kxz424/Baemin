@@ -60,13 +60,13 @@
 			<!-- 		<input type="text" id="SelectFoodHome" name="SelectFoodHome" value="업소명을 검색하세요"> -->
 			<div class="d1">
 				<form>
-					<input id="selectlocation" type="text" value="위치를 지정하세요">
+					<input id="selectlocation" name="" type="text" value="위치를 지정하세요">
 					<button type="submit"></button>
 				</form>
 			</div>
 			<div class="d1">
-				<form>
-					<input id="selectfoodhome" type="text" value="업소명을 검색하세요">
+				<form action="<%= projectName %>/baemin?cmd=search-db">
+					<input id="selectfoodhome" name="searchfoodhome" type="text" value="업소명을 검색하세요">
 					<button type="submit"></button>
 				</form>
 			</div>

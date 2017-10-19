@@ -23,8 +23,13 @@ public class CommandFoodHome implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 		
 		String cate = request.getParameter("cate");
-		
-		List<FoodHome> foodhome = ServiceFoodHome.getInstance().selectCategory(cate);
+		List<FoodHome> foodhome = null;
+		if(cate != null) {
+			foodhome = ServiceFoodHome.getInstance().selectCategory(cate);			
+		} else {
+			String search = request.getParameter("searchfoodhome");
+			foodhome = ServiceFoodHome.getInstance().selectText(search);
+		}
 		
 		request.setAttribute("foodhome", foodhome);
 		

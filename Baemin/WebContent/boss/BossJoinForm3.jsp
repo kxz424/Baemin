@@ -81,7 +81,7 @@
 									<option value="pig">족발,보쌈</option>
 									<option value="dosirak">도시락</option>
 									<option value="night">야식</option>
-									<option value="night">찜,탕</option>
+									<option value="jjim">찜,탕</option>
 								</select>
 								
 								

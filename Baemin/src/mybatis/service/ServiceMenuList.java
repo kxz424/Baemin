@@ -21,10 +21,9 @@ public class ServiceMenuList {
 	
 	public List<Review> selectReview(String rFood) throws SQLException {
 		
-		List<Review> list = (List<Review>) repo.selectReview(rFood); 
 //		repo.insertFoodHome(h);
 		
-		return list;
+		return repo.selectReview(rFood);
   
 	}
 	
