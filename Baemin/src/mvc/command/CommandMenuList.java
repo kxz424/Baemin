@@ -1,7 +1,7 @@
 package mvc.command;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,10 +22,10 @@ public class CommandMenuList implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 	
-		String boss = request.getParameter("boss");
+		String rFood = request.getParameter("rFood");
 		
 		try {
-			ArrayList<Review> list = ServiceMenuList.getInstance().selectReview(boss);
+			List<Review> list = ServiceMenuList.getInstance().selectReview(rFood);
 			request.setAttribute("reviewList", list);
 		} catch (SQLException e) {
 			e.printStackTrace();

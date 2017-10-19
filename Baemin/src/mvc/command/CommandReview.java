@@ -24,9 +24,9 @@ public class CommandReview implements Command {
 	
 		System.out.println("1>>>>"+request.getParameter("id"));
 		Review r = new Review();
-		r.setrMember(request.getParameter("id"));
-		r.setrContent(request.getParameter("review"));
-		r.setrFood(request.getParameter("food"));
+		r.setrMember(request.getParameter("rMember"));
+		r.setrContent(request.getParameter("rCentent"));
+		r.setrFood(request.getParameter("rFood"));
 		
 		ServiceReview.getInstance().insertReview(r);
 		System.out.println("2>>>"+request.getParameter("id"));
