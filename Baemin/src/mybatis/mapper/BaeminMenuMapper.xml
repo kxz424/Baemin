@@ -46,8 +46,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	
 	<!-- 메뉴 검색 --> 
-	<select id="selectAddMenu" parameterType="String">
-		select menu_name,menu_price, menu_soldout  from menu where menu_boss=#{menuBoss}
+	<select id="selectAddMenu" parameterType="hashmap" resultType="menu">
+		select menu_name,menu_price, menu_soldout from menu where menu_boss=#{menuBoss}
 	</select>
 	
 	

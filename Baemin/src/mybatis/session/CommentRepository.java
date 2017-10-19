@@ -113,9 +113,9 @@ public class CommentRepository {
 		SqlSession sess = getSqlSessionFactory().openSession();	
 		
 		HashMap map = new HashMap();
-		map.put("article_id", m);
+		map.put("menuBoss", m);
 		
-		ResultSet rs = (ResultSet) sess.selectList(namespace2 + ".selectAddMenu", m);
+		ResultSet rs = (ResultSet)sess.selectList(namespace2 + ".selectAddMenu", map);
 		
 		ArrayList result = new ArrayList();
 		
