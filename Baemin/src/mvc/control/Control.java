@@ -101,7 +101,7 @@ public class Control extends HttpServlet {
     		} else {
     			throw new CommandException("지정할 명령어가 존재하지 않음");
     		}
-
+ 
     		nextPage = cmd.execute( request, response );
     	} catch( CommandException e ) {
     		request.setAttribute("javax.servlet.jsp.jspException", e);

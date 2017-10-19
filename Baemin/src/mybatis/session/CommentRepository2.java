@@ -103,7 +103,7 @@ public class CommentRepository2 {
 		 
 		try {
 			HashMap hash = new HashMap();
-			hash.put("fCategory", search);
+			hash.put("fName", '%'+search+'%');
 			
 			return sess.selectList(namespace + ".selectCate", hash);
 		} finally {
