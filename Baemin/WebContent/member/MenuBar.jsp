@@ -25,7 +25,7 @@
 </script>
 </head>
 <body>
-<div class='c hidden'>
+<div class='c'>
 	<div id="menubar">
 	<a href="<%= projectName %>/baemin?cmd=cate-search&cate=chicken">
 		<img class="menubar" src="<%= projectName %>/배달의민족/ㄴ치킨.jpg">
@@ -59,16 +59,5 @@
 	</a>
 	</div>
 </div>
-
-<p>
-
-<br/>
-<br/>
-<br/>
-
-
-
-
-</p>
 </body>
 </html>

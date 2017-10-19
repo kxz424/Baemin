@@ -3,11 +3,12 @@
 	.c {
 		width : 100%;
 		background-color : black;
-		height: 100px;
+/* 		height: 100px; */
 	}
 	#menubar {
 		background-color : black;
 		width : 75%;
+/* width : 100%; */
 		margin : auto;
 		
 	}
@@ -21,5 +22,5 @@
 	}
 	
 	.visible{
-		overflow: visible;
+/* 		overflow: visible; */
 	}
