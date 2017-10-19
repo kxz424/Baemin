@@ -24,27 +24,24 @@ public class CommandAddMenu implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 		
 		Menu m = new Menu();
-		ArrayList result = new ArrayList();
+//		ArrayList result = new ArrayList();
+
 		
 //		m.setMenuName(request.getParameter("menuName"));		// 메뉴명
 //		m.setMenuPrice(Integer.parseInt(request.getParameter("menuPrice")));// 가격
 //		m.setMenuImg("img.jpg");			// 이미지 경로
 		m.setMenuFood("1111111111");		// 사업자등록번호
-//		
-//		
+		
+		
 //		ServiceAddMenu.getInstance().insertAddMenu(m);
 		
 		
-		result = ServiceAddMenu.getInstance().selectAddMenu(m.getMenuFood());
+		 ServiceAddMenu.getInstance().selectAddMenu(m.getMenuFood());
 		
+		  
+//		request.setAttribute("result", result);
 		
-		
-		
-		System.out.println(result.size());
-		
-		request.setAttribute("result", result);
-		
-		
+		 
 		
 		
 		

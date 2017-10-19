@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -108,35 +110,19 @@ public class CommentRepository {
 
 
 	
-	public ArrayList selectAddMenu(String m) {
+	public  void selectAddMenu(String m) {
 		
 		SqlSession sess = getSqlSessionFactory().openSession();	
 		
+		List rs = null;
+		
 		HashMap map = new HashMap();
-		map.put("menuBoss", m);
+		map.put("menuFood", m);
 		
-		ResultSet rs = (ResultSet)sess.selectList(namespace2 + ".selectAddMenu", map);
+		rs = sess.selectList(namespace2 + ".selectAddMenu", map);
 		
-		ArrayList result = new ArrayList();
 		
-		try {
-			while (rs.next()) {
-				
-				result.add(rs.getString("menu_name"));
-				System.out.println(rs.getString("menu_name"));
-				result.add(rs.getString("menu_price"));
-				System.out.println(rs.getString("menu_price"));
-				result.add(rs.getString("menu_soldout"));
-				System.out.println(rs.getString("menu_soldout"));
-			}
-
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		 
-		return result;
-
+ 
 	}
 	
 	

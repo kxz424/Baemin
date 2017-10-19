@@ -25,9 +25,9 @@ public class ServiceAddMenu {
 // 
 //	}
 
-	public ArrayList selectAddMenu(String m) {
+	public void selectAddMenu(String m) {
 		 
-		return repo.selectAddMenu(m); 
+		repo.selectAddMenu(m); 
 		
 	}
 	

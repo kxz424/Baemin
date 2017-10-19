@@ -9,10 +9,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	 
 	
 	<!-- 메뉴 테이블 -->
-<!-- 	<insert id="insertAddMenu" parameterType="menu"> -->
-<!-- 		INSERT INTO menu(menu_num, menu_name, menu_price, menu_food, menu_img) -->
-<!-- 		VALUES(seq_menu.nextval, #{menuName}, #{menuPrice}, #{menuFood}, #{menuImg}) -->
-<!-- 	</insert> -->
+	<insert id="insertAddMenu" parameterType="menu">
+		INSERT INTO menu(menu_num, menu_name, menu_price, menu_food, menu_img)
+		VALUES(seq_menu.nextval, #{menuName}, #{menuPrice}, #{menuFood}, #{menuImg})
+	</insert>
 	
 	<!-- 메뉴 품절 관리 -->
 	<update id="updateSoldOut" parameterType="menu">
