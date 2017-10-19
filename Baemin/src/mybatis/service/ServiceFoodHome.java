@@ -1,13 +1,16 @@
 package mybatis.service;
 
+import java.util.List;
+
 import model.Boss;
 import model.FoodHome;
 import mybatis.session.CommentRepository;
+import mybatis.session.CommentRepository2;
 
 public class ServiceFoodHome {
 	
 	private static ServiceFoodHome service;
-	CommentRepository repo = new CommentRepository();
+	CommentRepository2 repo = new CommentRepository2();
 	
 	private ServiceFoodHome() { }
 	
@@ -16,10 +19,9 @@ public class ServiceFoodHome {
 		return service;
 	} 
 	
-	public void insertBossJoin(Boss b) {
+	public List<FoodHome> selectCategory(String cate) {
 		 
-		repo.insertBossJoin(b);  
-//		repo.insertFoodHome(h);
+		return repo.selectCategory(cate);
 
 	}
 	

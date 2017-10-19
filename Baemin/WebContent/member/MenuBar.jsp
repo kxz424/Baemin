@@ -9,19 +9,19 @@
 <link rel="stylesheet" type="text/css" href="<%= projectName %>/css/member/MenuBar.css" />
 <script type="text/javascript" src="<%= projectName %>/lib/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
-	$(function() {
-		$(".c").mouseenter(function () {
-			$(this).removeClass('hidden');
-			$(this).addClass('visible');
-			$("p").show();
-		});
-		$(".c").mouseleave(function () {
-			$(this).removeClass('visible');
-			$(this).addClass('hidden');
-			$("p").hide();
-		});
+// 	$(function() {
+// 		$(".c").mouseenter(function () {
+// 			$(this).removeClass('hidden');
+// 			$(this).addClass('visible');
+// 			$("p").show();
+// 		});
+// 		$(".c").mouseleave(function () {
+// 			$(this).removeClass('visible');
+// 			$(this).addClass('hidden');
+// 			$("p").hide();
+// 		});
 		
-	});
+// 	});
 </script>
 </head>
 <body>

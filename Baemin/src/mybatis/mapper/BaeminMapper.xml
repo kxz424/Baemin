@@ -47,4 +47,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</where>
 	</select>
 
+	<!-- 카테고리로 검색 -->
+	<select id="selectCate" parameterType="hashmap" resultType="foodhome">
+		SELECT *
+		FROM food_home
+		<where>
+			<if test="fCategory != null">
+				f_category = #{fCategory}
+			</if>
+		</where>
+	</select>
+
 </mapper>
