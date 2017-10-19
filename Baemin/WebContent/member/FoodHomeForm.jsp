@@ -18,27 +18,36 @@
 	<jsp:include page="MainBar.jsp"></jsp:include>
 	
 	<jsp:include page="MenuBar.jsp"></jsp:include>
-
-<div id="foodhome">
-	<div id="foodhome-content">
-		<div id="sort">
-		<select>
-			<option>5줄 보기</option>
-			<option>10줄 보기</option>
-			<option>15줄 보기</option>
-		</select>
-		</div>
-		<div id="test">
+	
+<div id="">
+	<div id="foodhome-all">
+		<div id="foodhome-content">
+		
+			<div id="sort">
+			<select>
+				<option>5줄 보기</option>
+				<option>10줄 보기</option>
+				<option>15줄 보기</option>
+			</select>
+			</div>
+			
 			<% for(int i = 0 ; i < foodhome.size() ; i++ ) { %>
 			<div class="food">
-				<span>
-				<br/> <img class="test" src="<%= projectName %>/배달의민족/<%= foodhome.get(i).getfImg()  %>">
-				</span>
-				<span>안녕하세요</span>
+				<div class="home1">
+					<img class="img" src="<%= projectName %>/배달의민족/<%= foodhome.get(i).getfImg()  %>">
+				<div class="home2">
+					<div class="fName"><%= foodhome.get(i).getfName() %></div>
+					<div class="fLocation"><%= foodhome.get(i).getfLocation() %></div>
+					<div class="fTel"><%= foodhome.get(i).getfTel() %></div>
+					<div class="rCount">리뷰 <span>35</span></div>
+				</div>
+				</div>
+				
 			</div>
-			<% } %>
+		<% } %>
 		</div>
 	</div>
 </div>
+
 </body>
 </html>
