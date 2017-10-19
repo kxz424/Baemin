@@ -63,8 +63,8 @@
 					 
 					
 						<div class="check">
-							<input type="hidden" name="chk" value="N">
-							<input type="checkbox" id="soldout"/><label for="soldout" style="font-weight: 100">품절유무</label>
+							<input type="hidden" name="chk" value="">
+							<input type="checkbox" id="soldout"/><label for="soldout" style="font-weight: 100">품절</label>
 						</div>
 						
 						<div class="insertBtn">

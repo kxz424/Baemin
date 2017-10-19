@@ -25,7 +25,6 @@ public class CommandSoldOut implements Command {
 		m.setMenuName(request.getParameter("menuName"));	//메뉴명
 		str = request.getParameter("chk");	//품절유무
 		m.setMenuSoldOut(str.charAt(0));	//품절 - 유:Y , 무:N
-//		request.getParameter("");	//사업자등록번호
 		m.setMenuFood("1111111111");	//사업자등록번호(테스트용)
 		
 		 

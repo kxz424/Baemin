@@ -1,12 +1,12 @@
 package mybatis.service;
 
 import model.FoodHome;
-import mybatis.session.CommentRepository1;
+import mybatis.session.CommentRepository;
 
 public class ServiceIng {
 	
 	private static ServiceIng service;
-	CommentRepository1 repo = new CommentRepository1();
+	CommentRepository repo = new CommentRepository();
 	
 	private ServiceIng() { }
 	
