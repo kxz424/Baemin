@@ -2,6 +2,7 @@ package mvc.command;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -32,7 +33,12 @@ public class CommandAddMenu implements Command {
 		
 		ServiceAddMenu.getInstance().insertAddMenu(m);
 		
-		ServiceAddMenu.getInstance().selectAddMenu(m);
+		ArrayList result = new ArrayList();
+		result = ServiceAddMenu.getInstance().selectAddMenu(m);
+		
+		
+		request.setAttribute("result", result);
+		
 		
 		
 //		try {

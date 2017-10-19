@@ -107,22 +107,17 @@ public class CommentRepository {
 		ArrayList result = new ArrayList();
 		
 		try {
-			
 			while (rs.next()) {
-				
 				result.add(rs.getString("menu_name"));
 				result.add(rs.getString("menu_price"));
 				result.add(rs.getString("menu_soldout"));
-				
 			}
-			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		 
 		return result;
-		
-		
+
 	}
 	
 	
