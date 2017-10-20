@@ -39,27 +39,9 @@ public class CommandBossJoin implements Command{
 		foodHome.setfClose(request.getParameter("fClose1")+":"+request.getParameter("fClose2"));
 		foodHome.setfTel(request.getParameter("fTel"));
 		foodHome.setfCategory(request.getParameter("fCategory"));
-		foodHome.setfImg(request.getParameter("file"));
-		 
-		FileUploadServlet fus = new FileUploadServlet();
+		foodHome.setfImg(request.getParameter("fName") + ".png");
 		
-		request.setAttribute("boss", boss);
-		request.setAttribute("foodHome", foodHome);
-		try {
-			request.setAttribute("filePart", request.getPart("file"));
-		} catch (IOException | ServletException e1) {
-			e1.printStackTrace();
-		}
-		
-		RequestDispatcher rd = request.getRequestDispatcher("/file");
-		try {
-			rd.forward(request, response);
-		} catch (ServletException | IOException e) {
-			e.printStackTrace();
-		}
-		
-		
-//		ServiceBossJoin.getInstance().insertBossJoin(boss, foodHome);
+		ServiceBossJoin.getInstance().insertBossJoin(boss, foodHome);
 		
 		
 		return next;

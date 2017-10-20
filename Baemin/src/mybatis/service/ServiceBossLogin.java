@@ -18,7 +18,7 @@ public class ServiceBossLogin {
 	
 	public void insertBossJoin(Boss b) {
 		
-		repo.insertBossJoin(b);
+//		repo.insertBossJoin(b);
  
 	}
 	
