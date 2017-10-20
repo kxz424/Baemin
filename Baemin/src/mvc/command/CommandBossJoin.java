@@ -43,6 +43,9 @@ public class CommandBossJoin implements Command{
 		
 		ServiceBossJoin.getInstance().insertBossJoin(boss, foodHome);
 		
+		session.removeAttribute("boss");
+//		session.setAttribute("b, arg1);
+		
 		
 		return next;
 		

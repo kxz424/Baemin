@@ -10,6 +10,7 @@ public class FoodHome {
 	String fIng;		// 운영중
 	String fCategory;	// 카테고리
 	String fImg;		// 이미지 경로
+	String fContent;	//
 	
 	public String getfBoss() {
 		return fBoss;
@@ -65,5 +66,13 @@ public class FoodHome {
 	public void setfImg(String fImg) {
 		this.fImg = fImg;
 	}
+	public String getfContent() {
+		return fContent;
+	}
+	public void setfContent(String fContent) {
+		this.fContent = fContent;
+	}
+	
+	
 	
 }
