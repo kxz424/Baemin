@@ -21,10 +21,10 @@ $(function(){
 //						alert("중복");
 						mn.next().eq(i).attr('value', parseInt(mn.next().eq(i).val()) + 1);
 						flag = true;
-						var mnPrice = mn.next().next().next().next();
+						var mnPrice = $('label[name="menuPrice"]').eq(i);
 						var oMoney = $('label[name="oMoney"]');
-						alert(mnPrice.text().substr(0, mnPrice.val().length()-1));
-						oMoney.text(parseInt(oMoney.text()) + parseInt(mnPrice.val().substr(0, mnPrice.val().length()-1)));
+						alert(mnPrice.text().substr(0, mnPrice.text().indexOf('원')));
+						oMoney.text(parseInt(oMoney.text()) + parseInt(mnPrice.text().substr(0, mnPrice.text().indexOf('원'))));
 						
 					}
 				}
@@ -47,6 +47,15 @@ $(function(){
 					$('#cart').prepend(group);
 					
 //					flag = true;
+					
+					
+					for(var i = 0; i < mn.length; i++){
+						var mnPrice = $('label[name="menuPrice"]').eq(i);
+						var oMoney = $('label[name="oMoney"]');
+						alert(mnPrice.text().substr(0, mnPrice.text().indexOf('원')));
+						oMoney.text(parseInt(oMoney.text()) + parseInt(mnPrice.text().substr(0, mnPrice.text().indexOf('원'))));
+					}
+					
 					
 				}
 			}else{

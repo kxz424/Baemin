@@ -40,7 +40,8 @@
 			this.placeholder = "업소명을 검색하세요";
 		});
 		
-	});
+		
+	});	
 </script>
 </head>
 <body>
@@ -58,6 +59,7 @@
 			<img id="logo" src="<%= projectName %>/배달의민족/로고.jpg" /></a><br /> 
 <!-- 				<input type="text" id="SelectLocation" name="SelectLocation" value="위치를 지정하세요"> -->
 			<!-- 		<input type="text" id="SelectFoodHome" name="SelectFoodHome" value="업소명을 검색하세요"> -->
+
 <!-- 			<div class="d1"> -->
 <!-- 				<form> -->
 <!-- 					<input id="selectlocation" name="" type="text" placeholder="위치를 지정하세요"> -->
