@@ -53,7 +53,6 @@
 
 $(function(){
 	var toggle = true;
-	var birth;
 	
 	$(".btn-caution").click(function() {
 		$(".cau").slideToggle();
@@ -81,15 +80,17 @@ $(function(){
 		}
 	});
 	
-	$("#birth").keyup(function() {
-		birth = $(this).val();
-		if(birth > 8) {
-			this.value = this.value.slice(0, 8);
-		}
-	});
-	
 	$("#join").click(function() {		
 		
+		var chk = true;
+		for(var i = 1 ; i < 4 ; i++) {
+			chk &= $("#chk"+i).prop("checked");
+		}
+		
+		if(chk != 1) {
+			alert("필수항목을 체크하세요");
+			return false;
+		}
 		
 		var tel = 0;
 		
@@ -98,20 +99,34 @@ $(function(){
 				tel++;
 		});
 		
+		var birth = $("#birth").val();
+		var today = new Date();
+		var year = today.getFullYear();
+		var month = today.getMonth() +1;
+		var date = today.getDate();
+		
+		var age = year - birth.substr(0,4);
+		
+		if(birth.substr(4,2) - month > 0 || birth.substr(6,2) > date > 0)
+			age -= 1;
+		
 		if( tel != 0 ) {
 			$("#ptel").html("전화번호를 입력해주세요.");
 			$("#pbirth").html("");
+			return false;
 		} else if(birth == "") {
 			$("#ptel").html("");
-			$("#pbirth").html("생년월일을 입력해주세요.");1
-// 		} else if () {
-// 			$("#ptel").html("");
-// 			$("#pbirth").html("생년월일을 8자리로 입력해 주세요.");
-// 		} else if() {
-// 			$("#ptel").html("");
-// 			$("#pbirth").html("만 14세 미만은 회원가입이 제한됩니다.");
+			$("#pbirth").html("생년월일을 입력해주세요.");
+			return false;
+ 		} else if (birth.length != 8) {
+ 			$("#ptel").html("");
+ 			$("#pbirth").html("생년월일을 8자리로 입력해 주세요.");
+ 			return false;
+ 		} else if(age < 14) {
+ 			$("#ptel").html("");
+ 			$("#pbirth").html("만 14세 미만은 회원가입이 제한됩니다.");
+ 			return false;
 		}
-		
 	});
 	
 	$("#finish").click(function() {

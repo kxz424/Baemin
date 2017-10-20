@@ -13,6 +13,13 @@
 <% 
 	String projectName = "/Baemin"; 
 	
+	Object obj = session.getAttribute("user");
+	Member member = null;
+
+	if(obj != null) { 
+		member = (Member)obj;
+	}
+	
 	FoodHome foodhome = (FoodHome) request.getAttribute("foodhome");
 %>    
 
@@ -45,6 +52,9 @@
 
 </head>
 <body>
+<jsp:include page="MainBar.jsp"></jsp:include>
+<jsp:include page="MenuBar.jsp"></jsp:include>
+
 <div class="wrap" style="min-height: 405px;">
 	<div class="container">
  		<section class="shop-info">
@@ -87,6 +97,7 @@
 						</dl>
 					</section>
 					
+					<% if(member != null) { %>
 					<section class="cart box">
 						<h2 class="bold">장바구니</h2><hr/>
 						
@@ -96,22 +107,6 @@
 								
 								<form id="cart" method="post" action="<%= projectName %>/baemin" class="form-inline">
 									<input type="hidden" name="cmd" value="order-page"/>
-<!-- 									<div class="form-group"> -->
-<!-- 										<div class="cartMenu"> -->
-<!-- 											<label name="menuName">양파뿌린닭</label> -->
-<!-- 											<input type="text" name="menuCnt" value="1"/> -->
-<!-- 											<label name="menuPrice">19,900원</label> -->
-<!-- 										</div> -->
-<!-- 									</div> -->
-									
-<!-- 									<div class="form-group"> -->
-<!-- 										<div class="cartMenu"> -->
-<!-- 											<label class="menuName">똥집세트</label> -->
-<!-- 											<input type="text" name="menuCnt" value="1"/> -->
-<!-- 											<label name="menuPrice">19,900원</label> -->
-<!-- 										</div> -->
-<!-- 									</div> -->
-									
 									<div>
 										<div class="form-group">
 											<label><h4>주문합계금액</h4></label>
@@ -126,10 +121,8 @@
 									<span class="btn-cart-login">주문하기</span>
 								</button>
 							</div>
-						
-						
-						
 					</section>
+					<% } %>
 				</div>
 				
 				

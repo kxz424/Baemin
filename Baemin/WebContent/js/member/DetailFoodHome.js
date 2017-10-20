@@ -142,7 +142,6 @@ $(document).on('click','.minus',function(){
 	}
 });
 $(document).on('click', '#order', function(){
-	alert("111");
 	$('#cart').submit();
 });
 
