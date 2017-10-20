@@ -23,8 +23,8 @@ $(function(){
 						flag = true;
 						var mnPrice = mn.next().next().next().next();
 						var oMoney = $('label[name="oMoney"]');
-						alert(mnPrice.text().substr(0, mnPrice.val()-1));
-						oMoney.text(parseInt(oMoney.text()) + parseInt(mnPrice.val().substr(0, mnPrice.val()-1)));
+						alert(mnPrice.text().substr(0, mnPrice.val().length()-1));
+						oMoney.text(parseInt(oMoney.text()) + parseInt(mnPrice.val().substr(0, mnPrice.val().length()-1)));
 						
 					}
 				}
