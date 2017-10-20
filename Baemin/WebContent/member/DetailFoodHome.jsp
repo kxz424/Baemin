@@ -114,7 +114,7 @@
 											<input type="hidden" name="oMoney"/>
 										</div>
 									</div>
-								
+									<input type="hidden" name="fboss" value="<%= foodhome.getfBoss() %>" />
 								</form>
 								
 								<button type="button" class="btn btn-warning btn-lg btn-block" id="order">
