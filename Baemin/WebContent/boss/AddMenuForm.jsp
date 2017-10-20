@@ -36,6 +36,7 @@
 
 </head>
 <body>
+<%-- 	<jsp:include page="BossMenuBar.jsp"></jsp:include> --%>
 	<div class="container">
 
 		<div class="text-center">
