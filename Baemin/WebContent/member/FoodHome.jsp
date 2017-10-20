@@ -15,7 +15,7 @@
 <script type="text/javascript">
 	$(function() {
 		$(".food").click(function() {
-			window.location = "Baemin/baemin?cmd=detailfood";
+			$("form").submit();
 		});
 	});
 </script>
@@ -36,6 +36,16 @@
 			
 			<% for(int i = 0 ; i < foodhome.size() ; i++ ) { %>
 			<div class="food">
+			<form method="post" action="<%= projectName %>/baemin?cmd=MenuList-page">
+				<input type="hidden" name="fboos" value="<%= foodhome.get(i).getfBoss() %>" />
+				<input type="hidden" name="fcategory" value="<%= foodhome.get(i).getfCategory() %>" />
+				<input type="hidden" name="fclose" value="<%= foodhome.get(i).getfClose() %>" />
+				<input type="hidden" name="fing" value="<%= foodhome.get(i).getfIng() %>" />
+				<input type="hidden" name="flocation" value="<%= foodhome.get(i).getfLocation() %>" />
+				<input type="hidden" name="fname" value="<%= foodhome.get(i).getfName() %>" />
+				<input type="hidden" name="fopen" value="<%= foodhome.get(i).getfOpen() %>" />
+				<input type="hidden" name="ftel" value="<%= foodhome.get(i).getfTel() %>" />
+				
 				<div class="home1">
 					<img class="img" src="<%= projectName %>/배달의민족/<%= foodhome.get(i).getfImg()  %>">
 				<div class="home2">
@@ -45,8 +55,9 @@
 					<div class="rCount">리뷰 <span>35</span></div>
 				</div>
 				</div>
+			</form>
 			</div>
-		<% } %>
+			<% } %>
 		</div>
 	</div>
 </div>
