@@ -13,6 +13,12 @@
 <% 
 	String projectName = "/Baemin"; 
 	
+Object obj = session.getAttribute("user");
+Member member = null;
+
+if(obj != null) { 
+	member = (Member)obj;
+}
 	FoodHome foodhome = (FoodHome) request.getAttribute("foodhome");
 %>    
 
@@ -45,6 +51,9 @@
 
 </head>
 <body>
+<jsp:include page="MainBar.jsp"></jsp:include>
+<jsp:include page="MenuBar.jsp"></jsp:include>
+
 <div class="wrap" style="min-height: 405px;">
 	<div class="container">
  		<section class="shop-info">
@@ -87,6 +96,7 @@
 						</dl>
 					</section>
 					
+					<% if(member != null) { %>
 					<section class="cart box">
 						<h2 class="bold">장바구니</h2><hr/>
 						
@@ -126,10 +136,8 @@
 									<span class="btn-cart-login">주문하기</span>
 								</button>
 							</div>
-						
-						
-						
 					</section>
+					<% } %>
 				</div>
 				
 				
