@@ -34,7 +34,7 @@ public class CommandBossJoin implements Command{
 		
 		foodHome.setfBoss(boss.getbNum());
 		foodHome.setfName(request.getParameter("fName"));
-		foodHome.setfLocation(request.getParameter("fLocation1")+" "+request.getParameter("fLocation2")+" "+request.getParameter("fLocation3"));
+		foodHome.setfLocation(request.getParameter("fLocation"));
 		foodHome.setfOpen(request.getParameter("fOpen1")+":"+request.getParameter("fOpen2"));
 		foodHome.setfClose(request.getParameter("fClose1")+":"+request.getParameter("fClose2"));
 		foodHome.setfTel(request.getParameter("fTel"));

@@ -2,6 +2,21 @@
     pageEncoding="UTF-8"%>
 <% String projectName = "/Baemin"; %>
 
+<%
+	String[] menuName = request.getParameterValues("menuName");
+	String[] menuCnt = request.getParameterValues("menuCnt");
+	String[] menuPrice = request.getParameterValues("menuPrice");
+	
+	int totalCnt = 0;
+	
+	for(int j = 0; j < menuCnt.length; j++){
+		System.out.println(menuName[j] + menuCnt[j] + menuPrice[j]);
+		totalCnt += Integer.parseInt(menuCnt[j]);
+	}
+	
+	String oMoney = request.getParameter("oMoney");   
+%>
+
 <!DOCTYPE>
 <html>
 <head>
@@ -45,30 +60,31 @@
       			<h3>02. 결제</h3>
       
 				<div class="price1">
-      
+      				
+      			<% for(int i = 0; i < menuCnt.length; i++){ %>
 	         		<div class="price2">
-	            		<label class="label2">양파뿌린닭</label><label class="label1">19,900원</label><br/>
-	           			<label class="label2">가격:</label><label class="label3">19,900원x1</label>
+	            		<label class="label2"><%= menuName[i] %></label><label class="label1"><%= menuPrice[i] %>원</label><br/>
+	           			<label class="label2">가격:</label><label class="label3"><%= menuPrice[i] %>원x<%= menuCnt[i] %></label>
 	         		</div>
-	      
-	         		<div class="price2">
-	            		<label class="label2">양파뿌린닭</label><label class="label1">19,900원</label><br/>
-	            		<label class="label2">가격:</label><label class="label3">19,900원x1</label>
-	         		</div>
+	      		<% } %>
+<!-- 	         		<div class="price2"> -->
+<!-- 	            		<label class="label2">양파뿌린닭</label><label class="label1">19,900원</label><br/> -->
+<!-- 	            		<label class="label2">가격:</label><label class="label3">19,900원x1</label> -->
+<!-- 	         		</div> -->
       
       			</div>
       
       			<div class="price3">
 
-					<label class="label6">수량</label><label class="label5">2개</label><br/>
-         			<label class="label6">총상품금액</label><label class="label4">39,800원</label>
+					<label class="label6">수량</label><label class="label5"><%= totalCnt %>개</label><br/>
+         			<label class="label6">총상품금액</label><label class="label4"><%= oMoney %>원</label>
 
       			</div>
       
 				<div class="price4">
 
 					<label class="label7">최종 결제 금액</label><br/>
-			        <label class="label8">39,800원</label>
+			        <label class="label8"><%= oMoney %>원</label>
 
      			</div>
       
