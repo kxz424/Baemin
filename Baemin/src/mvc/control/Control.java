@@ -15,9 +15,11 @@ import mvc.command.CommandAddMenuDB;
 import mvc.command.CommandBossJoin;
 import mvc.command.CommandBossLogin;
 import mvc.command.CommandEdit;
+import mvc.command.CommandEditDB;
 import mvc.command.CommandException;
 import mvc.command.CommandFoodHome;
 import mvc.command.CommandIng;
+import mvc.command.CommandIngDB;
 import mvc.command.CommandJoin;
 import mvc.command.CommandLogin;
 import mvc.command.CommandLogout;
@@ -27,6 +29,7 @@ import mvc.command.CommandOrder;
 import mvc.command.CommandReview;
 import mvc.command.CommandReviewList;
 import mvc.command.CommandSoldOut;
+import mvc.command.CommandSoldOutDB;
 
 public class Control extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -71,13 +74,14 @@ public class Control extends HttpServlet {
 
         map.put("boss-add-menu", new CommandAddMenuDB("../boss/AddMenuForm.jsp"));
         map.put("boss-add-menu-db", new CommandAddMenu("../boss/AddMenuForm.jsp"));
-        
-
-        map.put("boss-edit", new CommandNull("../boss/EditForm.jsp"));
+ 
+        map.put("boss-edit", new CommandEditDB("../boss/EditForm.jsp"));
         map.put("boss-edit-db", new CommandEdit("../boss/EditForm.jsp"));
-        map.put("boss-sold", new CommandNull("../boss/SoldOutForm.jsp"));
+          
+        map.put("boss-sold", new CommandSoldOutDB("../boss/SoldOutForm.jsp"));
         map.put("boss-sold-db", new CommandSoldOut("../boss/SoldOutForm.jsp"));
-        map.put("boss-ing", new CommandNull("../boss/IngForm.jsp"));
+        
+        map.put("boss-ing", new CommandIngDB("../boss/IngForm.jsp"));
         map.put("boss-ing-db", new CommandIng("../boss/IngForm.jsp"));
 
     }

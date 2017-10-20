@@ -96,7 +96,7 @@ public class CommentRepository {
 	
 	
 	
-	public void insertAddMenu(Menu m) {
+	public List<Menu> insertAddMenu(Menu m) {
 		
 		SqlSession sess = getSqlSessionFactory().openSession();
 		
@@ -110,6 +110,23 @@ public class CommentRepository {
 		}
 		
 		
+		List<Menu> rs = new ArrayList<Menu>();
+		boolean isEmpty = true;
+		
+		HashMap map = new HashMap();
+		map.put("menuFood", m.getMenuFood());
+		
+		rs = sess.selectList(namespace2 + ".selectAddMenu", map);
+		
+		isEmpty = false;
+		
+		if(isEmpty) return Collections.emptyList();
+		
+		 
+		
+		return rs;
+		
+
 	}
 
 
@@ -136,6 +153,30 @@ public class CommentRepository {
  
 	}
 	
+	
+	public List<FoodHome> selectEdit(String fh) {
+		
+		SqlSession sess = getSqlSessionFactory().openSession();	
+		
+		List<FoodHome> rs = new ArrayList<FoodHome>();
+		boolean isEmpty = true;
+		
+		HashMap map = new HashMap();
+		map.put("fBoss", fh);
+		
+		rs = sess.selectOne(namespace2 + ".selectEdit", map);
+		
+		isEmpty = false;
+		
+		if(isEmpty) return Collections.emptyList();
+		
+		 
+		
+		return rs;
+ 
+	}
+	
+
 	
 	
 	public void updateSoldOut(Menu m) {

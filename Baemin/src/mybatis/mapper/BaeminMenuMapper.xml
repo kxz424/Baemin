@@ -10,8 +10,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 메뉴 테이블 -->
 	<insert id="insertAddMenu" parameterType="menu">
-		INSERT INTO menu(menu_num, menu_name, menu_price, menu_food, menu_img)
-		VALUES(seq_menu.nextval, #{menuName}, #{menuPrice}, #{menuFood}, #{menuImg})
+	    INSERT INTO menu(menu_num, menu_name, menu_price, menu_food, menu_img)
+	    SELECT seq_menu.nextval, #{menuName}, #{menuPrice}, #{menuFood}, #{menuImg} 
+	    FROM dual where not exists(SELECT menu_name FROM menu WHERE menu_name=#{menuName} and menu_food=#{menuFood})
 	</insert>
 	
 	<!-- 메뉴 품절 관리 -->
@@ -50,7 +51,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select menu_name,menu_price, menu_soldout from menu where menu_food=#{menuFood}
 	</select>
 	
-	
+	<!-- 운영정보 검색 -->
+	<select id="selectEdit" parameterType="hashmap" resultType="foodhome">
+		select f_open,f_close,f_tel from food_home where f_boss=#{fBoss}
+	</select>
 	
 	
 	<!-- 업소 테이블 -->

@@ -30,7 +30,8 @@
 <body>
 	<div class="container">
 		<div class="text-center">
-			<img alt="메뉴등록관리" src="<%= projectName %>/배달의민족/운영중지.png" />
+			<a href="<%= projectName %>/baemin?cmd=boss-main"><img id="bosslogo1" src="<%= projectName %>/배달의민족/사장님사이트.jpg"></a>
+			<img id="bosslogo2" alt="메뉴등록관리" src="<%= projectName %>/배달의민족/운영중지.png" />
 		</div>
 
 

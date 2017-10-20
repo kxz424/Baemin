@@ -33,7 +33,7 @@ public class CommandAddMenuDB implements Command{
 		m.setMenuFood("1111111111");		// 사업자등록번호
 
 		result = ServiceAddMenu.getInstance().selectAddMenu(m.getMenuFood());
-		
+		 
 		request.setAttribute("result", result);
 
 		

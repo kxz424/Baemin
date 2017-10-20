@@ -1,14 +1,13 @@
-<%@page import="java.util.List"%>
-<%@page import="model.Menu"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
+<%@page import="java.util.List"%>
+<%@page import="model.Menu"%>
+
 <% String projectName = "/Baemin"; %>
 
 <%
 	
 	List<Menu> list = (List)request.getAttribute("result");
- 	
 
 %>
 	
@@ -38,8 +37,10 @@
 </head>
 <body>
 	<div class="container">
+
 		<div class="text-center">
-			<img alt="메뉴등록관리" src="<%= projectName %>/배달의민족/메뉴등록.png" />
+			<a href="<%= projectName %>/baemin?cmd=boss-main"><img id="bosslogo1" src="<%= projectName %>/배달의민족/사장님사이트.jpg"></a>
+			<img id="bosslogo2" alt="메뉴등록관리" src="<%= projectName %>/배달의민족/메뉴등록.png" />
 		</div>
 
 		<div class="select">
@@ -67,15 +68,15 @@
 						<div class="row">
 							<div class="col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
-									<label class="input-group-addon">메뉴명</label> <input type="text"
-										id="menuName" name="menuName" class="form-control" placeholder="메뉴명을 입력하세요." />
+									<label class="input-group-addon">메뉴명</label> 
+									<input type="text" id="menuName" name="menuName" class="form-control" placeholder="메뉴명을 입력하세요." />
 								</div>
 							</div>
 	
 							<div class="col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
-									<label class="input-group-addon">가격</label> <input type="text"
-										id="menuPrice" name="menuPrice" class="form-control" placeholder="가격을 입력하세요." />
+									<label class="input-group-addon">가격</label> 
+									<input type="text" id="menuPrice" name="menuPrice" class="form-control" placeholder="가격을 입력하세요." />
 								</div>
 							</div>
 						</div>
@@ -88,8 +89,8 @@
 <!-- 					</div> -->
 
 					<div class="form-group">
-						<input type="button" id="modify" class="btn btn-primary" value="수정"> <input
-							type="button" id="insert" class="btn btn-success" value="등록">
+						<input type="button" id="modify" class="btn btn-primary" value="수정"> 
+						<input type="button" id="insert" class="btn btn-success" value="등록">
 					</div>
 					<input type="hidden" name="menuFood" value="123-45-67890"/>
 				</form>
@@ -105,12 +106,10 @@
 					
 					
 					<% if(list.isEmpty()){ %>
-	
-						<td></td><td></td><td></td>
-
+							
 					<% }else{ %>
 
-					<% for(Menu m : list){  %>
+					<% for(Menu m : list){ %>
 					<tr>
 						<td>
 						<%= m.getMenuName() %>

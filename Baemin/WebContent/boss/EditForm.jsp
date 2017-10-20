@@ -1,7 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="java.util.List"%>
+<%@page import="model.FoodHome"%>
 	
 <% String projectName = "/Baemin"; %>	
+
+<%
+	List<FoodHome> list = (List)request.getAttribute("result");
+
+%>
 	
 <!DOCTYPE>
 <html>
@@ -31,7 +38,8 @@
 <body>
 	<div class="container">
 		<div class="text-center">
-			<img alt="운영정보수정" src="<%= projectName %>/배달의민족/정보수정.png" />
+			<a href="<%= projectName %>/baemin?cmd=boss-main"><img id="bosslogo1" src="<%= projectName %>/배달의민족/사장님사이트.jpg"></a>
+			<img id="bosslogo2" alt="운영정보수정" src="<%= projectName %>/배달의민족/정보수정.png" />
 		</div>
 
 		<div class="select">
@@ -59,14 +67,14 @@
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
 									<label class="input-group-addon">오픈시간</label> 
-									<input id="openTime" name="fOpen" type="text" class="form-control" placeholder="예) 0930" />
+									<input id="openTime" name="fOpen" type="text" class="form-control" placeholder="예) 0930" value=""/>
 								</div>
 							</div>
 
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="input-group">
 									<label class="input-group-addon">마감시간</label> 
-									<input id="closeTime" name="fClose" type="text" class="form-control" placeholder="예) 2330" />
+									<input id="closeTime" name="fClose" type="text" class="form-control" placeholder="예) 2330" value=""/>
 								</div>
 							</div>
 						</div>
@@ -75,7 +83,7 @@
 					<div class="form-group">
 						<div class="input-group">
 							<label class="input-group-addon">전화번호</label> 
-							<input type="text" id="tel" name="fTel" class="form-control" placeholder="예) 01012345678" />
+							<input type="text" id="tel" name="fTel" class="form-control" placeholder="예) 01012345678" value=""/>
 						</div>
 					</div>
 

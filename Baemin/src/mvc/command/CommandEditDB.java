@@ -1,3 +1,4 @@
+
 package mvc.command;
 
 import java.io.IOException;
@@ -8,15 +9,18 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.FoodHome;
 import model.Menu;
 import mybatis.service.ServiceAddMenu;
 
 
-public class CommandAddMenu implements Command {
+public class CommandEditDB implements Command{
+
+	
 
 	private String next;
 	
-	public CommandAddMenu( String next ) {
+	public CommandEditDB( String next ) {
 		this.next = next;
 	}
 	 
@@ -24,21 +28,25 @@ public class CommandAddMenu implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 		
-		Menu m = new Menu();
+		FoodHome fh = new FoodHome();
 		
-		List<Menu> result = new ArrayList<Menu>();
+		List<FoodHome> result = new ArrayList<FoodHome>();
 		
-		m.setMenuName(request.getParameter("menuName"));		// 메뉴명
-		m.setMenuPrice(Integer.parseInt(request.getParameter("menuPrice")));// 가격
-		m.setMenuImg("img.jpg");			// 이미지 경로
-		m.setMenuFood("1111111111");		// 사업자등록번호
+		fh.setfBoss("1111111111");	// 사업자등록번호
 		
-		result = ServiceAddMenu.getInstance().insertAddMenu(m);
-
+		result = ServiceAddMenu.getInstance().selectEdit(fh.getfBoss());
+		  
 		request.setAttribute("result", result);
-		
+
 		return next;
 		
 	}
+	
+	
+	
+	
+	
 }
+
+
 

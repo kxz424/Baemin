@@ -3,6 +3,7 @@ package mybatis.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.FoodHome;
 import model.Menu;
 import mybatis.session.CommentRepository;
 
@@ -19,18 +20,26 @@ public class ServiceAddMenu {
 		return service;
 	} 
 	
-	public void insertAddMenu(Menu m) {
+	public List<Menu> insertAddMenu(Menu m) {
 		 
-		repo.insertAddMenu(m); 
-		 
+		 return repo.insertAddMenu(m); 
+		  
  
 	}
+	 
 
 	public List<Menu> selectAddMenu(String m) {
 		   
 		return repo.selectAddMenu(m); 
 		
 	}
+	
+	public List<FoodHome> selectEdit(String fh) {
+		     
+		return repo.selectEdit(fh); 
+		
+	}
+	
 	
 
 }
