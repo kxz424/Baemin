@@ -2,6 +2,7 @@ package mybatis.session;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -114,11 +115,18 @@ public class CommentRepository2 {
 	
 	public List<Menu> selectMenuList(String fboss) {
 		SqlSession sess = getSqlSessionFactory().openSession();
+		boolean isEmpty = true;
 		
 		try {
 			HashMap hash = new HashMap();
-			hash.put("fBoss", fboss);
-			return sess.selectList(namespace + ".selectMenu", hash);
+			hash.put("fboss", fboss);
+			List<Menu> list = sess.selectList(namespace + ".selectMenu", hash);
+			
+			isEmpty = false;
+			
+			if( isEmpty ) return Collections.emptyList();
+			
+			return list;
 			
 		} finally {
 			sess.close();

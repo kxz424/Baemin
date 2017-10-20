@@ -15,7 +15,7 @@
 <script type="text/javascript">
 	$(function() {
 		$(".food").click(function() {
-			$("form").submit();
+			$(this).find('form').submit();
 		});
 	});
 </script>
@@ -37,7 +37,7 @@
 			<% for(int i = 0 ; i < foodhome.size() ; i++ ) { %>
 			<div class="food">
 			<form method="post" action="<%= projectName %>/baemin?cmd=MenuList-page">
-				<input type="hidden" name="fboos" value="<%= foodhome.get(i).getfBoss() %>" />
+				<input type="text" name="fboss" value="<%= foodhome.get(i).getfBoss() %>" />
 				<input type="hidden" name="fcategory" value="<%= foodhome.get(i).getfCategory() %>" />
 				<input type="hidden" name="fclose" value="<%= foodhome.get(i).getfClose() %>" />
 				<input type="hidden" name="fing" value="<%= foodhome.get(i).getfIng() %>" />

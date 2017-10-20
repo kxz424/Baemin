@@ -24,8 +24,8 @@ public class ServiceReview {
   
 	}
 	
-	public List<Review> selectReview(String rFood) {
-		return repo.selectReview(rFood);
+	public List<Review> selectReview(String fboss) {
+		return repo.selectReview(fboss);
 	}
 	
 

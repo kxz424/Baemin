@@ -12,6 +12,7 @@ import com.sun.glass.ui.Menu;
 import model.FoodHome;
 import model.Review;
 import mybatis.service.ServiceMenuList;
+import mybatis.service.ServiceReview;
 
 
 public class CommandMenuList implements Command {
@@ -39,9 +40,14 @@ public class CommandMenuList implements Command {
 		foodhome.setfTel(request.getParameter("ftel"));
 		
 		request.setAttribute("foodhome", foodhome);
-		
+
+		//메뉴 조회
 		List<Menu> menu = ServiceMenuList.getInstance().selectMenuList(fboss);
+		//리뷰 조회
+		List<Review> review = ServiceReview.getInstance().selectReview(fboss);
+		
 		request.setAttribute("menulist", menu);
+		request.setAttribute("reviewlist", review);
 		
 		return next;
 		

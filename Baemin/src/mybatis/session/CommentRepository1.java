@@ -106,14 +106,14 @@ public class CommentRepository1 {
 		}
 	}
 	
-	public List<Review> selectReview(String rFood) {
+	public List<Review> selectReview(String fboss) {
 		SqlSession sess = getSqlSessionFactory().openSession();
 		
 		try {
 			List<Review> list = new ArrayList<>();
 			boolean isEmpty = true;
 			HashMap<String, String> map = new HashMap<>();
-			map.put("rFood", rFood);
+			map.put("fboss", fboss);
 		
 			list = (List) sess.selectList(namespace + ".selectReview", map);
 		

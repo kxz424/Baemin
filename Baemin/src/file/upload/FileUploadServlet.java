@@ -58,7 +58,7 @@ public class FileUploadServlet extends HttpServlet {
 		
 		foodHome.setfImg(realPath);
 		PdsItem pdsItem = new PdsItem();
-		pdsItem.setId(ServiceBossJoin.getInstance().insertBossJoin((Boss)req.getAttribute("boss"), foodHome));
+//		pdsItem.setId(ServiceBossJoin.getInstance().insertBossJoin((Boss)req.getAttribute("boss"), foodHome));
 		return pdsItem;
 	}
 

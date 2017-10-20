@@ -21,10 +21,10 @@ $(function(){
 //						alert("중복");
 						mn.next().eq(i).attr('value', parseInt(mn.next().eq(i).val()) + 1);
 						flag = true;
-//						var mnPrice = mn.next().next().next().next();
-//						var oMoney = $('label[name="oMoney"]');
-//						alert(mnPrice.text().substr(0, mnPrice.val()-1));
-//						oMoney.text(parseInt(oMoney.text()) + parseInt(mnPrice.val().substr(0, mnPrice.val()-1)));
+						var mnPrice = mn.next().next().next().next();
+						var oMoney = $('label[name="oMoney"]');
+						alert(mnPrice.text().substr(0, mnPrice.val()-1));
+						oMoney.text(parseInt(oMoney.text()) + parseInt(mnPrice.val().substr(0, mnPrice.val()-1)));
 						
 					}
 				}
