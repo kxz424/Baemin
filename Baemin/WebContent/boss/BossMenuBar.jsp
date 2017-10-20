@@ -1,6 +1,15 @@
+<%@page import="model.Boss"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <% String projectName = "/Baemin"; %>
+    <% String projectName = "/Baemin";
+    Object obj = session.getAttribute("boss");
+	Boss boss = null;
+	
+	if(obj != null) {
+		boss = (Boss)obj;
+	}
+	
+    %>
 <!DOCTYPE>
 <html>
 <head>
@@ -41,6 +50,8 @@
 	<div id="menu_knowhow" class="dropdown">
 		<a href="https://ceo.baemin.com/#/knowhow">사장님꿀팁</a>
 	</div>
-
+	<% if(boss != null) { %>
+	<p> 사장님 안녕하세요 ㅣ<a href="<%=projectName%>/baemin?cmd=boss-logout">로그아웃</a> </p>
+	<% } %>
 </body>
 </html>

@@ -1,8 +1,12 @@
 @charset "UTF-8";
 
 
-
-
+.bossgood {
+	cursor: pointer;
+}
+.knowhow {
+	width: 300px;
+}
 
 	.bosslogo{ 
 	 	width:100%; 
