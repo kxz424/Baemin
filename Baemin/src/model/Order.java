@@ -10,7 +10,7 @@ public class Order {
 	String oMember;		// 회원 아이디
 	String oFood;		// 사업자등록번호
 	String oMenuName;	// 메뉴명
-	int oMenuCnt;		// 수량
+	String oMenuCnt;		// 수량
 	
 	public String getoNum() {
 		return oNum;
@@ -71,11 +71,11 @@ public class Order {
 		this.oMenuName = oMenuName;
 	}
 
-	public int getoMenuCnt() {
+	public String getoMenuCnt() {
 		return oMenuCnt;
 	}
 
-	public void setoMenuCnt(int oMenuCnt) {
+	public void setoMenuCnt(String oMenuCnt) {
 		this.oMenuCnt = oMenuCnt;
 	}
 

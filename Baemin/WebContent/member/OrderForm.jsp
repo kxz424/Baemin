@@ -18,7 +18,7 @@
 	String oMoney = request.getParameter("oMoney");
 	
 	Member m = (Member)session.getAttribute("user");
-	String fboss = request.getParameter("fBoss");
+	String fboss = request.getParameter("fboss");
 	
 %>
 
@@ -37,7 +37,7 @@
 <div class="container">
 
 	<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=order-db">
-		<input type="hidden" name="fboss" value="<%= fboss %>">
+		<input type="text" name="fboss" value="<%= fboss %>">
 		<div class="header">
 			<h1>배달 / 결제 정보</h1><hr/>
 		</div>

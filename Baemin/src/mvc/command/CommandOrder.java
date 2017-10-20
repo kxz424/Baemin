@@ -6,6 +6,7 @@ import javax.servlet.http.HttpSession;
 
 import model.Member;
 import model.Order;
+import mybatis.service.ServiceOrder;
 import oracle.net.aso.r;
 
 
@@ -22,8 +23,6 @@ public class CommandOrder implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 		HttpSession session = request.getSession();
 		Member member = (Member)session.getAttribute("user");
-		member.setmTel(request.getParameter("oTel"));
-		String fboss = request.getParameter("fboss");
 		
 		String name = "";
 		String cnt = "";
@@ -34,7 +33,7 @@ public class CommandOrder implements Command {
 			name += menuname[i];
 			name += "/";
 			cnt += menucnt[i];
-			name += "/";
+			cnt += "/";
 		}
 		
 		Order order = new Order();
@@ -43,6 +42,12 @@ public class CommandOrder implements Command {
 		order.setoMoney(Integer.parseInt(request.getParameter("oMoney")));
 		order.setoRequest(request.getParameter("oRequest"));
 		order.setoMenuName(name);
+		order.setoMenuCnt(cnt);
+		order.setoMember(member.getmId());
+		order.setoFood(request.getParameter("fboss"));
+		order.setoTel(request.getParameter("oTel"));
+		System.out.println(order.getoFood());
+		ServiceOrder.getInstance().insertOrder(order);
 		
 		return next;
 		

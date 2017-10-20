@@ -68,4 +68,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE menu_food = #{fboss}
 	</select>
 
+	<insert id="insertOrder" parameterType="order">
+		INSERT INTO order_list(o_num, o_tel, o_address, o_date, o_request, o_money, o_member, o_food, o_menu_name, o_menu_cnt)
+		VALUES(seq_order.nextVal, #{oTel}, #{oAddress}, sysdate, #{oRequest}, #{oMoney}, #{oMember}, #{oFood}, #{oMenuName}, #{oMenuCnt})
+	</insert>
 </mapper>

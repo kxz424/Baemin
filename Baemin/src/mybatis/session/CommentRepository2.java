@@ -19,6 +19,7 @@ import com.sun.org.apache.regexp.internal.recompile;
 import model.Boss;
 import model.FoodHome;
 import model.Member;
+import model.Order;
 // 현희
 public class CommentRepository2 {
 	private String namespace = "mapper.BaeminMapper";
@@ -133,5 +134,18 @@ public class CommentRepository2 {
 		}
 	}
 
-	
+	public void insertOrder(Order o) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		try {
+			int result = sess.insert(namespace + ".insertOrder", o);
+			
+			if(result > 0 ) {
+				sess.commit();
+			} else {
+				sess.rollback();
+			}
+		} finally {
+			sess.close();
+		}
+	}
 }
