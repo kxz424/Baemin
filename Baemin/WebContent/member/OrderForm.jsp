@@ -51,10 +51,10 @@
 	           			<label class="label2">가격:</label><label class="label3">19,900원x1</label>
 	         		</div>
 	      
-	         		<div class="price2">
-	            		<label class="label2">양파뿌린닭</label><label class="label1">19,900원</label><br/>
-	            		<label class="label2">가격:</label><label class="label3">19,900원x1</label>
-	         		</div>
+<!-- 	         		<div class="price2"> -->
+<!-- 	            		<label class="label2">양파뿌린닭</label><label class="label1">19,900원</label><br/> -->
+<!-- 	            		<label class="label2">가격:</label><label class="label3">19,900원x1</label> -->
+<!-- 	         		</div> -->
       
       			</div>
       

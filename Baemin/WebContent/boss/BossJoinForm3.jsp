@@ -35,6 +35,9 @@
 
 <link rel="stylesheet" type="text/css" href="<%=projectName%>/css/boss/BossJoinForm3.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+
 <script type="text/javascript" src="<%=projectName%>/js/boss/BossJoinForm3.js"></script>
 </head>
 <body>
@@ -59,16 +62,24 @@
 								<h3>업소정보</h3> <label>업소명</label><br /> 
 								<input type="text" placeholder="업소명을 입력해 주세요." name="fName"/><br/><hr/> 
 								
-								<label>업소 주소</label> <br/> 
-								<select name="fLocation1">
-									<option>시도</option>
-								</select> 
-								<select name="fLocation2">
-									<option>시구군</option>
-								</select> 
-								<select name="fLocation3">
-									<option>동</option>
-								</select><br/><br/> 								
+<!-- 								<label>업소 주소</label> <br/>  -->
+<!-- 								<select name="fLocation1"> -->
+									<!--  <option>시도</option>-->
+<!-- 								</select>  -->
+<!-- 								<select name="fLocation2"> -->
+									<!-- <option>시구군</option> -->
+<!-- 								</select>  -->
+<!-- 								<select name="fLocation3"> -->
+									<!-- <option>동</option> -->
+<!-- 								</select><br/><br/> 								 -->
+
+
+								<input type="text" id="sample4_postcode" placeholder="우편번호">
+								<input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
+								<input type="text" id="sample4_roadAddress" name="fLocation" placeholder="도로명주소">
+								<input type="hidden" id="sample4_jibunAddress" placeholder="지번주소">
+								<span id="guide" style="color:#999; display: none;"></span>
+
 								
 								<label>카테고리</label><br/>
 								<select name="fCategory">
