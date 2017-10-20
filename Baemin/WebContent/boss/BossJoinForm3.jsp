@@ -14,8 +14,12 @@
 
 <%
 	String tel = "";
-	for(int i = 1 ; i < 4 ; i++)
+	for(int i = 1 ; i < 4 ; i++){
 		tel += request.getParameter("bTel"+i);
+		if(i < 3){
+			tel += "-";
+		}
+	}
 	
 	boss.setbTel(tel);
 	
@@ -46,7 +50,7 @@
 		</div>
 
 		<div class="terms-content">
-			<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=boss-join-db" enctype="multipart/form-data">
+			<form id="joinTerms" method="post" action="<%= projectName %>/baemin?cmd=boss-join-db">
 				<fieldset>
 					<div>
 						<ul>
@@ -64,11 +68,7 @@
 								</select> 
 								<select name="fLocation3">
 									<option>동</option>
-								</select><br/><br/> 
-								
-								<label>업소이미지첨부</label><br/> 
-								<input type="file" name="file" /><br/><br/>
-								
+								</select><br/><br/> 								
 								
 								<label>카테고리</label><br/>
 								<select name="fCategory">

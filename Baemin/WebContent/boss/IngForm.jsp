@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>우리반 연습</title>
+<title>임시 운영 중지</title>
 
 <!-- 합쳐지고 최소화된 최신 CSS -->
 <link rel="stylesheet"
@@ -36,24 +36,26 @@
 
 		<div class="row">
 		
-		<div class="col-sm-4"></div>
+		<div class="col-sm-3"></div>
 		
-		<div class="panel panel-default col-sm-4">
+		<div class="panel panel-default col-sm-6">
 			<div class="panel-body">
-				<div class="select">
-					<select>
-						<option>쌀통닭-신천점</option>
-						<option>굽네치킨-가락점</option>
-					</select>
-				</div>
-				<form action="<%= projectName %>/baemin?cmd=boss-ing-db">
+				<form action="<%= projectName %>/baemin?cmd=boss-ing-db" method="post">
+					<div class="select">
+						<select name="FoodHome">
+							<option>쌀통닭-신천점</option>
+							<option>굽네치킨-가락점</option>
+						</select>
+					</div>
+				
 					<div class="check">
-						<input type="radio" name="fIng" /> 운영중지
+						<input type="hidden" name="chk" value="">
+						<input type="checkbox" name="fIng" id="ing"/> <label for="ing" style="font-weight: 100">운영중지</label> 
 					</div>
 					<input type="button" id="ingBtn" value="적용"/>
 				</form>
 				
-			</div>
+			</div> 
 		</div>
 		
 		<div class="col-sm-4"></div>

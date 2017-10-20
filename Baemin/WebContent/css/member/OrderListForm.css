@@ -1,0 +1,98 @@
+ @charset "UTF-8";
+ 
+
+table {
+	
+	 border-collapse:collapse; 
+}
+
+
+.col1 {
+	
+	width: 200px;
+	
+}
+
+
+.col2 {
+	
+	width:500px;
+	
+}
+
+.table-header {
+	
+	font-size : 14px;
+	text-align: center;
+}
+
+.table-header-color {
+
+	border-top: solid;
+	border-bottom: double;
+	height: 30px;
+	background-color: #f2f2f2; 
+}
+
+td {
+	
+	height: 30px;
+}
+
+.line-bottom {
+	
+	border-bottom: solid;
+}
+.line-bottom2{
+	
+	border-bottom: solid 1px;
+}
+
+.line-left {
+	
+	border-left: solid 1px;
+
+}
+
+.line-bottom-dotted {
+	
+	border-bottom: dotted 1px;
+}
+
+
+
+.table-first {
+	
+	text-align: center;
+}
+
+.label1 {
+	
+	font-size : 20px;
+	font-weight: bolder;
+}
+
+.label2 {
+	
+	font-size : 15px;
+	font-weight: bolder;
+	
+}
+
+.label3 {
+	
+	font-weight: normal;
+	
+}
+
+.table-second {
+	font-size : 14px;
+	font-weight: bolder;
+	margin-left: 10px;
+}
+
+
+form {
+	margin:0 auto;
+	width: 705px;
+}

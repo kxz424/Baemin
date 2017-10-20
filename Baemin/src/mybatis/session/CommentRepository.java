@@ -2,13 +2,9 @@ package mybatis.session;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
@@ -16,12 +12,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
-
 import model.Boss;
 import model.FoodHome;
-
-import model.Member;
 import model.Menu;
 
 // 명환오빠
@@ -45,21 +37,9 @@ public class CommentRepository {
 	}
 	
 
-	public void insertBossJoin(Boss b) {
+	public int insertBossJoin(Boss b, FoodHome h) {
 		SqlSession sess = getSqlSessionFactory().openSession();
-		int result = sess.insert(namespace1 + ".insertBossJoin", b);
-		
-		if(result > 0) {
-			sess.commit();
-		}else {
-			sess.rollback();
-		}
-		
-	}
-
-	public int insertFoodHome(FoodHome h) {
-		
-		SqlSession sess = getSqlSessionFactory().openSession();
+		sess.insert(namespace1 + ".insertBossJoin", b);
 		int result = sess.insert(namespace1 + ".insertFoodHome", h);
 		
 		if(result > 0) {
@@ -67,10 +47,10 @@ public class CommentRepository {
 		}else {
 			sess.rollback();
 		}
-		
 		return result;
-
+		
 	}
+
 	
 //	public int BossLogin(String id, String password) {
 //		
@@ -167,6 +147,22 @@ public class CommentRepository {
 		}
 		
 	}
+	
+	
+	
+	public void updateIng(FoodHome fh) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		int result = sess.update(namespace2 + ".updateIng", fh);
+		
+		 
+		if(result > 0) {
+			sess.commit();
+		}else {
+			sess.rollback();
+		}
+		
+	}
+	
 	
 	
 	
