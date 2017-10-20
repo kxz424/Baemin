@@ -21,16 +21,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>우리반 연습</title>
-
-
-
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link type="text/css" rel="stylesheet" href="<%= projectName %>/css/member/MainBar.css" />
-
-
 <script type="text/javascript" src="<%= projectName %>/lib/jquery-3.1.1.min.js"></script>
-
 <script type="text/javascript">
 	$(function() {
 		$("#selectlocation").focus(function () {
@@ -47,10 +41,7 @@
 		});
 		
 		
-	});
-	
-	
-	
+	});	
 </script>
 </head>
 <body>
@@ -68,12 +59,13 @@
 			<img id="logo" src="<%= projectName %>/배달의민족/로고.jpg" /></a><br /> 
 <!-- 				<input type="text" id="SelectLocation" name="SelectLocation" value="위치를 지정하세요"> -->
 			<!-- 		<input type="text" id="SelectFoodHome" name="SelectFoodHome" value="업소명을 검색하세요"> -->
-			<div class="d1">
-				<form>
-					<input id="selectlocation1" name="" type="text" placeholder="위치를 지정하세요">
-					<button type="submit"></button>
-				</form>
-			</div>
+
+<!-- 			<div class="d1"> -->
+<!-- 				<form> -->
+<!-- 					<input id="selectlocation" name="" type="text" placeholder="위치를 지정하세요"> -->
+<!-- 					<button type="submit"></button> -->
+<!-- 				</form> -->
+<!-- 			</div> -->
 			<div class="d1">
 				<form method="get" action="<%= projectName %>/baemin">
 					<input id="selectfoodhome" name="searchfoodhome" type="text" placeholder="업소를 검색하세요"/>
