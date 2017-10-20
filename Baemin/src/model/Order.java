@@ -9,6 +9,8 @@ public class Order {
 	int oMoney;			// 결제금액
 	String oMember;		// 회원 아이디
 	String oFood;		// 사업자등록번호
+	String oMenuName;	// 메뉴명
+	int oMenuCnt;		// 수량
 	
 	public String getoNum() {
 		return oNum;
@@ -60,5 +62,31 @@ public class Order {
 	public void setoFood(String oFood) {
 		this.oFood = oFood;
 	}
+
+	public String getoMenuName() {
+		return oMenuName;
+	}
+
+	public void setoMenuName(String oMenuName) {
+		this.oMenuName = oMenuName;
+	}
+
+	public int getoMenuCnt() {
+		return oMenuCnt;
+	}
+
+	public void setoMenuCnt(int oMenuCnt) {
+		this.oMenuCnt = oMenuCnt;
+	}
+
+	public void setoNum(String oNum) {
+		this.oNum = oNum;
+	}
+
+	public void setoDate(String oDate) {
+		this.oDate = oDate;
+	}
+	
+	
 	
 }
