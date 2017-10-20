@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
-<%@page import="model.Review"%>
+<%@page import="model.*"%>
     
 <%  //웹브라우저가 게시글 목록을 캐싱할 경우 새로운 글이 추가되더라도 새글이 목록에 안 보일 수 있기 때문에 설정
 	response.setHeader("Pragma","No-cache");		// HTTP 1.0 version
@@ -13,11 +13,9 @@
 <% 
 	String projectName = "/Baemin"; 
 	
+	FoodHome foodhome = (FoodHome) request.getAttribute("foodhome");
 %>    
 
-<%
-// 	List<Review> list = (List<Review>) request.getAttribute("reviewList");
-%>
     
 <!DOCTYPE>
 <html>
@@ -79,10 +77,10 @@
 						
 						<dl class="sinfo xsmall">
 							<dt>운영시간</dt>
-							<dd>낮 12:00 ~ 익일 새벽 02:30</dd>
+							<dd>낮 <%= foodhome.getfOpen() %> ~ 밤 <%= foodhome.getfClose() %></dd>
 							<dt>전화번호</dt>
 							<dd>
-								<strong class="text-primary">050-4994-3230</strong>
+								<strong class="text-primary"><%= foodhome.getfTel() %></strong>
 							</dd>
 							<dt>업소소개</dt>
 							<dd><div id="intro"><p>쌀통닭 신천점입니다.</p></div></dd>
@@ -117,7 +115,7 @@
 									<div>
 										<div class="form-group">
 											<label><h4>주문합계금액</h4></label>
-											<label name="oMoney" class="text-right">19900원</label>
+											<label name="oMoney" class="text-right"></label>
 										</div>
 									</div>
 								

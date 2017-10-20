@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="model.Menu"%>
+<%@page import="java.util.*"%>
 	
 <% String projectName = "/Baemin"; %>  	
+
+<%
+	List<Menu> mlist = (List) request.getAttribute("menulist");
+%>
 	
 <!DOCTYPE>
 <html>
@@ -49,72 +55,78 @@
 					<div class="panel-collapse in" style="height: auto;">
 						<div class="panel-body">
 							<div class="row rec-menu">
+							
+							<% if(mlist.isEmpty()){ %>
+								<h3>등록된 메뉴가 없습니다.</h3>
+							<% } %>
+							<% for(Menu m : mlist){  %>
 								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
 									<div class="thumbnail shop-menu-panel">
 										<img alt="쌀통닭" src="<%= projectName %>/배달의민족/메뉴_쌀통닭.png">
 										<div class="caption">
 											<div class="small">
-												<span class="text-ellipsis">쌀통닭</span> <strong
-													class="text-ellipsis pull-right">15900원</strong>
+												<span class="text-ellipsis"><%= m.getMenuName() %></span> <strong
+													class="text-ellipsis pull-right"><%= m.getMenuPrice() %>원</strong>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-									<div class="thumbnail shop-menu-panel">
-										<img alt="쌀통닭순살" src="<%= projectName %>/배달의민족/메뉴_쌀통닭_순살.png">
-										<div class="caption">
-											<div class="small">
-												<span class="text-ellipsis">쌀통닭순살</span> <strong
-													class="text-ellipsis pull-right">16900원</strong>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-									<div class="thumbnail shop-menu-panel">
-										<img alt="불닭발" src="<%= projectName %>/배달의민족/메뉴_불닭발.png">
-										<div class="caption">
-											<div class="small">
-												<span class="text-ellipsis">불닭발</span> <strong
-													class="text-ellipsis pull-right">16900원</strong>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-									<div class="thumbnail shop-menu-panel">
-										<img alt="양파뿌린닭" src="<%= projectName %>/배달의민족/메뉴_양파뿌린닭.png">
-										<div class="caption">
-											<div class="small">
-												<span class="text-ellipsis">양파뿌린닭</span> <strong
-													class="text-ellipsis pull-right">19900원</strong>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-									<div class="thumbnail shop-menu-panel">
-										<img alt="똥집세트" src="<%= projectName %>/배달의민족/메뉴_똥집세트.png">
-										<div class="caption">
-											<div class="small">
-												<span class="text-ellipsis">똥집세트</span> <strong
-													class="text-ellipsis pull-right">22900원</strong>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-									<div class="thumbnail shop-menu-panel">
-										<img alt="옛날통닭두마리" src="<%= projectName %>/배달의민족/메뉴_옛날통닭두마리.png">
-										<div class="caption">
-											<div class="small">
-												<span class="text-ellipsis">옛날통닭두마리</span> <strong
-													class="text-ellipsis pull-right">19900원</strong>
-											</div>
-										</div>
-									</div>
-								</div>
+							<% } %>
+<!-- 								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"> -->
+<!-- 									<div class="thumbnail shop-menu-panel"> -->
+<%-- 										<img alt="쌀통닭순살" src="<%= projectName %>/배달의민족/메뉴_쌀통닭_순살.png"> --%>
+<!-- 										<div class="caption"> -->
+<!-- 											<div class="small"> -->
+<!-- 												<span class="text-ellipsis">쌀통닭순살</span> <strong -->
+<!-- 													class="text-ellipsis pull-right">16900원</strong> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"> -->
+<!-- 									<div class="thumbnail shop-menu-panel"> -->
+<%-- 										<img alt="불닭발" src="<%= projectName %>/배달의민족/메뉴_불닭발.png"> --%>
+<!-- 										<div class="caption"> -->
+<!-- 											<div class="small"> -->
+<!-- 												<span class="text-ellipsis">불닭발</span> <strong -->
+<!-- 													class="text-ellipsis pull-right">16900원</strong> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"> -->
+<!-- 									<div class="thumbnail shop-menu-panel"> -->
+<%-- 										<img alt="양파뿌린닭" src="<%= projectName %>/배달의민족/메뉴_양파뿌린닭.png"> --%>
+<!-- 										<div class="caption"> -->
+<!-- 											<div class="small"> -->
+<!-- 												<span class="text-ellipsis">양파뿌린닭</span> <strong -->
+<!-- 													class="text-ellipsis pull-right">19900원</strong> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"> -->
+<!-- 									<div class="thumbnail shop-menu-panel"> -->
+<%-- 										<img alt="똥집세트" src="<%= projectName %>/배달의민족/메뉴_똥집세트.png"> --%>
+<!-- 										<div class="caption"> -->
+<!-- 											<div class="small"> -->
+<!-- 												<span class="text-ellipsis">똥집세트</span> <strong -->
+<!-- 													class="text-ellipsis pull-right">22900원</strong> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"> -->
+<!-- 									<div class="thumbnail shop-menu-panel"> -->
+<%-- 										<img alt="옛날통닭두마리" src="<%= projectName %>/배달의민족/메뉴_옛날통닭두마리.png"> --%>
+<!-- 										<div class="caption"> -->
+<!-- 											<div class="small"> -->
+<!-- 												<span class="text-ellipsis">옛날통닭두마리</span> <strong -->
+<!-- 													class="text-ellipsis pull-right">19900원</strong> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
 							</div>
 						</div>
 					</div>

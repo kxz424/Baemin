@@ -20,7 +20,9 @@
 <link type="text/css" rel="stylesheet" href="<%= projectName %>/css/boss/BossMain.css" />
 </head>
 <body>
-	<div class="bosslogo"><h3><img id="bosslogo" src="<%= projectName %>/배달의민족/사장님사이트.jpg"></h3></div>
+
+	<jsp:include page="BossMenuBar.jsp"></jsp:include>
+	
 	<div class="quickmenu">
 		<a href="<%=projectName%>/baemin?cmd=boss-add-menu"><img id="addmenu" class="bossmenu" src="<%= projectName %>/배달의민족/메뉴등록.png"></a>
 		<a href="<%=projectName%>/baemin?cmd=boss-sold"><img id="soldout" class="bossmenu" src="<%= projectName %>/배달의민족/품절관리.png"></a>

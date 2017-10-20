@@ -16,13 +16,12 @@ public class ServiceBossJoin {
 		return service;
 	} 
 	
-	public int insertBossJoin(Boss b, FoodHome h) {
+	public void insertBossJoin(Boss b, FoodHome h) {
 		 
-		repo.insertBossJoin(b);  
-		int result = repo.insertFoodHome(h);
+		int result = repo.insertBossJoin(b, h);  
 		
-		return result;
-
+		
+		
 	}
 	
 

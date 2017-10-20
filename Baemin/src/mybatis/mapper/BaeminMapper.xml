@@ -60,5 +60,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			</if>
 		</where>
 	</select>
+	
+	<!-- 메뉴 목록 조회 -->
+	<select id="selectMenu" parameterType="hashmap" resultType="menu">
+		SELECT menu_num, menu_name, menu_soldout, menu_price, menu_food, menu_img
+		FROM menu 
+		WHERE menu_food = #{fboss}
+	</select>
 
 </mapper>
