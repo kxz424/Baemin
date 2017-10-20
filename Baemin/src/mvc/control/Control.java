@@ -14,6 +14,7 @@ import mvc.command.CommandAddMenu;
 import mvc.command.CommandAddMenuDB;
 import mvc.command.CommandBossJoin;
 import mvc.command.CommandBossLogin;
+import mvc.command.CommandBossLogout;
 import mvc.command.CommandEdit;
 import mvc.command.CommandEditDB;
 import mvc.command.CommandException;
@@ -67,6 +68,7 @@ public class Control extends HttpServlet {
         map.put("boss-main", new CommandNull("../boss/BossMain.jsp"));
         map.put("boss-login", new CommandNull("../boss/BossLoginForm.jsp"));
         map.put("boss-login-db", new CommandBossLogin("../boss/BossMain.jsp"));
+        map.put("boss-logout", new CommandBossLogout("../boss/BossMain.jsp"));
         map.put("boss-join", new CommandNull("../boss/BossJoinForm1.jsp"));
         map.put("boss-join1", new CommandNull("../boss/BossJoinForm2.jsp"));
         map.put("boss-join2", new CommandNull("../boss/BossJoinForm3.jsp"));
