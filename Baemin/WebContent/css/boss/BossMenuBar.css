@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+.dropdown {
+	display: inline-block;
+	cursor: pointer;
+	font-size: 15px;
+	font-family: "맑은고딕";
+	width: 130px;
+	letter-spacing: 3px;
+	margin: 36px 10px;
+}
+
+#menu_foodhome {
+	width: 100px;
+	letter-spacing: 10px;
+}
+
+#menu_knowhow {
+	letter-spacing: 5px;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: white;
+	width: 150px;
+	z-index: 1;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#foodhome {
+	width: 200px;
+	letter-spacing: 7px;
+}
+
+.detailmenu a:link, .detailmenu a:visited {
+	color: grey;
+	text-decoration: none;
+}
+
+.dropdown>a:link, .dropdown>a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.detailmenu {
+	display: none;
+	font-weight: normal;
+}
+
+#bosslog {
+	width: 170px;
+	height: 70px;
+	float: left;
+	margin: 10px 30px 0 50px;
+}
