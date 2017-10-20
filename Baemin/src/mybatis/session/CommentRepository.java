@@ -150,4 +150,20 @@ public class CommentRepository {
 	
 	
 	
+	public void updateIng(FoodHome fh) {
+		SqlSession sess = getSqlSessionFactory().openSession();
+		int result = sess.update(namespace2 + ".updateIng", fh);
+		
+		 
+		if(result > 0) {
+			sess.commit();
+		}else {
+			sess.rollback();
+		}
+		
+	}
+	
+	
+	
+	
 }

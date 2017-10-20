@@ -5,15 +5,21 @@
 }
 
 .select {
+	
+	
 	float: left;
 	margin-right: 20px;
+	margin-left: 100px;
 }
-.panel-default{
 
-}
 
 .check{
+	
 	float: left;
 	margin-right: 20px;
 }
 
+#ingBtn {
+	
+	width: 80px;
+}

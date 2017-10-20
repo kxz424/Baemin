@@ -8,6 +8,17 @@ $(function(){
 //	});
 	
 	
+	
+	if($("input[type='checkbox']").prop("checked")){
+		
+		$("input[type='hidden']").val("Y");
+		
+	}else{
+		
+		$("input[type='hidden']").val("N");
+	}
+	
+	
 	$("input[type='checkbox']").click(function(){
 		 
 		if($("input[type='checkbox']").prop("checked")){
