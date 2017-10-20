@@ -1,8 +1,8 @@
 $(function(){
-	$('#order').click(function(){
-		alert("111");
-		$('#cart').submit();
-	});
+//	$('#order').click(function(){
+//		alert("111");
+//		$('#cart').submit();
+//	});
 	
 
 	
@@ -25,6 +25,7 @@ $(function(){
 						var oMoney = $('label[name="oMoney"]');
 						alert(mnPrice.text().substr(0, mnPrice.text().indexOf('원')));
 						oMoney.text(parseInt(oMoney.text()) + parseInt(mnPrice.text().substr(0, mnPrice.text().indexOf('원'))));
+						$('input[name="oMoney"]').attr('value', oMoney.text());
 						
 					}
 				}
@@ -37,25 +38,27 @@ $(function(){
 					var menuMinus = $('<input type="button" class="minus" value="-" />');
 					var menuPlus = $('<input type="button" class="plus" value="+"/><br/>');
 					var menuPrice = $('<label name="menuPrice">' + $(this).find('.small strong').text() + '</label>');
+					var menuName2 = $('<input type="hidden" name="menuName" value="'+ $(this).find('.small span').text() + '"/>');
+					var menuPrice2 = $('<input type="hidden" name="menuPrice" value="' + $(this).find('.small strong').text().substr(0, $(this).find('.small strong').text().indexOf('원')) + '"/>');
 					
 					cartMenu.append(menuName);
 					cartMenu.append(menuCnt);
 					cartMenu.append(menuMinus);
 					cartMenu.append(menuPlus);
 					cartMenu.append(menuPrice);
+					cartMenu.append(menuName2);
+					cartMenu.append(menuPrice2);
 					group.append(cartMenu);
 					$('#cart').prepend(group);
 					
 //					flag = true;
-					
-					
 					for(var i = 0; i < mn.length; i++){
 						var mnPrice = $('label[name="menuPrice"]').eq(i);
 						var oMoney = $('label[name="oMoney"]');
 						alert(mnPrice.text().substr(0, mnPrice.text().indexOf('원')));
 						oMoney.text(parseInt(oMoney.text()) + parseInt(mnPrice.text().substr(0, mnPrice.text().indexOf('원'))));
+						$('input[name="oMoney"]').attr('value', oMoney.text());
 					}
-					
 					
 				}
 			}else{
@@ -66,14 +69,28 @@ $(function(){
 				var menuMinus = $('<input type="button" class="minus" value="-" />');
 				var menuPlus = $('<input type="button" class="plus" value="+" /><br/>');
 				var menuPrice = $('<label name="menuPrice">' + $(this).find('.small strong').text() + '</label>');
+				var menuName2 = $('<input type="hidden" name="menuName" value="'+ $(this).find('.small span').text() + '"/>');
+				var menuPrice2 = $('<input type="hidden" name="menuPrice" value="' + $(this).find('.small strong').text().substr(0, $(this).find('.small strong').text().indexOf('원')) + '"/>');
 				
 				cartMenu.append(menuName);
 				cartMenu.append(menuCnt);
 				cartMenu.append(menuMinus);
 				cartMenu.append(menuPlus);
 				cartMenu.append(menuPrice);
+				cartMenu.append(menuName2);
+				cartMenu.append(menuPrice2);
 				group.append(cartMenu);
 				$('#cart').prepend(group);
+				
+				var mn = $('label[name="menuName"]');		
+				
+				for(var i = 0; i < mn.length; i++){
+					var mnPrice = $('label[name="menuPrice"]').eq(i);
+					var oMoney = $('label[name="oMoney"]');
+					alert(mnPrice.text().substr(0, mnPrice.text().indexOf('원')));
+					oMoney.text(parseInt(oMoney.text()) + parseInt(mnPrice.text().substr(0, mnPrice.text().indexOf('원'))));
+					$('input[name="oMoney"]').attr('value', oMoney.text());
+				}
 				
 			}			
 			
@@ -124,5 +141,10 @@ $(document).on('click','.minus',function(){
 		$(this).prev().attr('value', cnt);
 	}
 });
+$(document).on('click', '#order', function(){
+	alert("111");
+	$('#cart').submit();
+});
+
 
 

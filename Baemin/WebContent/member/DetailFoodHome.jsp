@@ -94,8 +94,8 @@
 							<div class="login hidden-xs hidden-sm">
 	<!-- 							<p class="notice small text-center">바로결제를 사용하시려면<br/>로그인을 해주세요.</p> -->
 								
-								<form id="cart" method="post" action="<%= projectName %>/baemin?cmd=order-page" class="form-inline">
-								
+								<form id="cart" method="post" action="<%= projectName %>/baemin" class="form-inline">
+									<input type="hidden" name="cmd" value="order-page"/>
 <!-- 									<div class="form-group"> -->
 <!-- 										<div class="cartMenu"> -->
 <!-- 											<label name="menuName">양파뿌린닭</label> -->
@@ -116,6 +116,7 @@
 										<div class="form-group">
 											<label><h4>주문합계금액</h4></label>
 											<label name="oMoney" class="text-right">0원</label>
+											<input type="hidden" name="oMoney"/>
 										</div>
 									</div>
 								
